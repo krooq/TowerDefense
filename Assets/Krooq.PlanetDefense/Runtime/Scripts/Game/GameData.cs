@@ -27,6 +27,8 @@ namespace Krooq.PlanetDefense
         [Header("Shop")]
         [SerializeField] private List<UpgradeTile> _availableUpgrades;
         [SerializeField] private int _maxSlots = 5;
+        [SerializeField] private UpgradeTileUI _upgradeTilePrefab;
+        [SerializeField] private UpgradeSlotUI _upgradeSlotPrefab;
 
         public int StartingResources => _startingResources;
         public int BaseHealth => _baseHealth;
@@ -42,5 +44,7 @@ namespace Krooq.PlanetDefense
         public int ResourcesPerMeteor => _resourcesPerMeteor;
         public List<UpgradeTile> AvailableUpgrades => _availableUpgrades;
         public int MaxSlots => _maxSlots;
+        public UpgradeTileUI UpgradeTilePrefab => _upgradeTilePrefab;
+        public UpgradeSlotUI UpgradeSlotPrefab => _upgradeSlotPrefab;
     }
 }

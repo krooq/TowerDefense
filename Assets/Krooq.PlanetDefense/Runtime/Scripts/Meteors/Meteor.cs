@@ -12,6 +12,7 @@ namespace Krooq.PlanetDefense
         [SerializeField] private int _resources = 10;
         [SerializeField, ReadOnly] private Vector3 _direction = Vector3.down;
         protected GameManager GameManager => this.GetSingleton<GameManager>();
+        protected Rigidbody2D Rigidbody2D => this.GetCachedComponent<Rigidbody2D>();
 
         public float Speed => _speed;
         public float Health => _health;
@@ -35,9 +36,9 @@ namespace Krooq.PlanetDefense
             if (GameManager != null) GameManager.UnregisterMeteor(this);
         }
 
-        protected void Update()
+        protected void FixedUpdate()
         {
-            transform.position += _direction * Speed * Time.deltaTime;
+            Rigidbody2D.MovePosition(Rigidbody2D.position + (Vector2)(_direction * Speed * Time.fixedDeltaTime));
         }
 
         public void TakeDamage(float amount)

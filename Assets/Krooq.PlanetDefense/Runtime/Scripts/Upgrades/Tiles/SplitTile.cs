@@ -24,22 +24,22 @@ namespace Krooq.PlanetDefense
             {
                 context.ProjectileObject.transform.rotation = Quaternion.LookRotation(Vector3.forward, context.Direction);
                 // Update projectile component if it exists
-                if (context.ProjectileObject != null) context.ProjectileObject.Initialize(context.Direction, context.Stats);
+                if (context.ProjectileObject != null) context.ProjectileObject.Init(context.Direction, context.Stats);
             }
 
             // Spawn new
-            var newP = gameManager.SpawnProjectile();
-            newP.transform.SetPositionAndRotation(context.Position, Quaternion.LookRotation(Vector3.forward, rot2 * originalDir));
-            newP.Initialize(rot2 * originalDir, context.Stats.Clone());
+            var newProjectile = gameManager.SpawnProjectile();
+            newProjectile.transform.SetPositionAndRotation(context.Position, Quaternion.LookRotation(Vector3.forward, rot2 * originalDir));
+            newProjectile.Init(rot2 * originalDir, context.Stats.Clone());
 
             // Create context for new projectile
-            var newContext = new ProjectileContext(newP, context.Position, rot2 * originalDir, context.Stats.Clone(), context.IsSetupPhase);
+            var newContext = new ProjectileContext(newProjectile, context.Position, rot2 * originalDir, context.Stats.Clone(), context.IsSetupPhase);
 
             // Run chain on new projectile
             TileSequence.RunChain(newContext, remainingChain, gameManager);
 
             // Re-initialize with potentially modified stats
-            newP.Initialize(newContext.Direction, newContext.Stats);
+            newProjectile.Init(newContext.Direction, newContext.Stats);
 
             return true; // Continue chain on current projectile
         }

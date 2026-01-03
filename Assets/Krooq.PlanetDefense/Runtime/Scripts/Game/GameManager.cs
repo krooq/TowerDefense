@@ -24,15 +24,13 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private GameState _currentState;
         [SerializeField, ReadOnly] private int _baseHealth;
         [SerializeField, ReadOnly] private HashSet<Meteor> _activeMeteors = new();
-        [SerializeField, ReadOnly] private List<UpgradeTile> _activeUpgrades;
-        [SerializeField, ReadOnly] private List<UpgradeTile> _ownedUpgrades;
+        [SerializeField, ReadOnly] private List<UpgradeTile> _activeUpgrades = new();
 
         public GameData Data => _gameData;
         public int Resources => _currentResources;
         public GameState State => _currentState;
 
         public List<UpgradeTile> ActiveUpgrades => _activeUpgrades;
-        public List<UpgradeTile> OwnedUpgrades => _ownedUpgrades;
 
 
         protected MultiGameObjectPool Pool => this.GetSingleton<MultiGameObjectPool>();
@@ -71,7 +69,6 @@ namespace Krooq.PlanetDefense
             _currentWave = 1;
             _baseHealth = _gameData.BaseHealth;
             ActiveUpgrades.Clear();
-            OwnedUpgrades.Clear();
 
             // Add some default upgrades for testing if needed, or let player buy them
 
@@ -129,6 +126,10 @@ namespace Krooq.PlanetDefense
         public Projectile SpawnProjectile() => Pool.Get(_gameData.ProjectilePrefab);
 
         public Meteor SpawnMeteor() => Pool.Get(_gameData.MeteorPrefab);
+
+        public UpgradeTileUI SpawnUpgradeTileUI(UpgradeTileUI prefab) => Pool.Get(prefab);
+
+        public UpgradeSlotUI SpawnUpgradeSlotUI(UpgradeSlotUI prefab) => Pool.Get(prefab);
 
         public void Despawn(GameObject obj) => Pool.Release(obj);
         public void Despawn(Component obj) => Pool.Release(obj.gameObject);

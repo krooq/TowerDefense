@@ -13,6 +13,7 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private List<UpgradeTile> _remainingChain;
         [SerializeField, ReadOnly] private ProjectileStats _stats;
         [SerializeField, ReadOnly] private bool _exploded = false;
+
         protected GameManager GameManager => this.GetSingleton<GameManager>();
 
         public void Init(float radius, float damageMult, List<UpgradeTile> chain, ProjectileStats stats)
@@ -61,7 +62,7 @@ namespace Krooq.PlanetDefense
                 // We need to initialize the projectile component on the new object
                 // But RunChain might modify it further.
                 // The Projectile component needs Stats.
-                p.Initialize(transform.up, _stats.Clone()); // Initialize with current stats
+                p.Init(transform.up, _stats.Clone()); // Initialize with current stats
 
                 var newContext = new ProjectileContext(p, transform.position, transform.up, _stats.Clone(), false);
 

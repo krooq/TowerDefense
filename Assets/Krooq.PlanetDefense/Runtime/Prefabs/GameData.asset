@@ -26,3 +26,5 @@ MonoBehaviour:
   _resourcesPerMeteor: 10
   _availableUpgrades: []
   _maxSlots: 5
+  _upgradeTilePrefab: {fileID: 3834534628122088379, guid: fa161c7ab58755646bfa73ebbba2fe04, type: 3}
+  _upgradeSlotPrefab: {fileID: 1065834685477414293, guid: f2b82f5477973cd4d84159641376818d, type: 3}

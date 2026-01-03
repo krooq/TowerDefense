@@ -10,30 +10,24 @@ namespace Krooq.PlanetDefense
 {
     public class ShopUI : MonoBehaviour
     {
-        [SerializeField] private GameObject _shopPanel;
-        [SerializeField] private Transform _availableContainer;
-        [SerializeField] private Transform _inventoryContainer;
-        [SerializeField] private Transform _activeContainer;
-
-        [SerializeField] private GameObject _tileButtonPrefab;
-        [SerializeField] private TextMeshProUGUI _resourcesText;
-        [SerializeField] private Button _nextWaveButton;
+        [SerializeField] private Transform _itemContainer;
 
         [SerializeField, ReadOnly] private bool _dirty = true;
+
+        protected UpgradeUI UpgradeUI => this.GetSingleton<UpgradeUI>();
         protected GameManager GameManager => this.GetSingleton<GameManager>();
 
-        protected void Start()
-        {
-            _nextWaveButton.onClick.AddListener(OnNextWave);
-        }
+        protected CanvasGroup CanvasGroup => this.GetCachedComponent<CanvasGroup>();
 
         protected void Update()
         {
             if (GameManager.State == GameState.Shop)
             {
-                if (!_shopPanel.activeSelf)
+                if (CanvasGroup.alpha == 0f)
                 {
-                    _shopPanel.SetActive(true);
+                    CanvasGroup.alpha = 1f;
+                    CanvasGroup.interactable = true;
+                    CanvasGroup.blocksRaycasts = true;
                     _dirty = true;
                 }
 
@@ -45,7 +39,9 @@ namespace Krooq.PlanetDefense
             }
             else
             {
-                _shopPanel.SetActive(false);
+                CanvasGroup.alpha = 0f;
+                CanvasGroup.interactable = false;
+                CanvasGroup.blocksRaycasts = false;
             }
         }
 
@@ -56,82 +52,22 @@ namespace Krooq.PlanetDefense
 
         protected void UpdateUI()
         {
-            _resourcesText.text = $"Resources: {GameManager.Resources}";
+            // Clear Available container
+            for (var i = _itemContainer.childCount - 1; i >= 0; i--) GameManager.Despawn(_itemContainer.GetChild(i).gameObject);
 
-            // Clear containers
-            foreach (Transform t in _availableContainer) Destroy(t.gameObject);
-            foreach (Transform t in _inventoryContainer) Destroy(t.gameObject);
-            foreach (Transform t in _activeContainer) Destroy(t.gameObject);
+            // Refresh Active Slots
+            if (UpgradeUI != null) UpgradeUI.Refresh();
 
             // Populate Available
             if (GameManager.Data.AvailableUpgrades != null)
             {
                 foreach (var tile in GameManager.Data.AvailableUpgrades)
                 {
-                    var btnObj = Instantiate(_tileButtonPrefab, _availableContainer);
-                    var btn = btnObj.GetComponent<Button>();
-                    var txt = btnObj.GetComponentInChildren<TextMeshProUGUI>();
-                    if (txt) txt.text = $"{tile.TileName} (${tile.Cost})";
-                    btn.onClick.AddListener(() => BuyTile(tile));
+                    var ui = GameManager.SpawnUpgradeTileUI(GameManager.Data.UpgradeTilePrefab);
+                    ui.transform.SetParent(_itemContainer, false);
+                    ui.Init(tile, true);
                 }
             }
-
-            // Populate Inventory
-            for (var i = 0; i < GameManager.OwnedUpgrades.Count; i++)
-            {
-                var index = i;
-                var tile = GameManager.OwnedUpgrades[i];
-                var btnObj = Instantiate(_tileButtonPrefab, _inventoryContainer);
-                var btn = btnObj.GetComponent<Button>();
-                var txt = btnObj.GetComponentInChildren<TextMeshProUGUI>();
-                if (txt) txt.text = $"{tile.TileName}\n(Equip)";
-                btn.onClick.AddListener(() => EquipTile(index));
-            }
-
-            // Populate Active
-            for (var i = 0; i < GameManager.ActiveUpgrades.Count; i++)
-            {
-                var index = i;
-                var tile = GameManager.ActiveUpgrades[i];
-                var btnObj = Instantiate(_tileButtonPrefab, _activeContainer);
-                var btn = btnObj.GetComponent<Button>();
-                var txt = btnObj.GetComponentInChildren<TextMeshProUGUI>();
-                if (txt) txt.text = $"{tile.TileName}\n(Unequip)";
-                btn.onClick.AddListener(() => UnequipTile(index));
-            }
-        }
-
-        protected void BuyTile(UpgradeTile tile)
-        {
-            if (GameManager.SpendResources(tile.Cost))
-            {
-                GameManager.OwnedUpgrades.Add(tile);
-                SetDirty();
-            }
-        }
-
-        protected void EquipTile(int inventoryIndex)
-        {
-            if (GameManager.ActiveUpgrades.Count < GameManager.Data.MaxSlots)
-            {
-                var tile = GameManager.OwnedUpgrades[inventoryIndex];
-                GameManager.OwnedUpgrades.RemoveAt(inventoryIndex);
-                GameManager.ActiveUpgrades.Add(tile);
-                SetDirty();
-            }
-        }
-
-        protected void UnequipTile(int activeIndex)
-        {
-            var tile = GameManager.ActiveUpgrades[activeIndex];
-            GameManager.ActiveUpgrades.RemoveAt(activeIndex);
-            GameManager.OwnedUpgrades.Add(tile);
-            SetDirty();
-        }
-
-        protected void OnNextWave()
-        {
-            GameManager.NextWave();
         }
     }
 }

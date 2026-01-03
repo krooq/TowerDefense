@@ -11,12 +11,14 @@ namespace Krooq.PlanetDefense
         [SerializeField] private ProjectileStats _stats;
         [SerializeField, ReadOnly] private Vector3 _direction;
         [SerializeField, ReadOnly] private float _timer;
+
         protected GameManager GameManager => this.GetSingleton<GameManager>();
+        protected Rigidbody2D Rigidbody2D => this.GetCachedComponent<Rigidbody2D>();
 
         public ProjectileStats Stats => _stats;
 
 
-        public void Initialize(Vector3 direction, ProjectileStats stats)
+        public void Init(Vector3 direction, ProjectileStats stats)
         {
             _direction = direction;
             _stats = stats;
@@ -27,18 +29,15 @@ namespace Krooq.PlanetDefense
             transform.localScale = Vector3.one * stats.Size;
         }
 
-        protected void Update()
+        protected void FixedUpdate()
         {
             if (Stats == null) return;
 
-            var moveDist = Stats.Speed * Time.deltaTime;
-            transform.position += _direction * moveDist;
+            var moveDist = Stats.Speed * Time.fixedDeltaTime;
+            Rigidbody2D.MovePosition(Rigidbody2D.position + (Vector2)(_direction * moveDist));
 
-            _timer -= Time.deltaTime;
-            if (_timer <= 0)
-            {
-                GameManager.Despawn(gameObject);
-            }
+            _timer -= Time.fixedDeltaTime;
+            if (_timer <= 0) GameManager.Despawn(gameObject);
         }
 
         protected void OnTriggerEnter2D(Collider2D other)

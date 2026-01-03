@@ -34,6 +34,14 @@ namespace Krooq.PlanetDefense
             mousePos.z = 0f;
 
             var dir = (mousePos - _pivot.position).normalized;
+
+            // Restrict to upper semicircle
+            if (dir.y < 0)
+            {
+                dir.y = 0;
+                dir.x = Mathf.Sign(dir.x);
+            }
+
             var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f; // Assuming sprite points up
 
             _pivot.rotation = Quaternion.Lerp(_pivot.rotation, Quaternion.Euler(0, 0, angle), Time.deltaTime * GameManager.Data.RotationSpeed);
@@ -63,7 +71,7 @@ namespace Krooq.PlanetDefense
             TileSequence.RunChain(context, GameManager.ActiveUpgrades, GameManager);
 
             // Finalize
-            p.Initialize(context.Direction, context.Stats);
+            p.Init(context.Direction, context.Stats);
         }
     }
 }
