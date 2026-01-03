@@ -2,6 +2,7 @@ using UnityEngine;
 using Krooq.Core;
 using Krooq.Common;
 using Sirenix.OdinInspector;
+using System.Collections.Generic;
 
 namespace Krooq.PlanetDefense
 {
@@ -9,11 +10,15 @@ namespace Krooq.PlanetDefense
     {
         [SerializeField] private Transform _pivot;
         [SerializeField] private Transform _firePoint;
+        [SerializeField] private SpringTransform _recoilTransform;
+
+        [SerializeField] private List<GameObject> _fireEffects;
 
         [SerializeField, ReadOnly] private float _fireTimer;
         private Camera _cam;
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected InputManager InputManager => this.GetSingleton<InputManager>();
+        protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
 
         protected void Start()
         {
@@ -72,6 +77,16 @@ namespace Krooq.PlanetDefense
 
             // Finalize
             p.Init(context.Direction, context.Stats);
+
+            foreach (var effect in _fireEffects)
+            {
+                effect.SetActive(false);
+                effect.SetActive(true);
+            }
+
+            _recoilTransform.BumpPosition(_firePoint.localPosition - Vector3.up * 10f);
+            AudioManager.PlaySound(GameManager.Data.CannonFireSound);
+
         }
     }
 }

@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 
 namespace Krooq.PlanetDefense
 {
@@ -7,14 +8,14 @@ namespace Krooq.PlanetDefense
     public class GameData : ScriptableObject
     {
         [Header("Player Stats")]
-        [SerializeField] private int _startingResources = 100;
+        [SerializeField] private int _startingResources = 0;
         [SerializeField] private int _baseHealth = 10;
 
         [Header("Cannon")]
         [SerializeField] private float _fireRate = 0.5f;
         [SerializeField] private float _rotationSpeed = 10f;
-        [SerializeField] private float _projectileLifetime = 30f;
-        [SerializeField] private Projectile _projectilePrefab;
+        [SerializeField] private float _projectileLifetime = 30f;        [SerializeField] private float _recoilForce = 5f;        [SerializeField] private Projectile _projectilePrefab;
+        [SerializeField] private AudioResource _cannonFireSound;
 
         [Header("Meteors")]
         [SerializeField] private Meteor _meteorPrefab;
@@ -22,7 +23,7 @@ namespace Krooq.PlanetDefense
         [SerializeField] private float _meteorSpawnWidth = 16f;
         [SerializeField] private float _meteorBaseSpeed = 2f;
         [SerializeField] private int _meteorBaseHealth = 10;
-        [SerializeField] private int _resourcesPerMeteor = 10;
+        [SerializeField] private int _resourcesPerMeteor = 1;
 
         [Header("Shop")]
         [SerializeField] private List<UpgradeTile> _availableUpgrades;
@@ -30,12 +31,15 @@ namespace Krooq.PlanetDefense
         [SerializeField] private UpgradeTileUI _upgradeTilePrefab;
         [SerializeField] private UpgradeSlotUI _upgradeSlotPrefab;
 
+        [Header("Audio")]
+        [SerializeField] private AudioSource _audioSourcePrefab;
+
         public int StartingResources => _startingResources;
         public int BaseHealth => _baseHealth;
         public float FireRate => _fireRate;
         public float RotationSpeed => _rotationSpeed;
-        public float ProjectileLifetime => _projectileLifetime;
-        public Projectile ProjectilePrefab => _projectilePrefab;
+        public float ProjectileLifetime => _projectileLifetime;        public float RecoilForce => _recoilForce;        public Projectile ProjectilePrefab => _projectilePrefab;
+        public AudioResource CannonFireSound => _cannonFireSound;
         public Meteor MeteorPrefab => _meteorPrefab;
         public float MeteorSpawnHeight => _meteorSpawnHeight;
         public float MeteorSpawnWidth => _meteorSpawnWidth;
@@ -46,5 +50,6 @@ namespace Krooq.PlanetDefense
         public int MaxSlots => _maxSlots;
         public UpgradeTileUI UpgradeTilePrefab => _upgradeTilePrefab;
         public UpgradeSlotUI UpgradeSlotPrefab => _upgradeSlotPrefab;
+        public AudioSource AudioSourcePrefab => _audioSourcePrefab;
     }
 }

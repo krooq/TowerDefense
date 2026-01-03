@@ -629,8 +629,8 @@ Canvas:
   m_GameObject: {fileID: 408978902}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -640,7 +640,7 @@ Canvas:
   m_VertexColorAlwaysGammaSpace: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: 610060259
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &408978906
@@ -664,6 +664,360 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &458187146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 458187154}
+  - component: {fileID: 458187153}
+  - component: {fileID: 458187152}
+  - component: {fileID: 458187151}
+  - component: {fileID: 458187150}
+  - component: {fileID: 458187149}
+  - component: {fileID: 458187148}
+  - component: {fileID: 458187147}
+  m_Layer: 0
+  m_Name: CinemachineCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &458187147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458187146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d68394ff0deaba948873307b5fe5a801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MoreMountains.Tools::MoreMountains.FeedbacksForThirdParty.MMCinemachineFieldOfViewShaker
+  ChannelMode: 0
+  Channel: 0
+  MMChannelDefinition: {fileID: 0}
+  ShakeDuration: 0.5
+  PlayOnAwake: 0
+  PermanentShake: 0
+  Interruptible: 1
+  AlwaysResetTargetValuesAfterShake: 0
+  OnlyUseShakerValues: 0
+  CooldownBetweenShakes: 0
+  Shaking: 0
+  ForwardDirection: 1
+  TimescaleMode: 0
+  RelativeFieldOfView: 0
+  ShakeFieldOfView:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapFieldOfViewZero: 60
+  RemapFieldOfViewOne: 120
+--- !u!114 &458187148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458187146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ff80f834f6ca564da816a2f08bc75f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MoreMountains.Tools::MoreMountains.FeedbacksForThirdParty.MMCinemachineClippingPlanesShaker
+  ChannelMode: 0
+  Channel: 0
+  MMChannelDefinition: {fileID: 0}
+  ShakeDuration: 0.5
+  PlayOnAwake: 0
+  PermanentShake: 0
+  Interruptible: 1
+  AlwaysResetTargetValuesAfterShake: 0
+  OnlyUseShakerValues: 0
+  CooldownBetweenShakes: 0
+  Shaking: 0
+  ForwardDirection: 1
+  TimescaleMode: 0
+  RelativeClippingPlanes: 0
+  ShakeNear:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapNearZero: 0.3
+  RemapNearOne: 100
+  ShakeFar:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.5
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapFarZero: 1000
+  RemapFarOne: 1000
+--- !u!114 &458187149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458187146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8650a79a9f5e38449718559d1d6a2f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MoreMountains.Tools::MoreMountains.FeedbacksForThirdParty.MMCinemachinePriorityListener
+  TimescaleMode: 0
+  ChannelMode: 0
+  Channel: 0
+  MMChannelDefinition: {fileID: 0}
+--- !u!114 &458187150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458187146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51662a222e352d74a8ad12e5843f7501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MoreMountains.Tools::MoreMountains.FeedbacksForThirdParty.MMCinemachineZoom
+  ChannelMode: 0
+  Channel: 0
+  MMChannelDefinition: {fileID: 0}
+  Interruptable: 0
+  ZoomTween:
+    MMTweenDefinitionType: 1
+    MMTweenCurve: 4
+    Curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    Initialized: 0
+    ConditionPropertyName: 
+    EnumConditionPropertyName: 
+    EnumConditions: 0000000000000000000000000000000000000000000000000000000000000000
+  TestMode: 0
+  TestFieldOfView: 30
+  TestTransitionDuration: 0.1
+  TestDuration: 0.05
+  TestZoomButton: 0
+--- !u!114 &458187151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458187146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d66462bf720d28469c8db4b2e52720c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MoreMountains.Tools::MoreMountains.FeedbacksForThirdParty.MMCinemachineCameraShaker
+  ChannelMode: 0
+  Channel: 0
+  MMChannelDefinition: {fileID: 0}
+  DefaultShakeAmplitude: 0.5
+  DefaultShakeFrequency: 10
+  IdleAmplitude: 0
+  IdleFrequency: 1
+  LerpSpeed: 5
+  TestDuration: 0.3
+  TestAmplitude: 2
+  TestFrequency: 20
+  TestShakeButton: 0
+--- !u!114 &458187152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458187146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseListener
+  ApplyAfter: 2
+  ChannelMask: 1
+  Gain: 1
+  Use2DDistance: 0
+  UseCameraSpace: 1
+  SignalCombinationMode: 0
+  ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &458187153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458187146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 40
+    OrthographicSize: 40
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!4 &458187154
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458187146}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 30, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 625891846}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &470435550
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,6 +1246,270 @@ Transform:
   - {fileID: 2126100179}
   m_Father: {fileID: 625891846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &518809614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 518809615}
+  - component: {fileID: 518809616}
+  m_Layer: 0
+  m_Name: Screen Shake Shoot Feedback
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &518809615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518809614}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2126100179}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &518809616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 518809614}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6da43522623d4704e979466dc7650b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: MoreMountains.Tools::MoreMountains.Feedbacks.MMF_Player
+  Feedbacks: []
+  InitializationMode: 3
+  AutoInitialization: 1
+  SafeMode: 3
+  Direction: 0
+  AutoChangeDirectionOnEnd: 0
+  AutoPlayOnStart: 0
+  AutoPlayOnEnable: 1
+  ForceTimescaleMode: 0
+  ForcedTimescaleMode: 1
+  DurationMultiplier: 1
+  TimescaleMultiplier: 1
+  RandomizeDuration: 0
+  RandomDurationMultiplier: {x: 0.5, y: 1.5}
+  DisplayFullDurationDetails: 0
+  PlayerTimescaleMode: 0
+  OnlyPlayIfWithinRange: 0
+  RangeCenter: {fileID: 0}
+  RangeDistance: 5
+  UseRangeFalloff: 0
+  RangeFalloff:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapRangeFalloff: {x: 0, y: 1}
+  IgnoreRangeEvents: 0
+  CooldownDuration: 0
+  InitialDelay: 0
+  CanPlay: 1
+  CanPlayWhileAlreadyPlaying: 1
+  ChanceToPlay: 100
+  FeedbacksIntensity: 1
+  Events:
+    TriggerMMFeedbacksEvents: 0
+    TriggerUnityEvents: 1
+    OnPlay:
+      m_PersistentCalls:
+        m_Calls: []
+    OnPause:
+      m_PersistentCalls:
+        m_Calls: []
+    OnStop:
+      m_PersistentCalls:
+        m_Calls: []
+    OnResume:
+      m_PersistentCalls:
+        m_Calls: []
+    OnChangeDirection:
+      m_PersistentCalls:
+        m_Calls: []
+    OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRestoreInitialValues:
+      m_PersistentCalls:
+        m_Calls: []
+    OnSkipToTheEnd:
+      m_PersistentCalls:
+        m_Calls: []
+    OnInitializationComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    OnEnable:
+      m_PersistentCalls:
+        m_Calls: []
+    OnDisable:
+      m_PersistentCalls:
+        m_Calls: []
+  DebugActive: 0
+  InScriptDrivenPause: 0
+  FeedbacksList:
+  - rid: 7659276120402690345
+  KeepPlayModeChanges: 0
+  PerformanceMode: 0
+  RestoreInitialValuesOnDisable: 0
+  StopFeedbacksOnDisable: 0
+  PlayCount: 0
+  MMF_ChannelMode: 0
+  MMF_Channel: 0
+  MMF_ChannelDefinition: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: 7659276120402690345
+      type: {class: MMF_CinemachineImpulse, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Tools}
+      data:
+        Active: 1
+        UniqueID: -1494872037
+        Label: Cinemachine Impulse
+        OriginalLabel: Cinemachine Impulse
+        ChannelMode: 0
+        Channel: 0
+        MMChannelDefinition: {fileID: 0}
+        Chance: 100
+        Timing:
+          TimescaleMode: 0
+          ExcludeFromHoldingPauses: 0
+          ContributeToTotalDuration: 1
+          InitialDelay: 0
+          CooldownDuration: 0
+          InterruptsOnStop: 1
+          NumberOfRepeats: 0
+          RepeatForever: 0
+          DelayBetweenRepeats: 1
+          PlayCount: 97
+          LimitPlayCount: 0
+          MaxPlayCount: 3
+          SetPlayCountToZeroOnReset: 0
+          MMFeedbacksDirectionCondition: 0
+          PlayDirection: 0
+          ConstantIntensity: 0
+          UseIntensityInterval: 0
+          IntensityIntervalMin: 0
+          IntensityIntervalMax: 0
+          Sequence: {fileID: 0}
+          TrackID: 0
+          Quantized: 0
+          TargetBPM: 120
+        AutomatedTargetAcquisition:
+          Mode: 0
+          ChildIndex: 0
+        RandomizeOutput: 0
+        RandomMultiplier: {x: 0.8, y: 1}
+        RandomizeDuration: 0
+        RandomDurationMultiplier: {x: 0.5, y: 2}
+        UseRange: 0
+        RangeDistance: 5
+        UseRangeFalloff: 0
+        RangeFalloff:
+          serializedVersion: 2
+          m_Curve:
+          - serializedVersion: 3
+            time: 0
+            value: 1
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          - serializedVersion: 3
+            time: 1
+            value: 0
+            inSlope: 0
+            outSlope: 0
+            tangentMode: 0
+            weightedMode: 0
+            inWeight: 0
+            outWeight: 0
+          m_PreInfinity: 2
+          m_PostInfinity: 2
+          m_RotationOrder: 4
+        RemapRangeFalloff: {x: 0, y: 1}
+        AutomaticShakerSetupButton:
+          ButtonText: Automatic Shaker Setup
+        Owner: {fileID: 518809616}
+        DebugActive: 0
+        m_ImpulseDefinition:
+          ImpulseChannel: 1
+          ImpulseShape: 0
+          CustomImpulseShape:
+            serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          ImpulseDuration: 0.2
+          ImpulseType: 3
+          DissipationRate: 0
+          RawSignal: {fileID: 11400000, guid: bcf6524ce6451f34cb7106d0c00da9a5, type: 2}
+          AmplitudeGain: 0.5
+          FrequencyGain: 5
+          RepeatMode: 0
+          Randomize: 1
+          TimeEnvelope:
+            AttackShape:
+              serializedVersion: 2
+              m_Curve: []
+              m_PreInfinity: 2
+              m_PostInfinity: 2
+              m_RotationOrder: 4
+            DecayShape:
+              serializedVersion: 2
+              m_Curve: []
+              m_PreInfinity: 2
+              m_PostInfinity: 2
+              m_RotationOrder: 4
+            AttackTime: 0
+            SustainTime: 0.1
+            DecayTime: 0.1
+            ScaleWithImpact: 1
+            HoldForever: 0
+          ImpactRadius: 100
+          DirectionMode: 1
+          DissipationMode: 2
+          DissipationDistance: 100
+          PropagationSpeed: 343
+        Velocity: {x: 0, y: 5, z: 0}
+        ClearImpulseOnStop: 0
+        DrawGizmos: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -904,6 +1522,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -932,8 +1551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RenderShadows: 1
-  m_RequiresDepthTextureOption: 2
-  m_RequiresOpaqueTextureOption: 2
+  m_RequiresDepthTextureOption: 1
+  m_RequiresOpaqueTextureOption: 1
   m_CameraType: 0
   m_Cameras: []
   m_RendererIndex: -1
@@ -994,9 +1613,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 34
+  near clip plane: 0.1
+  far clip plane: 5000
+  field of view: 40
   orthographic: 1
   orthographic size: 40
   m_Depth: -1
@@ -1029,6 +1648,38 @@ Transform:
   m_Children: []
   m_Father: {fileID: 625891846}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineBrain
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 2
+  BlendUpdateMethod: 1
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 1
+    Time: 2
+    CustomCurve:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  CustomBlends: {fileID: 0}
 --- !u!114 &585376450
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,11 +1724,62 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1895776356}
+  - {fileID: 780407922}
   - {fileID: 519420032}
+  - {fileID: 458187154}
   - {fileID: 408978906}
   - {fileID: 479340703}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &780407921
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 780407922}
+  - component: {fileID: 780407923}
+  m_Layer: 0
+  m_Name: Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &780407922
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780407921}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 625891846}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &780407923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 780407921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 286a0874334672d4c8db33c9888e0cfb, type: 2}
 --- !u!114 &794850629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,6 +1827,7 @@ Transform:
   - {fileID: 1671999584}
   - {fileID: 471246412}
   - {fileID: 1447995062}
+  - {fileID: 1565090707}
   - {fileID: 1904232934}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1156,6 +1859,68 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_ActionId: 24908448-c609-4bc3-a128-ea258674378a
+--- !u!1001 &1029137761
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1485155204}
+    m_Modifications:
+    - target: {fileID: 160582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_Name
+      value: MuzzleFlash4
+      objectReference: {fileID: 0}
+    - target: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+--- !u!4 &1029137762 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 460582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+  m_PrefabInstance: {fileID: 1029137761}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1055587109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,7 +2561,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1029137762}
   m_Father: {fileID: 1707487642}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1510782250
@@ -2012,6 +2778,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
   m_Asset: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_ActionId: 32b35790-4ed0-4e9a-aa41-69ac6d629449
+--- !u!1 &1565090706
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565090707}
+  - component: {fileID: 1565090708}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1565090707
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565090706}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 811296318}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1565090708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565090706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15a0da8fdaff7054489fafb2c1cf3017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.AudioManager
 --- !u!114 &1589095881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2082,6 +2892,7 @@ GameObject:
   - component: {fileID: 1707487645}
   - component: {fileID: 1707487644}
   - component: {fileID: 1707487643}
+  - component: {fileID: 1707487646}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -2208,6 +3019,260 @@ MonoBehaviour:
     spacing: 4
     offset: 0
     shapeModifier: 1
+--- !u!114 &1707487646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707487641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a01e902c95b341dbb4af68d7158c44b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Krooq.Common::Krooq.Common.SpringTransform
+  _isLocal: 1
+  _positionSpring:
+    SeparateAxis: 0
+    UnifiedSpring:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 1
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+    SpringX:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 0
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+    SpringY:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 0
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+    SpringZ:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 0
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+  _rotationSpring:
+    SeparateAxis: 0
+    UnifiedSpring:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 1
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+    SpringX:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 0
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+    SpringY:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 0
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+    SpringZ:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 0
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+  _scaleSpring:
+    SeparateAxis: 0
+    UnifiedSpring:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 1
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+    SpringX:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 0
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+    SpringY:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 0
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+    SpringZ:
+      Damping: 0.4
+      Frequency: 6
+      ClampSettings:
+        ClampMin: 0
+        ClampMinValue: 0
+        ClampMinInitial: 0
+        ClampMinBounce: 0
+        ClampMax: 0
+        ClampMaxValue: 10
+        ClampMaxInitial: 0
+        ClampMaxBounce: 0
+      SpringDebug:
+        CurrentValue: 0
+        TargetValue: 0
+      UnifiedSpring: 0
+      CurrentValueDisplay: 0
+      TargetValueDisplay: 0
+      VelocityDisplay: 0
+  _positionReachedTolerance: 0.01
+  _rotationReachedTolerance: 0.01
+  _scaleReachedTolerance: 0.01
+  _onTargetReached:
+    m_PersistentCalls:
+      m_Calls: []
+  _hasReachedTarget: 0
 --- !u!1 &1740077604
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,6 +3769,11 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &2040713731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 160582, guid: 54c6cbb0345b562429527ec1b4f6cb37, type: 3}
+  m_PrefabInstance: {fileID: 1029137761}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2125967429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2828,6 +3898,7 @@ Transform:
   m_Children:
   - {fileID: 1075298570}
   - {fileID: 5716432}
+  - {fileID: 518809615}
   m_Father: {fileID: 479340703}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2126100180
@@ -2844,6 +3915,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.CannonController
   _pivot: {fileID: 5716432}
   _firePoint: {fileID: 1485155204}
+  _recoilTransform: {fileID: 1707487646}
+  _fireEffects:
+  - {fileID: 518809614}
+  - {fileID: 2040713731}
   _fireTimer: 0
 --- !u!1 &2140718769
 GameObject:
