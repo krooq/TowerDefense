@@ -14,21 +14,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.GameData
   _startingResources: 0
   _baseHealth: 10
-  _fireRate: 0.5
+  _availableWeapons:
+  - {fileID: 11400000, guid: c57ec0eb5af177447a7316823cca26b2, type: 2}
+  _defaultWeapon: {fileID: 11400000, guid: c57ec0eb5af177447a7316823cca26b2, type: 2}
+  _damageStat: {fileID: 11400000, guid: a6594e0ea2d6c7c4e9c6a00a6ee713d6, type: 2}
+  _speedStat: {fileID: 11400000, guid: ca8cd83cafaba674e920021faa0df61b, type: 2}
+  _sizeStat: {fileID: 11400000, guid: 8027cbcacae69a847bafe660b0af87b3, type: 2}
+  _pierceStat: {fileID: 11400000, guid: 695c8c57fc377714bb4ba84a7522b660, type: 2}
+  _lifetimeStat: {fileID: 11400000, guid: ca8cd83cafaba674e920021faa0df61b, type: 2}
+  _explosionRadiusStat: {fileID: 11400000, guid: bd1135e781d2dcf46b1115f471faa193, type: 2}
+  _explosionDamageMultStat: {fileID: 11400000, guid: 8ad50d3cf60cc684a91df6b61ee16705, type: 2}
+  _splitCountStat: {fileID: 11400000, guid: 564b00be1b485c840801156f08a5422c, type: 2}
   _rotationSpeed: 10
-  _projectileLifetime: 30
-  _recoilForce: 5
-  _projectilePrefab: {fileID: 8491378065012396037, guid: 0ac105268fcd8d548aa6cf0f11ccd45b, type: 3}
-  _cannonFireSound: {fileID: 6418180475301049370, guid: 0ca959c278502a744818b3e75e57799c, type: 2}
   _meteorPrefab: {fileID: -3283402286077190664, guid: 52dd661294498034e83e684275db9a7e, type: 3}
   _meteorSpawnHeight: 10
   _meteorSpawnWidth: 16
   _meteorBaseSpeed: 2
   _meteorBaseHealth: 10
   _resourcesPerMeteor: 1
-  _availableUpgrades:
-  - {fileID: 11400000, guid: 0e7b2a3db4534b246bfab902a196e35e, type: 2}
+  _availableModifiers:
+  - {fileID: 11400000, guid: 8ce0efa9b95f53c4cad7739ad4eecdee, type: 2}
   _maxSlots: 5
-  _upgradeTilePrefab: {fileID: 3834534628122088379, guid: fa161c7ab58755646bfa73ebbba2fe04, type: 3}
-  _upgradeSlotPrefab: {fileID: 1065834685477414293, guid: f2b82f5477973cd4d84159641376818d, type: 3}
+  _modifierTilePrefab: {fileID: 3834534628122088379, guid: fa161c7ab58755646bfa73ebbba2fe04, type: 3}
+  _modifierSlotPrefab: {fileID: 1065834685477414293, guid: f2b82f5477973cd4d84159641376818d, type: 3}
   _audioSourcePrefab: {fileID: 6661895296412262151, guid: 60f5935b6112d794bbd5632723a85de9, type: 3}

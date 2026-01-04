@@ -4,6 +4,7 @@ using Krooq.Core;
 using Krooq.Common;
 using Cysharp.Threading.Tasks;
 using Sirenix.OdinInspector;
+using System.Linq;
 
 namespace Krooq.PlanetDefense
 {
@@ -24,13 +25,15 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private GameState _currentState;
         [SerializeField, ReadOnly] private int _baseHealth;
         [SerializeField, ReadOnly] private HashSet<Meteor> _activeMeteors = new();
-        [SerializeField, ReadOnly] private List<Upgrade> _activeUpgrades = new();
+        [SerializeField, ReadOnly] private List<Modifier> _activeModifiers = new();
+        [SerializeField, ReadOnly] private ProjectileWeaponData _selectedWeapon;
 
         public GameData Data => _gameData;
         public int Resources => _currentResources;
         public GameState State => _currentState;
 
-        public List<Upgrade> ActiveUpgrades => _activeUpgrades;
+        public IEnumerable<Modifier> ActiveModifiers => _activeModifiers.Where(m => m != null);
+        public ProjectileWeaponData SelectedWeapon => _selectedWeapon;
 
 
         protected MultiGameObjectPool Pool => this.GetSingleton<MultiGameObjectPool>();
@@ -55,6 +58,8 @@ namespace Krooq.PlanetDefense
             {
                 _currentResources = _gameData.StartingResources;
                 _baseHealth = _gameData.BaseHealth;
+                _selectedWeapon = _gameData.DefaultWeapon;
+                _activeModifiers = new List<Modifier>(new Modifier[_gameData.MaxSlots]);
             }
         }
 
@@ -68,9 +73,10 @@ namespace Krooq.PlanetDefense
             _currentResources = _gameData.StartingResources;
             _currentWave = 1;
             _baseHealth = _gameData.BaseHealth;
-            ActiveUpgrades.Clear();
 
-            // Add some default upgrades for testing if needed, or let player buy them
+            for (int i = 0; i < _activeModifiers.Count; i++) _activeModifiers[i] = null;
+
+            // Add some default modifiers for testing if needed, or let player buy them
 
             StartWave();
         }
@@ -123,13 +129,36 @@ namespace Krooq.PlanetDefense
             Debug.Log("Game Over");
         }
 
-        public Projectile SpawnProjectile() => Pool.Get(_gameData.ProjectilePrefab);
+        public void SelectWeapon(ProjectileWeaponData weapon)
+        {
+            _selectedWeapon = weapon;
+        }
+
+        public void SetModifier(int index, Modifier modifier)
+        {
+            if (index >= 0 && index < _activeModifiers.Count)
+            {
+                var oldModifier = _activeModifiers[index];
+                if (oldModifier != null)
+                {
+                    AddResources(oldModifier.Cost / 2);
+                }
+
+                _activeModifiers[index] = modifier;
+            }
+        }
+
+        public Projectile SpawnProjectile()
+        {
+            if (_selectedWeapon == null || _selectedWeapon.ProjectilePrefab == null) return null;
+            return Pool.Get(_selectedWeapon.ProjectilePrefab);
+        }
 
         public Meteor SpawnMeteor() => Pool.Get(_gameData.MeteorPrefab);
 
-        public UpgradeTileUI SpawnUpgradeTileUI(UpgradeTileUI prefab) => Pool.Get(prefab);
+        public ModifierTileUI SpawnModifierTileUI(ModifierTileUI prefab) => Pool.Get(prefab);
 
-        public UpgradeSlotUI SpawnUpgradeSlotUI(UpgradeSlotUI prefab) => Pool.Get(prefab);
+        public ModifierSlotUI SpawnModifierSlotUI(ModifierSlotUI prefab) => Pool.Get(prefab);
 
         public void Despawn(GameObject obj) => Pool.Release(obj);
         public void Despawn(Component obj) => Pool.Release(obj.gameObject);

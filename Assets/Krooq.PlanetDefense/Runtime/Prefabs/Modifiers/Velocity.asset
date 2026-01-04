@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4af46a25b61c7c94caa53a95f6d99e7f, type: 3}
+  m_Name: Velocity
+  m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.Modifier
+  _tileName: Velocity
+  _cost: 5
+  _tileColor: {r: 1, g: 1, b: 1, a: 1}
+  _effects:
+  - _trigger: 0
+    _timerDuration: 0
+    _statModifiers:
+    - _statData: {fileID: 11400000, guid: ca8cd83cafaba674e920021faa0df61b, type: 2}
+      _value: 5
+      _type: 0
+    _tagsToAdd: []
+    _tagsToRemove: []
+    _prefabToSpawn: {fileID: 0}
+    _spawnCount: 1

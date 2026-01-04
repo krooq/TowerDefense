@@ -23,10 +23,11 @@ namespace Krooq.PlanetDefense
 
         public async void StartWave(int waveNumber)
         {
+            var waveIndex = waveNumber - 1;
             _isWaveActive = true;
-            var meteorCount = waveNumber * 5 + 5;
-            var spawnRate = Mathf.Max(0.2f, 2f - (waveNumber * 0.1f));
-
+            var data = GameManager.Data;
+            var meteorCount = data.BaseMeteorCount + (waveIndex * data.MeteorsPerWave);
+            var spawnRate = Mathf.Max(data.MinSpawnRate, data.BaseSpawnRate - (waveIndex * data.SpawnRateDecreasePerWave));
             for (var i = 0; i < meteorCount; i++)
             {
                 if (GameManager.State != GameState.Playing) break;

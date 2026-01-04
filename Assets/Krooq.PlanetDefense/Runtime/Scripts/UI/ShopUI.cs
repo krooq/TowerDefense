@@ -14,7 +14,7 @@ namespace Krooq.PlanetDefense
 
         [SerializeField, ReadOnly] private bool _dirty = true;
 
-        protected UpgradeUI UpgradeUI => this.GetSingleton<UpgradeUI>();
+        protected ModifierUI ModifierUI => this.GetSingleton<ModifierUI>();
         protected GameManager GameManager => this.GetSingleton<GameManager>();
 
         protected CanvasGroup CanvasGroup => this.GetCachedComponent<CanvasGroup>();
@@ -56,14 +56,14 @@ namespace Krooq.PlanetDefense
             for (var i = _itemContainer.childCount - 1; i >= 0; i--) GameManager.Despawn(_itemContainer.GetChild(i).gameObject);
 
             // Refresh Active Slots
-            if (UpgradeUI != null) UpgradeUI.Refresh();
+            if (ModifierUI != null) ModifierUI.Refresh();
 
             // Populate Available
-            if (GameManager.Data.AvailableUpgrades != null)
+            if (GameManager.Data.AvailableModifiers != null)
             {
-                foreach (var tile in GameManager.Data.AvailableUpgrades)
+                foreach (var tile in GameManager.Data.AvailableModifiers)
                 {
-                    var ui = GameManager.SpawnUpgradeTileUI(GameManager.Data.UpgradeTilePrefab);
+                    var ui = GameManager.SpawnModifierTileUI(GameManager.Data.ModifierTilePrefab);
                     ui.transform.SetParent(_itemContainer, false);
                     ui.Init(tile, true);
                 }

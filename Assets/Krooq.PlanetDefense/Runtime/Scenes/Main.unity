@@ -1121,7 +1121,7 @@ GameObject:
   - component: {fileID: 470435554}
   - component: {fileID: 470435553}
   m_Layer: 5
-  m_Name: Upgrade Panel
+  m_Name: Modifiers Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3712,7 +3712,7 @@ GameObject:
   - component: {fileID: 1740077607}
   - component: {fileID: 1740077606}
   m_Layer: 5
-  m_Name: Upgrades UI
+  m_Name: Modifiers UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3736,7 +3736,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
   m_AnchoredPosition: {x: 0, y: 70}
-  m_SizeDelta: {x: 600, y: 100}
+  m_SizeDelta: {x: 580, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &1740077606
 CanvasGroup:
@@ -3759,10 +3759,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1740077604}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e7e177dd15136a47bc98c61bc6707a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3307e5d739f08404c89239b60348a93a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.UpgradeUI
-  _upgradeSlotContainer: {fileID: 2022510809}
+  _modifierSlotContainer: {fileID: 2022510809}
 --- !u!1 &1776426766
 GameObject:
   m_ObjectHideFlags: 0
@@ -4109,7 +4109,8 @@ MonoBehaviour:
   _currentWave: 1
   _currentState: 0
   _baseHealth: 0
-  _activeUpgrades: []
+  _activeModifiers: []
+  _selectedWeapon: {fileID: 0}
 --- !u!114 &1917920411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4179,7 +4180,7 @@ GameObject:
   - component: {fileID: 2022510809}
   - component: {fileID: 2022510810}
   m_Layer: 5
-  m_Name: Upgrade Slots
+  m_Name: Modifier Slots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

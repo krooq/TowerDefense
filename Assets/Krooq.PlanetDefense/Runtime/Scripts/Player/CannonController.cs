@@ -58,25 +58,26 @@ namespace Krooq.PlanetDefense
 
             if (InputManager.ClickAction.IsPressed() && _fireTimer <= 0)
             {
-                Fire();
-                _fireTimer = GameManager.Data.FireRate;
+                if (GameManager.SelectedWeapon != null)
+                {
+                    Fire();
+                    _fireTimer = GameManager.SelectedWeapon.FireRate;
+                }
             }
         }
 
         protected void Fire()
         {
             var p = GameManager.SpawnProjectile();
+            if (p == null) return;
+
             p.transform.SetPositionAndRotation(_firePoint.position, _firePoint.rotation);
 
-            // Base Stats
-            var stats = p.Stats.Clone();
-
-            var context = new ProjectileContext(p, _firePoint.position, _firePoint.up, stats, true);
-
-            UpgradeSequence.RunChain(context, GameManager.ActiveUpgrades, GameManager);
+            // Get Modifiers
+            var modifiers = GameManager.ActiveModifiers;
 
             // Finalize
-            p.Init(context.Direction, context.Stats);
+            p.Init(_firePoint.up, GameManager.SelectedWeapon, modifiers);
 
             foreach (var effect in _fireEffects)
             {
@@ -85,7 +86,7 @@ namespace Krooq.PlanetDefense
             }
 
             _recoilTransform.BumpPosition(_firePoint.localPosition - Vector3.up * 10f);
-            AudioManager.PlaySound(GameManager.Data.CannonFireSound);
+            if (GameManager.SelectedWeapon.FireSound != null) AudioManager.PlaySound(GameManager.SelectedWeapon.FireSound);
         }
     }
 }

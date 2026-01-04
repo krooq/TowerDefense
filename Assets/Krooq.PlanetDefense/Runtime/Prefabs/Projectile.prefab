@@ -47,13 +47,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d380c23194656418044ee6cf67cb4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.Projectile
-  _stats:
-    _damage: 10
-    _speed: 10
-    _size: 1
-    _pierceCount: 0
   _direction: {x: 0, y: 0, z: 0}
   _timer: 0
+  _damage:
+    _statData: {fileID: 0}
+    _baseValue: 0
+    _modifiers: []
+  _speed:
+    _statData: {fileID: 0}
+    _baseValue: 0
+    _modifiers: []
+  _size:
+    _statData: {fileID: 0}
+    _baseValue: 0
+    _modifiers: []
+  _pierce:
+    _statData: {fileID: 0}
+    _baseValue: 0
+    _modifiers: []
+  _lifetime:
+    _statData: {fileID: 0}
+    _baseValue: 0
+    _modifiers: []
+  _explosionRadius:
+    _statData: {fileID: 0}
+    _baseValue: 0
+    _modifiers: []
+  _explosionDamageMult:
+    _statData: {fileID: 0}
+    _baseValue: 0
+    _modifiers: []
+  _splitCount:
+    _statData: {fileID: 0}
+    _baseValue: 0
+    _modifiers: []
 --- !u!70 &2424604694856499707
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
