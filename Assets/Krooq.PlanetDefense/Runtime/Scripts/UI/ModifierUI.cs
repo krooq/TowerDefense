@@ -37,7 +37,8 @@ namespace Krooq.PlanetDefense
                 {
                     var slot = _modifierSlotContainer.GetChild(i);
                     var ui = GameManager.SpawnModifierTileUI(GameManager.Data.ModifierTilePrefab);
-                    ui.transform.SetParent(slot, false);
+                    ui.transform.SetParent(slot);
+                    ui.transform.localPosition = Vector3.zero;
                     ui.Init(modifier, false);
                 }
             }

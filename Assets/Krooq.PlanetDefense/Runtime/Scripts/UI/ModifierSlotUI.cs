@@ -28,6 +28,7 @@ namespace Krooq.PlanetDefense
 
         public void OnDrop(PointerEventData eventData)
         {
+            if (ShopUI) ShopUI.SetDirty();
             if (eventData.pointerDrag != null && eventData.pointerDrag.TryGetComponent<ModifierTileUI>(out var tileUI))
             {
                 // Handle Drop Logic
@@ -45,9 +46,6 @@ namespace Krooq.PlanetDefense
 
                         GameManager.SetModifier(_slotIndex, tileUI.Modifier);
 
-                        // Refresh UI handled by ShopUI Update loop
-                        // But we should probably trigger an event or set dirty
-                        if (ShopUI) ShopUI.SetDirty();
                         var modifierUI = this.GetSingleton<ModifierUI>();
                         if (modifierUI) modifierUI.Refresh();
                     }

@@ -21,11 +21,13 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private Stat _explosionRadius;
         [SerializeField, ReadOnly] private Stat _explosionDamageMult;
         [SerializeField, ReadOnly] private Stat _splitCount;
+        [SerializeField, ReadOnly] private Stat _fireRate;
 
         private HashSet<string> _tags = new();
         private List<Modifier> _modifiers = new();
 
         protected GameManager GameManager => this.GetSingleton<GameManager>();
+        protected MultiGameObjectPool Pool => this.GetSingleton<MultiGameObjectPool>();
         protected Rigidbody2D Rigidbody2D => this.GetCachedComponent<Rigidbody2D>();
 
         public float Damage => _damage.Value;
@@ -33,6 +35,7 @@ namespace Krooq.PlanetDefense
         public float Size => _size.Value;
         public int PierceCount => (int)_pierce.Value;
         public float Lifetime => _lifetime.Value;
+        public float FireRate => _fireRate.Value;
 
         public void Init(Vector3 direction, ProjectileWeaponData weaponData, IEnumerable<Modifier> modifiers)
         {
@@ -46,6 +49,7 @@ namespace Krooq.PlanetDefense
             _size = new Stat().WithBaseValue(weaponData.BaseSize);
             _pierce = new Stat().WithBaseValue(weaponData.BasePierce);
             _lifetime = new Stat().WithBaseValue(weaponData.BaseLifetime);
+            _fireRate = new Stat().WithBaseValue(weaponData.FireRate);
 
             // Initialize Optional Stats (default to 0 or 1 as appropriate)
             _explosionRadius = new Stat().WithBaseValue(0f);
@@ -77,6 +81,7 @@ namespace Krooq.PlanetDefense
             else if (modifier.StatData == GameManager.Data.ExplosionRadiusStat) _explosionRadius.AddModifier(modifier);
             else if (modifier.StatData == GameManager.Data.ExplosionDamageMultStat) _explosionDamageMult.AddModifier(modifier);
             else if (modifier.StatData == GameManager.Data.SplitCountStat) _splitCount.AddModifier(modifier);
+            else if (modifier.StatData == GameManager.Data.FireRateStat) _fireRate.AddModifier(modifier);
         }
 
         public void AddTag(string tag) => _tags.Add(tag);
@@ -95,7 +100,8 @@ namespace Krooq.PlanetDefense
 
             for (int i = 0; i < count; i++)
             {
-                Instantiate(prefab, transform.position, Quaternion.identity);
+                var obj = Pool.Get(prefab);
+                obj.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
             }
         }
 

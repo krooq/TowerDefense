@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Krooq.PlanetDefense
 {
-    public class CannonController : MonoBehaviour
+    public class PlayerController : MonoBehaviour
     {
         [SerializeField] private Transform _pivot;
         [SerializeField] private Transform _firePoint;
@@ -29,8 +29,15 @@ namespace Krooq.PlanetDefense
         {
             if (GameManager.State != GameState.Playing) return;
 
+            HandleMovement();
             HandleAiming();
             HandleFiring();
+        }
+
+        protected void HandleMovement()
+        {
+            var moveInput = InputManager.MoveAction.ReadValue<Vector2>();
+            transform.Translate(GameManager.Data.MoveSpeed * moveInput.x * Time.deltaTime * Vector3.right);
         }
 
         protected void HandleAiming()
@@ -61,7 +68,6 @@ namespace Krooq.PlanetDefense
                 if (GameManager.SelectedWeapon != null)
                 {
                     Fire();
-                    _fireTimer = GameManager.SelectedWeapon.FireRate;
                 }
             }
         }
@@ -78,6 +84,9 @@ namespace Krooq.PlanetDefense
 
             // Finalize
             p.Init(_firePoint.up, GameManager.SelectedWeapon, modifiers);
+
+            // Set Fire Timer based on projectile stat
+            _fireTimer = p.FireRate;
 
             foreach (var effect in _fireEffects)
             {

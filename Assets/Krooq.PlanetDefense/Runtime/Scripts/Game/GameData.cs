@@ -19,6 +19,7 @@ namespace Krooq.PlanetDefense
         [Header("Projectile Stats")]
         [SerializeField] private StatData _damageStat;
         [SerializeField] private StatData _speedStat;
+        [SerializeField] private StatData _fireRateStat;
         [SerializeField] private StatData _sizeStat;
         [SerializeField] private StatData _pierceStat;
         [SerializeField] private StatData _lifetimeStat;
@@ -27,6 +28,7 @@ namespace Krooq.PlanetDefense
         [SerializeField] private StatData _splitCountStat;
 
         [Header("Cannon")]
+        [SerializeField] private float _moveSpeed = 5f;
         [SerializeField] private float _rotationSpeed = 10f;
 
         [Header("Meteors")]
@@ -60,6 +62,7 @@ namespace Krooq.PlanetDefense
 
         public StatData DamageStat => _damageStat;
         public StatData SpeedStat => _speedStat;
+        public StatData FireRateStat => _fireRateStat;
         public StatData SizeStat => _sizeStat;
         public StatData PierceStat => _pierceStat;
         public StatData LifetimeStat => _lifetimeStat;
@@ -67,6 +70,7 @@ namespace Krooq.PlanetDefense
         public StatData ExplosionDamageMultStat => _explosionDamageMultStat;
         public StatData SplitCountStat => _splitCountStat;
 
+        public float MoveSpeed => _moveSpeed;
         public float RotationSpeed => _rotationSpeed;
 
         public Meteor MeteorPrefab => _meteorPrefab;

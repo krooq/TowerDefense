@@ -67,25 +67,10 @@ namespace Krooq.PlanetDefense
 
         public void Apply(Projectile projectile)
         {
-            foreach (var statMod in _statModifiers)
-            {
-                projectile.AddStatModifier(statMod);
-            }
-
-            foreach (var tag in _tagsToAdd)
-            {
-                projectile.AddTag(tag);
-            }
-
-            foreach (var tag in _tagsToRemove)
-            {
-                projectile.RemoveTag(tag);
-            }
-
-            if (_prefabToSpawn != null)
-            {
-                projectile.SpawnChild(_prefabToSpawn, _spawnCount);
-            }
+            foreach (var statMod in _statModifiers) projectile.AddStatModifier(statMod);
+            foreach (var tag in _tagsToAdd) projectile.AddTag(tag);
+            foreach (var tag in _tagsToRemove) projectile.RemoveTag(tag);
+            if (_prefabToSpawn != null) projectile.SpawnChild(_prefabToSpawn, _spawnCount);
         }
     }
 }

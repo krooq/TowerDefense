@@ -81,6 +81,10 @@ MonoBehaviour:
     _statData: {fileID: 0}
     _baseValue: 0
     _modifiers: []
+  _fireRate:
+    _statData: {fileID: 0}
+    _baseValue: 0
+    _modifiers: []
 --- !u!70 &2424604694856499707
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
