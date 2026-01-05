@@ -14,26 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.GameData
   _startingResources: 0
   _baseHealth: 10
+  _startingModifiers:
+  - {fileID: 11400000, guid: ed1f61c40eed7cb47b6e4121301d9dac, type: 2}
   _availableWeapons:
   - {fileID: 11400000, guid: c57ec0eb5af177447a7316823cca26b2, type: 2}
   _defaultWeapon: {fileID: 11400000, guid: c57ec0eb5af177447a7316823cca26b2, type: 2}
   _damageStat: {fileID: 11400000, guid: a6594e0ea2d6c7c4e9c6a00a6ee713d6, type: 2}
   _speedStat: {fileID: 11400000, guid: ca8cd83cafaba674e920021faa0df61b, type: 2}
+  _fireRateStat: {fileID: 11400000, guid: 9b07f13ae7c0ab74482920703c1ca920, type: 2}
   _sizeStat: {fileID: 11400000, guid: 8027cbcacae69a847bafe660b0af87b3, type: 2}
   _pierceStat: {fileID: 11400000, guid: 695c8c57fc377714bb4ba84a7522b660, type: 2}
-  _lifetimeStat: {fileID: 11400000, guid: ca8cd83cafaba674e920021faa0df61b, type: 2}
+  _lifetimeStat: {fileID: 11400000, guid: fc66210bce89fe147929761e0ca3d840, type: 2}
   _explosionRadiusStat: {fileID: 11400000, guid: bd1135e781d2dcf46b1115f471faa193, type: 2}
   _explosionDamageMultStat: {fileID: 11400000, guid: 8ad50d3cf60cc684a91df6b61ee16705, type: 2}
   _splitCountStat: {fileID: 11400000, guid: 564b00be1b485c840801156f08a5422c, type: 2}
+  _moveSpeed: 5
   _rotationSpeed: 10
-  _meteorPrefab: {fileID: -3283402286077190664, guid: 52dd661294498034e83e684275db9a7e, type: 3}
-  _meteorSpawnHeight: 10
-  _meteorSpawnWidth: 16
-  _meteorBaseSpeed: 2
-  _meteorBaseHealth: 10
-  _resourcesPerMeteor: 1
+  _threatPrefab: {fileID: -3283402286077190664, guid: 52dd661294498034e83e684275db9a7e, type: 3}
+  _threatSpawnHeight: 10
+  _threatSpawnWidth: 16
+  _threatBaseSpeed: 2
+  _threatBaseHealth: 10
+  _resourcesPerThreat: 1
+  _baseWaveSize: 5
+  _threatsPerWave: 5
+  _baseSpawnRate: 2
+  _spawnRateDecreasePerWave: 0.1
+  _minSpawnRate: 0.2
   _availableModifiers:
   - {fileID: 11400000, guid: 8ce0efa9b95f53c4cad7739ad4eecdee, type: 2}
+  - {fileID: 11400000, guid: ed1f61c40eed7cb47b6e4121301d9dac, type: 2}
   _maxSlots: 5
   _modifierTilePrefab: {fileID: 3834534628122088379, guid: fa161c7ab58755646bfa73ebbba2fe04, type: 3}
   _modifierSlotPrefab: {fileID: 1065834685477414293, guid: f2b82f5477973cd4d84159641376818d, type: 3}

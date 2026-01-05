@@ -86,7 +86,7 @@ namespace Krooq.PlanetDefense
             p.Init(_firePoint.up, GameManager.SelectedWeapon, modifiers);
 
             // Set Fire Timer based on projectile stat
-            _fireTimer = p.FireRate;
+            _fireTimer = 1f / p.FireRate;
 
             foreach (var effect in _fireEffects)
             {

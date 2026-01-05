@@ -120,15 +120,12 @@ namespace Krooq.PlanetDefense
 
         protected void OnTriggerEnter2D(Collider2D other)
         {
-            foreach (var mod in _modifiers)
-            {
-                mod.Process(this, ModifierTrigger.OnHit);
-            }
+            foreach (var mod in _modifiers) mod.Process(this, ModifierTrigger.OnHit);
 
-            var meteor = other.gameObject.GetCachedComponent<Meteor>();
-            if (meteor != null)
+            var threat = other.attachedRigidbody.gameObject.GetCachedComponent<Threat>();
+            if (threat != null)
             {
-                meteor.TakeDamage(Damage);
+                threat.TakeDamage(Damage);
 
                 if (HasTag("Explosive"))
                 {
@@ -166,9 +163,9 @@ namespace Krooq.PlanetDefense
             var hits = Physics2D.OverlapCircleAll(transform.position, radius);
             foreach (var hit in hits)
             {
-                if (hit.TryGetComponent<Meteor>(out var meteor))
+                if (hit.TryGetComponent<Threat>(out var threat))
                 {
-                    meteor.TakeDamage(Damage * damageMult);
+                    threat.TakeDamage(Damage * damageMult);
                 }
             }
         }

@@ -31,15 +31,17 @@ namespace Krooq.PlanetDefense
             }
 
             // Populate Active Slots
-            foreach (var (modifier, i) in GameManager.ActiveModifiers.WithIndex())
+            var activeModifiers = GameManager.ActiveModifiers.ToList();
+            for (int i = 0; i < activeModifiers.Count; i++)
             {
+                var modifier = activeModifiers[i];
                 if (modifier != null && i < _modifierSlotContainer.childCount)
                 {
                     var slot = _modifierSlotContainer.GetChild(i);
                     var ui = GameManager.SpawnModifierTileUI(GameManager.Data.ModifierTilePrefab);
                     ui.transform.SetParent(slot);
                     ui.transform.localPosition = Vector3.zero;
-                    ui.Init(modifier, false);
+                    ui.Init(modifier, false, i);
                 }
             }
         }

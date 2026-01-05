@@ -3,10 +3,12 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using Krooq.Common;
+using Krooq.Core;
 
 namespace Krooq.PlanetDefense
 {
-    public class ModifierTileUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class ModifierTileUI : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerClickHandler
     {
         [SerializeField] private Button _button;
         [SerializeField] private TextMeshProUGUI _text;
@@ -16,14 +18,19 @@ namespace Krooq.PlanetDefense
         private bool _isShopItem;
         private Transform _originalParent;
         private Vector3 _originalPosition;
+        private int _slotIndex = -1;
+
+        protected GameManager GameManager => this.GetSingleton<GameManager>();
+        protected ShopUI ShopUI => this.GetSingleton<ShopUI>();
 
         public Modifier Modifier => _modifier;
         public bool IsShopItem => _isShopItem;
 
-        public void Init(Modifier modifier, bool isShopItem, UnityAction onClick = null)
+        public void Init(Modifier modifier, bool isShopItem, int slotIndex = -1, UnityAction onClick = null)
         {
             _modifier = modifier;
             _isShopItem = isShopItem;
+            _slotIndex = slotIndex;
 
             if (_text != null)
             {
@@ -47,6 +54,24 @@ namespace Krooq.PlanetDefense
                 _button.onClick.RemoveAllListeners();
             }
             _modifier = null;
+            _slotIndex = -1;
+        }
+
+        public void OnPointerClick(PointerEventData eventData)
+        {
+            if (eventData.button == PointerEventData.InputButton.Right)
+            {
+                if (!_isShopItem && GameManager.State == GameState.Shop && _slotIndex != -1)
+                {
+                    // Sell
+                    GameManager.AddResources(_modifier.Cost); // 100% refund for now
+                    GameManager.SetModifier(_slotIndex, null);
+
+                    if (ShopUI) ShopUI.SetDirty();
+                    var modifierUI = this.GetSingleton<ModifierUI>();
+                    if (modifierUI) modifierUI.Refresh();
+                }
+            }
         }
 
         public void OnBeginDrag(PointerEventData eventData)

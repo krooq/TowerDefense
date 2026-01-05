@@ -19,9 +19,9 @@ MonoBehaviour:
   - _trigger: 0
     _timerDuration: 0
     _statModifiers:
-    - _statData: {fileID: 11400000, guid: ca8cd83cafaba674e920021faa0df61b, type: 2}
-      _value: 5
-      _type: 0
+    - _statData: {fileID: 11400000, guid: 9b07f13ae7c0ab74482920703c1ca920, type: 2}
+      _value: 2
+      _type: 1
     _tagsToAdd: []
     _tagsToRemove: []
     _prefabToSpawn: {fileID: 0}

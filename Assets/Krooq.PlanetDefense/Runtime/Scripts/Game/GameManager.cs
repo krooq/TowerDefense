@@ -20,46 +20,46 @@ namespace Krooq.PlanetDefense
     {
         [SerializeField] private GameData _gameData;
 
-        [SerializeField, ReadOnly] private int _currentResources;
-        [SerializeField, ReadOnly] private int _currentWave = 1;
+        [SerializeField, ReadOnly] private int _resources;
+        [SerializeField, ReadOnly] private int _wave = 1;
         [SerializeField, ReadOnly] private GameState _currentState;
         [SerializeField, ReadOnly] private int _baseHealth;
-        [SerializeField, ReadOnly] private HashSet<Meteor> _activeMeteors = new();
-        [SerializeField, ReadOnly] private List<Modifier> _activeModifiers = new();
+        [SerializeField, ReadOnly] private List<Threat> _threats = new();
+        [SerializeField, ReadOnly] private List<Modifier> _modifiers = new();
         [SerializeField, ReadOnly] private ProjectileWeaponData _selectedWeapon;
 
         public GameData Data => _gameData;
-        public int Resources => _currentResources;
+        public int Resources => _resources;
         public GameState State => _currentState;
 
-        public IEnumerable<Modifier> ActiveModifiers => _activeModifiers.Where(m => m != null);
+        public IEnumerable<Modifier> ActiveModifiers => _modifiers.Where(m => m != null);
         public ProjectileWeaponData SelectedWeapon => _selectedWeapon;
 
 
         protected MultiGameObjectPool Pool => this.GetSingleton<MultiGameObjectPool>();
         protected WaveManager WaveManager => this.GetSingleton<WaveManager>();
 
-        public int MeteorCount => _activeMeteors.Count;
-        public bool HasMeteors => _activeMeteors.Count > 0;
+        public int ThreatCount => _threats.Count;
+        public bool HasThreats => _threats.Count > 0;
 
-        public void RegisterMeteor(Meteor meteor)
+        public void Register(Threat threat)
         {
-            if (!_activeMeteors.Contains(meteor)) _activeMeteors.Add(meteor);
+            if (!_threats.Contains(threat)) _threats.Add(threat);
         }
 
-        public void UnregisterMeteor(Meteor meteor)
+        public void Unregister(Threat threat)
         {
-            if (_activeMeteors.Contains(meteor)) _activeMeteors.Remove(meteor);
+            if (_threats.Contains(threat)) _threats.Remove(threat);
         }
 
         protected void Awake()
         {
             if (_gameData != null)
             {
-                _currentResources = _gameData.StartingResources;
+                _resources = _gameData.StartingResources;
                 _baseHealth = _gameData.BaseHealth;
                 _selectedWeapon = _gameData.DefaultWeapon;
-                _activeModifiers = new List<Modifier>(new Modifier[_gameData.MaxSlots]);
+                _modifiers = new List<Modifier>(new Modifier[_gameData.MaxSlots]);
             }
         }
 
@@ -70,11 +70,21 @@ namespace Krooq.PlanetDefense
 
         public void StartGame()
         {
-            _currentResources = _gameData.StartingResources;
-            _currentWave = 1;
+            _resources = _gameData.StartingResources;
+            _wave = 1;
             _baseHealth = _gameData.BaseHealth;
 
-            for (int i = 0; i < _activeModifiers.Count; i++) _activeModifiers[i] = null;
+            for (int i = 0; i < _modifiers.Count; i++)
+            {
+                if (i < _gameData.StartingModifiers.Count)
+                {
+                    _modifiers[i] = _gameData.StartingModifiers[i];
+                }
+                else
+                {
+                    _modifiers[i] = null;
+                }
+            }
 
             // Add some default modifiers for testing if needed, or let player buy them
 
@@ -84,7 +94,7 @@ namespace Krooq.PlanetDefense
         public void StartWave()
         {
             _currentState = GameState.Playing;
-            WaveManager.StartWave(_currentWave);
+            WaveManager.StartWave(_wave);
         }
 
         public void EndWave()
@@ -95,20 +105,20 @@ namespace Krooq.PlanetDefense
 
         public void NextWave()
         {
-            _currentWave++;
+            _wave++;
             StartWave();
         }
 
         public void AddResources(int amount)
         {
-            _currentResources += amount;
+            _resources += amount;
         }
 
         public bool SpendResources(int amount)
         {
-            if (_currentResources >= amount)
+            if (_resources >= amount)
             {
-                _currentResources -= amount;
+                _resources -= amount;
                 return true;
             }
             return false;
@@ -136,15 +146,15 @@ namespace Krooq.PlanetDefense
 
         public void SetModifier(int index, Modifier modifier)
         {
-            if (index >= 0 && index < _activeModifiers.Count)
+            if (index >= 0 && index < _modifiers.Count)
             {
-                var oldModifier = _activeModifiers[index];
+                var oldModifier = _modifiers[index];
                 if (oldModifier != null)
                 {
                     AddResources(oldModifier.Cost / 2);
                 }
 
-                _activeModifiers[index] = modifier;
+                _modifiers[index] = modifier;
             }
         }
 
@@ -154,7 +164,7 @@ namespace Krooq.PlanetDefense
             return Pool.Get(_selectedWeapon.ProjectilePrefab);
         }
 
-        public Meteor SpawnMeteor() => Pool.Get(_gameData.MeteorPrefab);
+        public Threat SpawnThreat() => Pool.Get(_gameData.ThreatPrefab);
 
         public ModifierTileUI SpawnModifierTileUI(ModifierTileUI prefab) => Pool.Get(prefab);
 

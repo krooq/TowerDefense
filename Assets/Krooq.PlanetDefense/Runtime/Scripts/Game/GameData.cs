@@ -11,6 +11,7 @@ namespace Krooq.PlanetDefense
         [Header("Player Stats")]
         [SerializeField] private int _startingResources = 0;
         [SerializeField] private int _baseHealth = 10;
+        [SerializeField] private List<Modifier> _startingModifiers;
 
         [Header("Weapons")]
         [SerializeField] private List<ProjectileWeaponData> _availableWeapons;
@@ -31,17 +32,17 @@ namespace Krooq.PlanetDefense
         [SerializeField] private float _moveSpeed = 5f;
         [SerializeField] private float _rotationSpeed = 10f;
 
-        [Header("Meteors")]
-        [SerializeField] private Meteor _meteorPrefab;
-        [SerializeField] private float _meteorSpawnHeight = 10f;
-        [SerializeField] private float _meteorSpawnWidth = 16f;
-        [SerializeField] private float _meteorBaseSpeed = 2f;
-        [SerializeField] private int _meteorBaseHealth = 10;
-        [SerializeField] private int _resourcesPerMeteor = 1;
+        [Header("Threats")]
+        [SerializeField] private Threat _threatPrefab;
+        [SerializeField] private float _threatSpawnHeight = 10f;
+        [SerializeField] private float _threatSpawnWidth = 16f;
+        [SerializeField] private float _threatBaseSpeed = 2f;
+        [SerializeField] private int _threatBaseHealth = 10;
+        [SerializeField] private int _resourcesPerThreat = 1;
 
         [Header("Wave Configuration")]
-        [SerializeField] private int _baseMeteorCount = 5;
-        [SerializeField] private int _meteorsPerWave = 5;
+        [SerializeField] private int _baseWaveSize = 5;
+        [SerializeField] private int _threatsPerWave = 5;
         [SerializeField] private float _baseSpawnRate = 2f;
         [SerializeField] private float _spawnRateDecreasePerWave = 0.1f;
         [SerializeField] private float _minSpawnRate = 0.2f;
@@ -57,6 +58,7 @@ namespace Krooq.PlanetDefense
 
         public int StartingResources => _startingResources;
         public int BaseHealth => _baseHealth;
+        public IReadOnlyList<Modifier> StartingModifiers => _startingModifiers;
         public IReadOnlyList<ProjectileWeaponData> AvailableWeapons => _availableWeapons;
         public ProjectileWeaponData DefaultWeapon => _defaultWeapon;
 
@@ -73,15 +75,15 @@ namespace Krooq.PlanetDefense
         public float MoveSpeed => _moveSpeed;
         public float RotationSpeed => _rotationSpeed;
 
-        public Meteor MeteorPrefab => _meteorPrefab;
-        public float MeteorSpawnHeight => _meteorSpawnHeight;
-        public float MeteorSpawnWidth => _meteorSpawnWidth;
-        public float MeteorBaseSpeed => _meteorBaseSpeed;
-        public int MeteorBaseHealth => _meteorBaseHealth;
-        public int ResourcesPerMeteor => _resourcesPerMeteor;
+        public Threat ThreatPrefab => _threatPrefab;
+        public float ThreatSpawnHeight => _threatSpawnHeight;
+        public float ThreatSpawnWidth => _threatSpawnWidth;
+        public float ThreatBaseSpeed => _threatBaseSpeed;
+        public int ThreatBaseHealth => _threatBaseHealth;
+        public int ResourcesPerThreat => _resourcesPerThreat;
 
-        public int BaseMeteorCount => _baseMeteorCount;
-        public int MeteorsPerWave => _meteorsPerWave;
+        public int BaseWaveSize => _baseWaveSize;
+        public int ThreatsPerWave => _threatsPerWave;
         public float BaseSpawnRate => _baseSpawnRate;
         public float SpawnRateDecreasePerWave => _spawnRateDecreasePerWave;
         public float MinSpawnRate => _minSpawnRate;

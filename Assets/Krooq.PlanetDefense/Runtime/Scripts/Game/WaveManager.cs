@@ -26,18 +26,18 @@ namespace Krooq.PlanetDefense
             var waveIndex = waveNumber - 1;
             _isWaveActive = true;
             var data = GameManager.Data;
-            var meteorCount = data.BaseMeteorCount + (waveIndex * data.MeteorsPerWave);
+            var threatCount = data.BaseWaveSize + (waveIndex * data.ThreatsPerWave);
             var spawnRate = Mathf.Max(data.MinSpawnRate, data.BaseSpawnRate - (waveIndex * data.SpawnRateDecreasePerWave));
-            for (var i = 0; i < meteorCount; i++)
+            for (var i = 0; i < threatCount; i++)
             {
                 if (GameManager.State != GameState.Playing) break;
 
-                SpawnMeteor();
+                SpawnThreat();
                 await UniTask.Delay((int)(spawnRate * 1000));
             }
 
-            // Wait for all meteors to be gone
-            while (GameManager.HasMeteors)
+            // Wait for all threats to be gone
+            while (GameManager.HasThreats)
             {
                 if (GameManager.State != GameState.Playing) break;
                 await UniTask.Delay(500);
@@ -47,7 +47,7 @@ namespace Krooq.PlanetDefense
             GameManager.EndWave();
         }
 
-        protected void SpawnMeteor()
+        protected void SpawnThreat()
         {
             if (_cam == null) _cam = Camera.main;
 
@@ -70,9 +70,9 @@ namespace Krooq.PlanetDefense
 
             var direction = (targetPos - spawnPos).normalized;
 
-            var m = GameManager.SpawnMeteor();
+            var m = GameManager.SpawnThreat();
             m.transform.SetPositionAndRotation(spawnPos, Quaternion.identity);
-            m.Init(GameManager.Data.MeteorBaseSpeed, GameManager.Data.MeteorBaseHealth, GameManager.Data.ResourcesPerMeteor, direction);
+            m.Init(GameManager.Data.ThreatBaseSpeed, GameManager.Data.ThreatBaseHealth, GameManager.Data.ResourcesPerThreat, direction);
         }
     }
 }
