@@ -51,7 +51,7 @@ namespace Krooq.PlanetDefense
 
         private Projectile Fire(PlayerTargetingReticle targetingReticle, ProjectileWeaponData weaponData, IEnumerable<Modifier> modifiers, float damageMultiplier)
         {
-            var p = GameManager.Spawn(weaponData.ProjectilePrefab);
+            var p = GameManager.Spawn(GameManager.Data.ProjectilePrefab);
             if (p == null) return null;
 
             p.transform.SetPositionAndRotation(_firePoint.position, _firePoint.rotation);

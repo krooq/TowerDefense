@@ -46,8 +46,15 @@ namespace Krooq.PlanetDefense
             _currentHealth = _maxHealth;
             _selectedWeapon = GameManager.Data.DefaultWeapon;
             _spells = new Spell[GameManager.Data.MaxSlots];
+            var startingSpells = GameManager.Data.StartingSpells;
+            for (int i = 0; i < startingSpells.Count && i < _spells.Length; i++)
+            {
+                _spells[i] = startingSpells[i];
+            }
             _currentMana = _maxMana;
             _manaRegenAccumulator = 0f;
+
+            this.GetSingleton<SpellBarUI>()?.Refresh();
         }
 
         private void Update()

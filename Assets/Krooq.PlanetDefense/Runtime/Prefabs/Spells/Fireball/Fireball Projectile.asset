@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e5ab80e5c36c414aa0e304301dc404f, type: 3}
+  m_Name: Fireball Projectile
+  m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.ProjectileWeaponData
+  _weaponName: Fireball
+  _icon: {fileID: 0}
+  _fireRate: 2
+  _projectilePrefab: {fileID: 8491378065012396037, guid: 0ac105268fcd8d548aa6cf0f11ccd45b, type: 3}
+  _fireSound: {fileID: 6418180475301049370, guid: 0ca959c278502a744818b3e75e57799c, type: 2}
+  _baseDamage: 10
+  _baseSpeed: 10
+  _baseSize: 1
+  _basePierce: 0
+  _baseLifetime: 30

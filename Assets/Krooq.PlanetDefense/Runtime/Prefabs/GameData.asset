@@ -16,11 +16,12 @@ MonoBehaviour:
   _baseHealth: 10
   _baseMana: 100
   _baseManaRegen: 5
-  _startingModifiers:
-  - {fileID: 11400000, guid: ed1f61c40eed7cb47b6e4121301d9dac, type: 2}
+  _startingSpells:
+  - {fileID: 11400000, guid: 87be09573ef0bc04e818a8ca9336716b, type: 2}
   _availableWeapons:
   - {fileID: 11400000, guid: c57ec0eb5af177447a7316823cca26b2, type: 2}
   _defaultWeapon: {fileID: 11400000, guid: c57ec0eb5af177447a7316823cca26b2, type: 2}
+  _projectilePrefab: {fileID: 8491378065012396037, guid: 0ac105268fcd8d548aa6cf0f11ccd45b, type: 3}
   _damageStat: {fileID: 11400000, guid: a6594e0ea2d6c7c4e9c6a00a6ee713d6, type: 2}
   _speedStat: {fileID: 11400000, guid: ca8cd83cafaba674e920021faa0df61b, type: 2}
   _fireRateStat: {fileID: 11400000, guid: 9b07f13ae7c0ab74482920703c1ca920, type: 2}
@@ -45,7 +46,8 @@ MonoBehaviour:
   _baseSpawnRate: 2
   _spawnRateDecreasePerWave: 0.1
   _minSpawnRate: 0.2
-  _availableSpells: []
+  _availableSpells:
+  - {fileID: 11400000, guid: 600ef34a9555c24439ca5b512ea18667, type: 2}
   _maxSlots: 4
   _spellTilePrefab: {fileID: 3834534628122088379, guid: fa161c7ab58755646bfa73ebbba2fe04, type: 3}
   _spellSlotPrefab: {fileID: 1065834685477414293, guid: f2b82f5477973cd4d84159641376818d, type: 3}

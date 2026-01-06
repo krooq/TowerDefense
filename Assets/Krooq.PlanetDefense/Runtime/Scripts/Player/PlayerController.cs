@@ -19,7 +19,8 @@ namespace Krooq.PlanetDefense
         {
             if (GameManager.State != GameState.Playing) return;
 
-            HandleMovement();
+            // NOTE: Player movement is currently disabled.
+            // HandleMovement();
             HandleAiming();
         }
 

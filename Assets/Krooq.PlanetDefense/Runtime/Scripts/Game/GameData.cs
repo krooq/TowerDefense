@@ -13,13 +13,14 @@ namespace Krooq.PlanetDefense
         [SerializeField] private int _baseHealth = 10;
         [SerializeField] private int _baseMana = 100;
         [SerializeField] private int _baseManaRegen = 5;
-        [SerializeField] private List<Modifier> _startingModifiers;
+        [SerializeField] private List<Spell> _startingSpells;
 
         [Header("Weapons")]
         [SerializeField] private List<ProjectileWeaponData> _availableWeapons;
         [SerializeField] private ProjectileWeaponData _defaultWeapon;
 
         [Header("Projectile Stats")]
+        [SerializeField] private Projectile _projectilePrefab;
         [SerializeField] private StatData _damageStat;
         [SerializeField] private StatData _speedStat;
         [SerializeField] private StatData _fireRateStat;
@@ -70,9 +71,11 @@ namespace Krooq.PlanetDefense
         public int BaseHealth => _baseHealth;
         public int BaseMana => _baseMana;
         public int BaseManaRegen => _baseManaRegen;
-        public IReadOnlyList<Modifier> StartingModifiers => _startingModifiers;
+        public IReadOnlyList<Spell> StartingSpells => _startingSpells;
         public IReadOnlyList<ProjectileWeaponData> AvailableWeapons => _availableWeapons;
         public ProjectileWeaponData DefaultWeapon => _defaultWeapon;
+
+        public Projectile ProjectilePrefab => _projectilePrefab;
 
         public StatData DamageStat => _damageStat;
         public StatData SpeedStat => _speedStat;

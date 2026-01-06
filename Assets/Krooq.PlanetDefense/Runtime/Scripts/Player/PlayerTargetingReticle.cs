@@ -48,7 +48,7 @@ namespace Krooq.PlanetDefense
             if (worldPos.y <= groundLevel)
             {
                 IsGroundTarget = true;
-                TargetPosition = new Vector3(worldPos.x, groundLevel, 0f); // Snap to ground
+                TargetPosition = new Vector3(worldPos.x, worldPos.y, 0f); // Snap to ground
 
                 if (_groundVisual) _groundVisual.SetActive(true);
                 if (_airVisual) _airVisual.SetActive(false);

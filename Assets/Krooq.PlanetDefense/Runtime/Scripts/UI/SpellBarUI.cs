@@ -20,6 +20,7 @@ namespace Krooq.PlanetDefense
                 slot.transform.SetParent(_spellSlotContainer, false);
                 slot.Init(i);
             }
+            Refresh();
         }
 
         public void Refresh()

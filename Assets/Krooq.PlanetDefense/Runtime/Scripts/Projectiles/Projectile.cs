@@ -16,7 +16,7 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private Vector3? _target;
         [SerializeField, ReadOnly] private HashSet<string> _tags = new();
         [SerializeField, ReadOnly] private List<Modifier> _modifiers = new();
-
+        [SerializeField, ReadOnly] private ProjectileModel _currentModel;
 
         [Header("Stats")]
         [SerializeField, ReadOnly] private Stat _damage;
@@ -28,8 +28,6 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private Stat _explosionDamageMult;
         [SerializeField, ReadOnly] private Stat _splitCount;
         [SerializeField, ReadOnly] private Stat _fireRate;
-
-
 
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected MultiGameObjectPool Pool => this.GetSingleton<MultiGameObjectPool>();
@@ -49,6 +47,15 @@ namespace Krooq.PlanetDefense
             _modifiers = new List<Modifier>(modifiers);
             _target = null;
 
+            if (weaponData.ProjectileModelPrefab != null)
+            {
+                _currentModel = Pool.Get(weaponData.ProjectileModelPrefab);
+                _currentModel.transform.SetParent(transform);
+                _currentModel.transform.localPosition = Vector3.zero;
+                _currentModel.transform.localRotation = Quaternion.identity;
+                _currentModel.Init(this);
+            }
+
             if (targetingReticle != null && targetingReticle.IsGroundTarget)
             {
                 var dist = Vector3.Distance(transform.position, targetingReticle.TargetPosition);
@@ -61,7 +68,7 @@ namespace Krooq.PlanetDefense
             _size = new Stat().WithBaseValue(weaponData.BaseSize);
             _pierce = new Stat().WithBaseValue(weaponData.BasePierce);
             _lifetime = new Stat().WithBaseValue(weaponData.BaseLifetime);
-            _fireRate = new Stat().WithBaseValue(weaponData.FireRate);
+            _fireRate = new Stat().WithBaseValue(weaponData.BaseFireRate);
 
             // Initialize Optional Stats (default to 0 or 1 as appropriate)
             _explosionRadius = new Stat().WithBaseValue(0f);
@@ -102,6 +109,12 @@ namespace Krooq.PlanetDefense
 
         protected void OnDisable()
         {
+            if (_currentModel != null)
+            {
+                Pool.Release(_currentModel);
+                _currentModel = null;
+            }
+
             _tags.Clear();
             _modifiers.Clear();
         }
