@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e5ab80e5c36c414aa0e304301dc404f, type: 3}
   m_Name: Magic Missile Projectile
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.ProjectileWeaponData
-  _weaponName: Magic Missile
   _icon: {fileID: 0}
-  _fireRate: 2
   _projectileModelPrefab: {fileID: -5921722349357070731, guid: 6a4cffbb94ebd4b42a80995d78c94bb3, type: 3}
+  _fireEffectPrefab: {fileID: 2303279938099685763, guid: e4b25e8ae8da09047b3af903bcb519d0, type: 3}
+  _impactEffectPrefab: {fileID: 1512438380890628738, guid: 54a2417118ee59e4cb3b573f5ec11d72, type: 3}
   _fireSound: {fileID: 6418180475301049370, guid: 0ca959c278502a744818b3e75e57799c, type: 2}
+  _impactSound: {fileID: 6418180475301049370, guid: 51e467160460334428f586a52d261a79, type: 2}
+  _baseFireRate: 0.5
   _baseDamage: 10
   _baseSpeed: 30
   _baseSize: 1

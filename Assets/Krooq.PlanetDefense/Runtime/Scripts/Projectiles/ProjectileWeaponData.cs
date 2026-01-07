@@ -10,10 +10,13 @@ namespace Krooq.PlanetDefense
         [Header("Visuals & Effects")]
         [SerializeField] private Sprite _icon;
         [SerializeField] private ProjectileModel _projectileModelPrefab;
+        [SerializeField] private GameObject _fireEffectPrefab;
+        [SerializeField] private GameObject _impactEffectPrefab;
         [SerializeField] private AudioResource _fireSound;
+        [SerializeField] private AudioResource _impactSound;
 
         [Header("Projectile Stats")]
-        [SerializeField] private float _baseFireRate = 0.5f;
+        [SerializeField] private float _baseFireRate = 1f;
         [SerializeField] private float _baseDamage = 10f;
         [SerializeField] private float _baseSpeed = 10f;
         [SerializeField] private float _baseSize = 1f;
@@ -22,7 +25,10 @@ namespace Krooq.PlanetDefense
 
         public Sprite Icon => _icon;
         public ProjectileModel ProjectileModelPrefab => _projectileModelPrefab;
+        public GameObject FireEffectPrefab => _fireEffectPrefab;
+        public GameObject ImpactEffectPrefab => _impactEffectPrefab;
         public AudioResource FireSound => _fireSound;
+        public AudioResource ImpactSound => _impactSound;
 
         public float BaseFireRate => _baseFireRate;
         public float BaseDamage => _baseDamage;

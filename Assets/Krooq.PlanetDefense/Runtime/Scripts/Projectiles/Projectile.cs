@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Krooq.Common;
 using Krooq.Core;
 using Sirenix.OdinInspector;
+using Cysharp.Threading.Tasks;
 
 namespace Krooq.PlanetDefense
 {
@@ -17,6 +18,7 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private HashSet<string> _tags = new();
         [SerializeField, ReadOnly] private List<Modifier> _modifiers = new();
         [SerializeField, ReadOnly] private ProjectileModel _currentModel;
+        [SerializeField, ReadOnly] private ProjectileWeaponData _weaponData;
 
         [Header("Stats")]
         [SerializeField, ReadOnly] private Stat _damage;
@@ -31,6 +33,7 @@ namespace Krooq.PlanetDefense
 
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected MultiGameObjectPool Pool => this.GetSingleton<MultiGameObjectPool>();
+        protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
         protected Rigidbody2D Rigidbody2D => this.GetCachedComponent<Rigidbody2D>();
 
         public float Damage => _damage.Value;
@@ -42,18 +45,25 @@ namespace Krooq.PlanetDefense
 
         public void Init(Vector3 direction, ProjectileWeaponData weaponData, IEnumerable<Modifier> modifiers, PlayerTargetingReticle targetingReticle = null)
         {
+            _weaponData = weaponData;
             _direction = direction;
             _tags.Clear();
             _modifiers = new List<Modifier>(modifiers);
             _target = null;
+            gameObject.SetActive(true);
 
-            if (weaponData.ProjectileModelPrefab != null)
+            if (_weaponData.ProjectileModelPrefab != null)
             {
-                _currentModel = Pool.Get(weaponData.ProjectileModelPrefab);
+                _currentModel = Pool.Get(_weaponData.ProjectileModelPrefab);
                 _currentModel.transform.SetParent(transform);
                 _currentModel.transform.localPosition = Vector3.zero;
                 _currentModel.transform.localRotation = Quaternion.identity;
                 _currentModel.Init(this);
+            }
+
+            if (_weaponData.FireEffectPrefab != null)
+            {
+                SpawnEffect(_weaponData.FireEffectPrefab, transform.position, Quaternion.identity);
             }
 
             if (targetingReticle != null && targetingReticle.IsGroundTarget)
@@ -88,6 +98,17 @@ namespace Krooq.PlanetDefense
             transform.localScale = Vector3.one * Size;
         }
 
+        private async void SpawnEffect(GameObject prefab, Vector3 position, Quaternion rotation)
+        {
+            if (prefab == null) return;
+            var effect = Pool.Get(prefab);
+            effect.transform.SetPositionAndRotation(position, rotation);
+
+            await UniTask.Delay(5000, cancellationToken: this.GetCancellationTokenOnDestroy());
+
+            if (effect != null && Pool != null) Pool.Release(effect);
+        }
+
         public void AddStatModifier(StatModifier modifier)
         {
             if (modifier.StatData == null) return;
@@ -117,6 +138,7 @@ namespace Krooq.PlanetDefense
 
             _tags.Clear();
             _modifiers.Clear();
+            _weaponData = null;
         }
 
         public void SpawnChild(GameObject prefab, int count)
@@ -141,7 +163,7 @@ namespace Krooq.PlanetDefense
                 {
                     foreach (var mod in _modifiers) mod.Process(this, ModifierTrigger.OnHit);
                     if (HasTag(Explosive)) Explode();
-                    GameManager.Despawn(gameObject);
+                    HandleImpact(true, Quaternion.LookRotation(Vector3.forward, Vector3.up));
                     return;
                 }
             }
@@ -152,12 +174,14 @@ namespace Krooq.PlanetDefense
             if (_timer <= 0)
             {
                 foreach (var mod in _modifiers) mod.Process(this, ModifierTrigger.OnDespawn);
-                GameManager.Despawn(gameObject);
+                HandleImpact(false);
             }
         }
 
         protected void OnTriggerEnter2D(Collider2D other)
         {
+            if (!gameObject.activeInHierarchy) return; // Ignore collisions if already dealing with impact
+
             foreach (var mod in _modifiers) mod.Process(this, ModifierTrigger.OnHit);
             var rb = other.attachedRigidbody;
             var go = rb != null ? rb.gameObject : other.gameObject;
@@ -180,7 +204,7 @@ namespace Krooq.PlanetDefense
                 }
                 else
                 {
-                    GameManager.Despawn(gameObject);
+                    HandleImpact(true, Quaternion.LookRotation(Vector3.forward, -_direction));
                 }
             }
             else if (other.gameObject.layer == LayerMask.NameToLayer("Ground"))
@@ -189,8 +213,35 @@ namespace Krooq.PlanetDefense
                 {
                     Explode();
                 }
-                GameManager.Despawn(gameObject);
+                HandleImpact(true, Quaternion.LookRotation(Vector3.forward, Vector3.up));
             }
+        }
+
+        private async void HandleImpact(bool spawnEffects = true, Quaternion? impactRotation = null)
+        {
+            if (spawnEffects && _weaponData != null)
+            {
+                if (_weaponData.ImpactSound != null && AudioManager != null)
+                {
+                    AudioManager.PlaySound(_weaponData.ImpactSound);
+                }
+
+                if (_weaponData.ImpactEffectPrefab != null)
+                {
+                    SpawnEffect(_weaponData.ImpactEffectPrefab, transform.position, impactRotation ?? Quaternion.identity);
+                }
+            }
+
+            // Wait for effects to finish (simplistic approach: just wait 5s for the longest possible effect)
+            // Ideally we track active effects count, but for now we trust the fire-and-forget SpawnEffect logic 
+            // has its own cleanup, but we must stay alive to run that cleanup if we are the one awaiting.
+            // Actually, SpawnEffect is async void, so it runs detached.
+            // But if we return to pool, the gameObject is disabled, which MIGHT cancel the UniTask if it is linked to this GameObject.
+            // So we should wait here.
+            gameObject.SetActive(false);
+            await UniTask.Delay(5000, cancellationToken: this.GetCancellationTokenOnDestroy());
+
+            GameManager.Despawn(gameObject);
         }
 
         private void Explode()
