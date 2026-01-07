@@ -49,7 +49,7 @@ MonoBehaviour:
   _direction: {x: 0, y: 0, z: 0}
   _timer: 0
   _modifiers: []
-  _currentModel: {fileID: 0}
+  _model: {fileID: 0}
   _weaponData: {fileID: 0}
   _damage:
     _statData: {fileID: 0}

@@ -17,7 +17,7 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private Vector3? _target;
         [SerializeField, ReadOnly] private HashSet<string> _tags = new();
         [SerializeField, ReadOnly] private List<Modifier> _modifiers = new();
-        [SerializeField, ReadOnly] private ProjectileModel _currentModel;
+        [SerializeField, ReadOnly] private ProjectileModel _model;
         [SerializeField, ReadOnly] private ProjectileWeaponData _weaponData;
 
         [Header("Stats")]
@@ -32,7 +32,6 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private Stat _fireRate;
 
         protected GameManager GameManager => this.GetSingleton<GameManager>();
-        protected MultiGameObjectPool Pool => this.GetSingleton<MultiGameObjectPool>();
         protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
         protected Rigidbody2D Rigidbody2D => this.GetCachedComponent<Rigidbody2D>();
 
@@ -54,11 +53,10 @@ namespace Krooq.PlanetDefense
 
             if (_weaponData.ProjectileModelPrefab != null)
             {
-                _currentModel = Pool.Get(_weaponData.ProjectileModelPrefab);
-                _currentModel.transform.SetParent(transform);
-                _currentModel.transform.localPosition = Vector3.zero;
-                _currentModel.transform.localRotation = Quaternion.identity;
-                _currentModel.Init(this);
+                _model = GameManager.Spawn(_weaponData.ProjectileModelPrefab);
+                _model.transform.SetParent(transform);
+                _model.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+                _model.Init(this);
             }
 
             if (_weaponData.FireEffectPrefab != null)
@@ -101,12 +99,12 @@ namespace Krooq.PlanetDefense
         private async void SpawnEffect(GameObject prefab, Vector3 position, Quaternion rotation)
         {
             if (prefab == null) return;
-            var effect = Pool.Get(prefab);
+            var effect = GameManager.Spawn(prefab);
             effect.transform.SetPositionAndRotation(position, rotation);
 
-            await UniTask.Delay(5000, cancellationToken: this.GetCancellationTokenOnDestroy());
+            await UniTask.Delay(5000, cancellationToken: this.GetCancellationTokenOnDestroy()).SuppressCancellationThrow();
 
-            if (effect != null && Pool != null) Pool.Release(effect);
+            if (effect != null && GameManager != null) GameManager.Despawn(effect);
         }
 
         public void AddStatModifier(StatModifier modifier)
@@ -130,12 +128,11 @@ namespace Krooq.PlanetDefense
 
         protected void OnDisable()
         {
-            if (_currentModel != null)
+            if (_model != null)
             {
-                Pool.Release(_currentModel);
-                _currentModel = null;
+                GameManager.Despawn(_model);
+                _model = null;
             }
-
             _tags.Clear();
             _modifiers.Clear();
             _weaponData = null;
@@ -147,7 +144,7 @@ namespace Krooq.PlanetDefense
 
             for (int i = 0; i < count; i++)
             {
-                var obj = Pool.Get(prefab);
+                var obj = GameManager.Spawn(prefab);
                 obj.transform.SetPositionAndRotation(transform.position, Quaternion.identity);
             }
         }
@@ -239,9 +236,9 @@ namespace Krooq.PlanetDefense
             // But if we return to pool, the gameObject is disabled, which MIGHT cancel the UniTask if it is linked to this GameObject.
             // So we should wait here.
             gameObject.SetActive(false);
-            await UniTask.Delay(5000, cancellationToken: this.GetCancellationTokenOnDestroy());
+            await UniTask.Delay(5000, cancellationToken: this.GetCancellationTokenOnDestroy()).SuppressCancellationThrow();
 
-            GameManager.Despawn(gameObject);
+            if (GameManager != null) GameManager.Despawn(gameObject);
         }
 
         private void Explode()

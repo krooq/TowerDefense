@@ -32,7 +32,8 @@ namespace Krooq.PlanetDefense
 
             if (data.ModelPrefab != null)
             {
-                _model = Instantiate(data.ModelPrefab, transform);
+                _model = GameManager.Spawn(data.ModelPrefab);
+                _model.transform.SetParent(transform);
                 _model.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
                 _model.Init(this);
             }
@@ -45,6 +46,11 @@ namespace Krooq.PlanetDefense
 
         protected void OnDisable()
         {
+            if (_model)
+            {
+                GameManager.Despawn(_model.gameObject);
+                _model = null;
+            }
             if (GameManager != null) GameManager.Unregister(this);
         }
 

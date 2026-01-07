@@ -83,9 +83,9 @@ namespace Krooq.PlanetDefense
             return false;
         }
 
-        public bool TrySpendMana(float amount)
+        public bool TrySpendMana(int amount)
         {
-            int cost = Mathf.CeilToInt(amount);
+            var cost = amount;
             if (_currentMana >= cost)
             {
                 _currentMana -= cost;

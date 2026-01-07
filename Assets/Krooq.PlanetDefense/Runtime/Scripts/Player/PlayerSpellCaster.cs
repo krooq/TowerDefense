@@ -8,20 +8,42 @@ namespace Krooq.PlanetDefense
 {
     public class PlayerSpellCaster : MonoBehaviour
     {
-        [SerializeField] private PlayerWeapon _weapon;
+        [SerializeField] private Transform _pivot;
+        [SerializeField] private Transform _firePoint;
         [SerializeField] private PlayerTargetingReticle _targetingReticle;
 
         [SerializeField, ReadOnly] private int _selectedSlotIndex = 0;
         [SerializeField, ReadOnly] private Spell _lastCastSpell;
         [SerializeField, ReadOnly] private float _nextSpellDamageMultiplier = 1f;
 
+        private Dictionary<int, float> _spellCooldowns = new Dictionary<int, float>();
+
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected Player Player => this.GetSingleton<Player>();
+        protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
 
         private void Update()
         {
             if (GameManager.State != GameState.Playing) return;
+
+            // Update Cooldowns
+            var keys = new List<int>(_spellCooldowns.Keys);
+            foreach (var key in keys)
+            {
+                if (_spellCooldowns[key] > 0)
+                {
+                    _spellCooldowns[key] -= Time.deltaTime;
+                }
+            }
+
             HandleInput();
+        }
+
+        public void Aim(Vector3 targetPosition, float rotationSpeed)
+        {
+            var dir = (targetPosition - _pivot.position).normalized;
+            var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f; // Assuming sprite points up
+            _pivot.rotation = Quaternion.Lerp(_pivot.rotation, Quaternion.Euler(0, 0, angle), Time.deltaTime * rotationSpeed);
         }
 
         private void HandleInput()
@@ -54,6 +76,9 @@ namespace Krooq.PlanetDefense
             var spell = spells[slotIndex];
             if (spell == null) return;
 
+            // Check Cooldown
+            if (_spellCooldowns.TryGetValue(slotIndex, out var timer) && timer > 0) return;
+
             // Capture current multiplier
             float dmgMult = _nextSpellDamageMultiplier;
 
@@ -65,12 +90,15 @@ namespace Krooq.PlanetDefense
 
         private void ProcessSpell(Spell spell, int slotIndex, float manaCostMult, float damageMult)
         {
-            float cost = spell.ManaCost * manaCostMult;
+            var cost = Mathf.CeilToInt(spell.ManaCost * manaCostMult);
             if (!Player.TrySpendMana(cost))
             {
                 // TODO: Feedback
                 return;
             }
+
+            // Set Cooldown
+            _spellCooldowns[slotIndex] = spell.Cooldown;
 
             foreach (var effect in spell.Effects)
             {
@@ -107,7 +135,7 @@ namespace Krooq.PlanetDefense
         {
             if (effect.Type == SpellEffectType.FireProjectile)
             {
-                _weapon.TryFire(_targetingReticle, effect.ProjectileData, effect.ProjectileModifiers, damageMult);
+                Fire(_targetingReticle, effect.ProjectileData, effect.ProjectileModifiers, damageMult);
             }
             else if (effect.Type == SpellEffectType.CastSlot)
             {
@@ -127,6 +155,28 @@ namespace Krooq.PlanetDefense
             {
                 _nextSpellDamageMultiplier *= effect.DamageMultiplier;
             }
+        }
+
+        private Projectile Fire(PlayerTargetingReticle targetingReticle, ProjectileWeaponData weaponData, IEnumerable<Modifier> modifiers, float damageMultiplier)
+        {
+            var p = GameManager.Spawn(GameManager.Data.ProjectilePrefab);
+            if (p == null) return null;
+
+            p.transform.SetPositionAndRotation(_firePoint.position, _firePoint.rotation);
+
+            // Finalize
+            p.Init(_firePoint.up, weaponData, modifiers, targetingReticle);
+
+            if (damageMultiplier != 1f)
+            {
+                // Create a temporary modifier for damage
+                var dmgMod = new StatModifier(GameManager.Data.DamageStat, damageMultiplier, StatModifier.ModifierType.Multiplicative);
+                p.AddStatModifier(dmgMod);
+            }
+
+            if (weaponData.FireSound != null) AudioManager.PlaySound(weaponData.FireSound);
+
+            return p;
         }
     }
 }
