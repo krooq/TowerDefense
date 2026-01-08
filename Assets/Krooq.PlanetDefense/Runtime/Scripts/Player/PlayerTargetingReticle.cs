@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 
 namespace Krooq.PlanetDefense
 {
-    public class PlayerTargetingReticle : MonoBehaviour
+    public class PlayerTargetingReticle : MonoBehaviour, ITargetingInfo
     {
         [Header("Visuals")]
         [SerializeField] private GameObject _groundVisual;

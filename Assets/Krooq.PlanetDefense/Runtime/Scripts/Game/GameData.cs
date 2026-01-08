@@ -13,7 +13,7 @@ namespace Krooq.PlanetDefense
         [SerializeField] private int _baseHealth = 10;
         [SerializeField] private int _baseMana = 100;
         [SerializeField] private int _baseManaRegen = 5;
-        [SerializeField] private List<Spell> _startingSpells;
+        [SerializeField] private List<SpellData> _startingSpells;
 
         [Header("Weapons")]
         [SerializeField] private List<ProjectileData> _availableWeapons;
@@ -58,7 +58,7 @@ namespace Krooq.PlanetDefense
         [SerializeField] private float _minSpawnRate = 0.2f;
 
         [Header("Shop")]
-        [SerializeField] private List<Spell> _availableSpells;
+        [SerializeField] private List<SpellData> _availableSpells;
         [SerializeField] private int _maxSlots = 4;
         [SerializeField] private SpellTileUI _spellTilePrefab;
         [SerializeField] private SpellSlotUI _spellSlotPrefab;
@@ -71,7 +71,7 @@ namespace Krooq.PlanetDefense
         public int BaseHealth => _baseHealth;
         public int BaseMana => _baseMana;
         public int BaseManaRegen => _baseManaRegen;
-        public IReadOnlyList<Spell> StartingSpells => _startingSpells;
+        public IReadOnlyList<SpellData> StartingSpells => _startingSpells;
         public IReadOnlyList<ProjectileData> AvailableWeapons => _availableWeapons;
         public ProjectileData DefaultWeapon => _defaultWeapon;
 
@@ -99,23 +99,23 @@ namespace Krooq.PlanetDefense
         public float SpawnRateDecreasePerWave => _spawnRateDecreasePerWave;
         public float MinSpawnRate => _minSpawnRate;
 
-        public List<Spell> AvailableSpells => _availableSpells;
+        public List<SpellData> AvailableSpells => _availableSpells;
         public int MaxSlots => _maxSlots;
         public SpellTileUI SpellTilePrefab => _spellTilePrefab;
         public SpellSlotUI SpellSlotPrefab => _spellSlotPrefab;
         public AudioSource AudioSourcePrefab => _audioSourcePrefab;
 
         [Header("Relics")]
-        [SerializeField] private List<Relic> _availableRelics;
+        [SerializeField] private List<RelicData> _availableRelics;
         [SerializeField] private int _maxRelicSlots = 3;
         [SerializeField] private RelicTileUI _relicTilePrefab;
         [SerializeField] private RelicSlotUI _relicSlotPrefab;
-        [SerializeField] private List<Relic> _startingRelics;
+        [SerializeField] private List<RelicData> _startingRelics;
 
-        public List<Relic> AvailableRelics => _availableRelics;
+        public List<RelicData> AvailableRelics => _availableRelics;
         public int MaxRelicSlots => _maxRelicSlots;
         public RelicTileUI RelicTilePrefab => _relicTilePrefab;
         public RelicSlotUI RelicSlotPrefab => _relicSlotPrefab;
-        public List<Relic> StartingRelics => _startingRelics;
+        public List<RelicData> StartingRelics => _startingRelics;
     }
 }

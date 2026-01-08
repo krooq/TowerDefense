@@ -30,14 +30,14 @@ namespace Krooq.PlanetDefense
         public override async UniTask OnGameEvent(IGameEvent gameEvent)
         {
             if (gameEvent is not SpellCastEvent spellCast) return;
-            if (Source is not Spell sourceSpell) return;
+            if (Source is not SpellData sourceSpell) return;
             if (sourceSpell != spellCast.Spell) return;
             FireProjectile(spellCast);
         }
 
         private void FireProjectile(SpellCastEvent e)
         {
-            var gm = Player.GetSingleton<GameManager>();
+            var gm = Owner.gameObject.GetSingleton<GameManager>();
             var data = _data.ProjectileData;
             if (data == null) return;
 
@@ -46,10 +46,9 @@ namespace Krooq.PlanetDefense
             var p = gm.Spawn(prefab);
             if (p == null) return;
 
-            var caster = Player.GetCachedComponent<PlayerSpellCaster>();
-            p.transform.SetPositionAndRotation(caster.FirePoint.position, caster.FirePoint.rotation);
+            p.transform.SetPositionAndRotation(Owner.FirePoint.position, Owner.FirePoint.rotation);
 
-            p.Init(caster.FirePoint.up, data, e.Spell, Player, caster.TargetingReticle);
+            p.Init(Owner.FirePoint.up, data, e.Spell, Owner, Owner.TargetingInfo);
         }
     }
 }

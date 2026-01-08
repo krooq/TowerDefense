@@ -30,7 +30,8 @@ namespace Krooq.PlanetDefense
         public float CurrentMana => Player.CurrentMana;
         public GameState State => _currentState;
 
-        public IReadOnlyList<Spell> Spells => Player.Spells;
+        public IReadOnlyList<Threat> Threats => _threats;
+        public IReadOnlyList<SpellData> Spells => Player.Spells;
         public ProjectileData SelectedWeapon => Player.SelectedWeapon;
 
         protected MultiGameObjectPool Pool => this.GetSingleton<MultiGameObjectPool>();

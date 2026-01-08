@@ -13,8 +13,8 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private int _currentMana;
         [SerializeField, ReadOnly] private int _maxMana;
         [SerializeField, ReadOnly] private int _resources;
-        [SerializeField, ReadOnly] private Spell[] _spells = new Spell[4];
-        [SerializeField, ReadOnly] private Relic[] _relics;
+        [SerializeField, ReadOnly] private SpellData[] _spells = new SpellData[4];
+        [SerializeField, ReadOnly] private RelicData[] _relics;
         [SerializeField, ReadOnly] private ProjectileData _selectedWeapon;
 
         private AbilityController _abilityController;
@@ -28,8 +28,8 @@ namespace Krooq.PlanetDefense
         public int CurrentMana => _currentMana;
         public int MaxMana => _maxMana;
         public int Resources => _resources;
-        public IReadOnlyList<Spell> Spells => _spells;
-        public IReadOnlyList<Relic> Relics => _relics;
+        public IReadOnlyList<SpellData> Spells => _spells;
+        public IReadOnlyList<RelicData> Relics => _relics;
         public ProjectileData SelectedWeapon => _selectedWeapon;
         public AbilityController AbilityController => _abilityController;
 
@@ -48,11 +48,11 @@ namespace Krooq.PlanetDefense
             {
                 _abilityController = GetComponent<AbilityController>();
                 if (_abilityController == null) _abilityController = gameObject.AddComponent<AbilityController>();
-                _abilityController.Init(this);
+                _abilityController.Init(GetComponent<PlayerSpellCaster>());
             }
         }
 
-        public void SetSpell(int index, Spell spell)
+        public void SetSpell(int index, SpellData spell)
         {
             if (index >= 0 && index < _spells.Length)
             {
@@ -61,7 +61,7 @@ namespace Krooq.PlanetDefense
             }
         }
 
-        public void SetRelic(int index, Relic relic)
+        public void SetRelic(int index, RelicData relic)
         {
             if (index >= 0 && index < _relics.Length)
             {
@@ -78,14 +78,14 @@ namespace Krooq.PlanetDefense
             _resources = GameManager.Data.StartingResources;
             _currentHealth = _maxHealth;
             _selectedWeapon = GameManager.Data.DefaultWeapon;
-            _spells = new Spell[GameManager.Data.MaxSlots];
+            _spells = new SpellData[GameManager.Data.MaxSlots];
             var startingSpells = GameManager.Data.StartingSpells;
             for (int i = 0; i < startingSpells.Count && i < _spells.Length; i++)
             {
                 _spells[i] = startingSpells[i];
             }
 
-            _relics = new Relic[GameManager.Data.MaxRelicSlots];
+            _relics = new RelicData[GameManager.Data.MaxRelicSlots];
             var startingRelics = GameManager.Data.StartingRelics;
             if (startingRelics != null)
             {

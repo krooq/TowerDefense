@@ -9,14 +9,14 @@ namespace Krooq.PlanetDefense
 {
     public class AbilityController : MonoBehaviour, IGameEventListener
     {
-        private Player _player;
+        private ISpellCaster _caster;
         private List<IAbility> _abilities = new();
 
         protected GameEventManager GameEventManager => this.GetSingleton<GameEventManager>();
 
-        public void Init(Player player)
+        public void Init(ISpellCaster caster)
         {
-            _player = player;
+            _caster = caster;
             GameEventManager.AddListener(this);
             RebuildAbilities();
         }
@@ -30,32 +30,16 @@ namespace Krooq.PlanetDefense
         {
             _abilities.Clear();
 
-            // Order: Relics then Spells
-            if (_player.Relics != null)
-            {
-                foreach (var relic in _player.Relics)
-                {
-                    if (relic == null) continue;
-                    foreach (var def in relic.Abilities)
-                    {
-                        var ability = def.Create();
-                        ability.Init(_player, relic);
-                        _abilities.Add(ability);
-                    }
-                }
-            }
+            if (_caster == null) return;
 
-            if (_player.Spells != null)
+            foreach (var source in _caster.AbilitySources)
             {
-                foreach (var spell in _player.Spells)
+                if (source == null) continue;
+                foreach (var def in source.Abilities)
                 {
-                    if (spell == null) continue;
-                    foreach (var def in spell.Abilities)
-                    {
-                        var ability = def.Create();
-                        ability.Init(_player, spell);
-                        _abilities.Add(ability);
-                    }
+                    var ability = def.Create();
+                    ability.Init(_caster, source);
+                    _abilities.Add(ability);
                 }
             }
         }

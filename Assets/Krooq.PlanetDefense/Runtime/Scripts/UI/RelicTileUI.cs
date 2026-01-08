@@ -7,9 +7,9 @@ namespace Krooq.PlanetDefense
 {
     public class RelicTileUI : BaseTileUI
     {
-        public Relic Relic => Item as Relic;
+        public RelicData Relic => Item as RelicData;
 
-        public void Init(Relic relic, bool isShopItem, int slotIndex = -1, UnityAction onClick = null)
+        public void Init(RelicData relic, bool isShopItem, int slotIndex = -1, UnityAction onClick = null)
         {
             base.Init(relic, isShopItem, slotIndex, onClick);
         }

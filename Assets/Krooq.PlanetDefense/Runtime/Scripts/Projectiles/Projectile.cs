@@ -42,7 +42,7 @@ namespace Krooq.PlanetDefense
         public float Lifetime => _lifetime.Value;
         public float FireRate => _fireRate.Value;
 
-        public void Init(Vector3 direction, ProjectileData data, Spell sourceSpell, Player sourcePlayer, PlayerTargetingReticle targetingReticle = null)
+        public void Init(Vector3 direction, ProjectileData data, SpellData sourceSpell, ISpellCaster sourceCaster, ITargetingInfo targetingInfo = null)
         {
             _data = data;
             _direction = direction;
@@ -68,9 +68,9 @@ namespace Krooq.PlanetDefense
                 _model.Init(this);
             }
 
-            if (targetingReticle != null && targetingReticle.IsGroundTarget)
+            if (targetingInfo != null && targetingInfo.IsGroundTarget)
             {
-                var dist = Vector3.Distance(transform.position, targetingReticle.TargetPosition);
+                var dist = Vector3.Distance(transform.position, targetingInfo.TargetPosition);
                 _target = transform.position + (direction.normalized * dist);
             }
 
@@ -91,7 +91,7 @@ namespace Krooq.PlanetDefense
             transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
             // Fire Event
-            GameEventManager.FireEvent(this, new ProjectileLaunchedEvent(this, sourceSpell, sourcePlayer));
+            GameEventManager.FireEvent(this, new ProjectileLaunchedEvent(this, sourceSpell, sourceCaster));
 
             // Update Scale
             transform.localScale = Vector3.one * Size;

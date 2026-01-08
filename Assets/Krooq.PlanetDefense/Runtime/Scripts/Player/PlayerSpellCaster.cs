@@ -6,40 +6,23 @@ using Sirenix.OdinInspector;
 
 namespace Krooq.PlanetDefense
 {
-    public class PlayerSpellCaster : MonoBehaviour
+    public class PlayerSpellCaster : Caster
     {
         [SerializeField] private Transform _pivot;
-        [SerializeField] private Transform _firePoint;
         [SerializeField] private PlayerTargetingReticle _targetingReticle;
 
-        public Transform FirePoint => _firePoint;
+        public override ITargetingInfo TargetingInfo => _targetingReticle;
         public PlayerTargetingReticle TargetingReticle => _targetingReticle;
 
         [SerializeField, ReadOnly] private int _selectedSlotIndex = 0;
-        [SerializeField, ReadOnly] private Spell _lastCastSpell;
-        [SerializeField, ReadOnly] private float _nextSpellDamageMultiplier = 1f;
+        [SerializeField, ReadOnly] private SpellData _lastCastSpell;
 
-        private Dictionary<int, float> _spellCooldowns = new Dictionary<int, float>();
-
-        protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected Player Player => this.GetSingleton<Player>();
-        protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
-        protected Krooq.Common.GameEventManager GameEventManager => this.GetSingleton<Krooq.Common.GameEventManager>();
 
-        private void Update()
+        protected override void Update()
         {
+            base.Update();
             if (GameManager.State != GameState.Playing) return;
-
-            // Update Cooldowns
-            var keys = new List<int>(_spellCooldowns.Keys);
-            foreach (var key in keys)
-            {
-                if (_spellCooldowns[key] > 0)
-                {
-                    _spellCooldowns[key] -= Time.deltaTime;
-                }
-            }
-
             HandleInput();
         }
 
@@ -72,42 +55,47 @@ namespace Krooq.PlanetDefense
             if (Player.Inputs.QuickCast4Action.WasPressedThisFrame()) CastSpell(3);
         }
 
-        private void CastSelectedSpell() => CastSpell(_selectedSlotIndex);
-
-        private void CastSpell(int slotIndex)
+        private void CastSelectedSpell()
         {
-            var spells = GameManager.Spells;
-            if (slotIndex < 0 || slotIndex >= spells.Count) return;
-            var spell = spells[slotIndex];
-            if (spell == null) return;
-
-            // Check Cooldown
-            if (_spellCooldowns.TryGetValue(slotIndex, out var timer) && timer > 0) return;
-
-            // Capture current multiplier
-            float dmgMult = _nextSpellDamageMultiplier;
-
-            // Reset for next separate cast chain
-            _nextSpellDamageMultiplier = 1f;
-
-            ProcessSpell(spell, slotIndex, 1f, dmgMult);
+            CastSpell(_selectedSlotIndex);
         }
 
-        private void ProcessSpell(Spell spell, int slotIndex, float manaCostMult, float damageMult)
+        public override SpellData GetSpell(int index)
         {
-            var cost = Mathf.CeilToInt(spell.ManaCost * manaCostMult);
-            if (!Player.TrySpendMana(cost))
+            var spells = Player.Spells;
+            if (index < 0 || index >= spells.Count) return null;
+            return spells[index];
+        }
+
+        public override bool TrySpendMana(int amount)
+        {
+            return Player.TrySpendMana(amount);
+        }
+
+        public override IEnumerable<IAbilitySource> AbilitySources
+        {
+            get
             {
-                // TODO: Feedback
-                return;
+                if (Player == null) yield break;
+                if (Player.Relics != null)
+                {
+                    foreach (var relic in Player.Relics)
+                        if (relic != null) yield return relic;
+                }
+                if (Player.Spells != null)
+                {
+                    foreach (var spell in Player.Spells)
+                        if (spell != null) yield return spell;
+                }
             }
+        }
 
-            // Set Cooldown
-            _spellCooldowns[slotIndex] = spell.Cooldown;
-
-            GameEventManager.FireEvent(this, new SpellCastEvent(spell, Player));
-
+        protected override void ProcessSpell(SpellData spell, int slotIndex, float manaCostMult, float damageMult)
+        {
+            base.ProcessSpell(spell, slotIndex, manaCostMult, damageMult);
             _lastCastSpell = spell;
         }
+
+        // Removed original ProcessSpell, CastSpell, _firePoint, etc as they are in Base/Refactored
     }
 }

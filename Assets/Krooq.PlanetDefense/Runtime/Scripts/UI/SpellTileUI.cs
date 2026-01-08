@@ -10,9 +10,9 @@ namespace Krooq.PlanetDefense
 {
     public class SpellTileUI : BaseTileUI
     {
-        public Spell Spell => Item as Spell;
+        public SpellData Spell => Item as SpellData;
 
-        public void Init(Spell spell, bool isShopItem, int slotIndex = -1, UnityAction onClick = null)
+        public void Init(SpellData spell, bool isShopItem, int slotIndex = -1, UnityAction onClick = null)
         {
             base.Init(spell, isShopItem, slotIndex, onClick);
         }
