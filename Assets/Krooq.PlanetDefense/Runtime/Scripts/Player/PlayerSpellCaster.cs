@@ -12,6 +12,9 @@ namespace Krooq.PlanetDefense
         [SerializeField] private Transform _firePoint;
         [SerializeField] private PlayerTargetingReticle _targetingReticle;
 
+        public Transform FirePoint => _firePoint;
+        public PlayerTargetingReticle TargetingReticle => _targetingReticle;
+
         [SerializeField, ReadOnly] private int _selectedSlotIndex = 0;
         [SerializeField, ReadOnly] private Spell _lastCastSpell;
         [SerializeField, ReadOnly] private float _nextSpellDamageMultiplier = 1f;
@@ -21,6 +24,7 @@ namespace Krooq.PlanetDefense
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected Player Player => this.GetSingleton<Player>();
         protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
+        protected Krooq.Common.GameEventManager GameEventManager => this.GetSingleton<Krooq.Common.GameEventManager>();
 
         private void Update()
         {
@@ -101,83 +105,9 @@ namespace Krooq.PlanetDefense
             // Set Cooldown
             _spellCooldowns[slotIndex] = spell.Cooldown;
 
-            foreach (var effect in spell.Effects)
-            {
-                if (CheckCondition(effect, _lastCastSpell))
-                {
-                    ApplyEffect(effect, spell, slotIndex, damageMult);
-                }
-            }
+            GameEventManager?.FireEvent(this, new SpellCastEvent(spell, Player));
 
             _lastCastSpell = spell;
-        }
-
-        private bool CheckCondition(Effect effect, Spell lastSpell)
-        {
-            if (!effect.HasCondition) return true;
-            var condition = effect.Condition;
-
-            switch (condition.Type)
-            {
-                case Condition.ConditionType.PreviousSpellTag:
-                    if (lastSpell == null) return false;
-                    foreach (var tag in lastSpell.Tags) if (tag == condition.Tag) return true;
-                    return false;
-                case Condition.ConditionType.ManaPercentageAbove:
-                    if (GameManager.Data.BaseMana <= 0) return false;
-                    return (GameManager.CurrentMana / GameManager.Data.BaseMana) >= condition.MinManaPercent;
-                case Condition.ConditionType.Chance:
-                    return Random.value <= condition.Chance;
-            }
-            return true;
-        }
-
-        private void ApplyEffect(Effect effect, Spell sourceSpell, int sourceSlotIndex, float damageMult)
-        {
-            if (effect.Type == EffectType.FireProjectile)
-            {
-                Fire(_targetingReticle, effect.ProjectileData, effect.ProjectileModifiers, damageMult);
-            }
-            else if (effect.Type == EffectType.CastSlot)
-            {
-                int targetSlot = sourceSlotIndex + effect.SlotOffset;
-                var spells = GameManager.Spells;
-                if (targetSlot >= 0 && targetSlot < spells.Count)
-                {
-                    var targetSpell = spells[targetSlot];
-                    if (targetSpell != null)
-                    {
-                        // Recursive cast
-                        ProcessSpell(targetSpell, targetSlot, effect.ManaCostMultiplier, damageMult);
-                    }
-                }
-            }
-            else if (effect.Type == EffectType.ModifyNextSpell)
-            {
-                _nextSpellDamageMultiplier *= effect.DamageMultiplier;
-            }
-        }
-
-        private Projectile Fire(PlayerTargetingReticle targetingReticle, ProjectileWeaponData weaponData, IEnumerable<Modifier> modifiers, float damageMultiplier)
-        {
-            var p = GameManager.Spawn(GameManager.Data.ProjectilePrefab);
-            if (p == null) return null;
-
-            p.transform.SetPositionAndRotation(_firePoint.position, _firePoint.rotation);
-
-            // Finalize
-            p.Init(_firePoint.up, weaponData, modifiers, targetingReticle);
-
-            if (damageMultiplier != 1f)
-            {
-                // Create a temporary modifier for damage
-                var dmgMod = new StatModifier(GameManager.Data.DamageStat, damageMultiplier, StatModifier.ModifierType.Multiplicative);
-                p.AddStatModifier(dmgMod);
-            }
-
-            if (weaponData.FireSound != null) AudioManager.PlaySound(weaponData.FireSound);
-
-            return p;
         }
     }
 }

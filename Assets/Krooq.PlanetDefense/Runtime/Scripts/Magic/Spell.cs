@@ -15,7 +15,7 @@ namespace Krooq.PlanetDefense
         [SerializeField] private float _cooldown;
         [SerializeField] private List<string> _tags = new();
 
-        [SerializeField] private List<Effect> _effects = new();
+        [SerializeField] private List<AbilityDefinition> _abilities = new();
 
         public string SpellName => _spellName;
         public string Name => _spellName;
@@ -25,6 +25,6 @@ namespace Krooq.PlanetDefense
         public float ManaCost => _manaCost;
         public float Cooldown => _cooldown;
         public IReadOnlyList<string> Tags => _tags;
-        public IReadOnlyList<Effect> Effects => _effects;
+        public IReadOnlyList<AbilityDefinition> Abilities => _abilities;
     }
 }

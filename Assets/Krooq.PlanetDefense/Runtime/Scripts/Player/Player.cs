@@ -17,6 +17,7 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private Relic[] _relics;
         [SerializeField, ReadOnly] private ProjectileWeaponData _selectedWeapon;
 
+        private AbilityController _abilityController;
         private float _manaRegenAccumulator;
 
         public PlayerInputs Inputs => this.GetCachedComponent<PlayerInputs>();
@@ -30,12 +31,24 @@ namespace Krooq.PlanetDefense
         public IReadOnlyList<Spell> Spells => _spells;
         public IReadOnlyList<Relic> Relics => _relics;
         public ProjectileWeaponData SelectedWeapon => _selectedWeapon;
+        public AbilityController AbilityController => _abilityController;
 
         private void Start()
         {
+            EnsureAbilityController();
             if (GameManager != null && GameManager.Data != null)
             {
                 ResetPlayer();
+            }
+        }
+
+        private void EnsureAbilityController()
+        {
+            if (_abilityController == null)
+            {
+                _abilityController = GetComponent<AbilityController>();
+                if (_abilityController == null) _abilityController = gameObject.AddComponent<AbilityController>();
+                _abilityController.Init(this);
             }
         }
 
@@ -44,6 +57,7 @@ namespace Krooq.PlanetDefense
             if (index >= 0 && index < _spells.Length)
             {
                 _spells[index] = spell;
+                _abilityController.RebuildAbilities();
             }
         }
 
@@ -52,6 +66,7 @@ namespace Krooq.PlanetDefense
             if (index >= 0 && index < _relics.Length)
             {
                 _relics[index] = relic;
+                _abilityController.RebuildAbilities();
             }
         }
 
@@ -85,6 +100,8 @@ namespace Krooq.PlanetDefense
 
             this.GetSingleton<SpellBarUI>()?.Refresh();
             this.GetSingleton<RelicBarUI>()?.Refresh();
+
+            _abilityController.RebuildAbilities();
         }
 
         private void Update()

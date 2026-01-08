@@ -16,7 +16,6 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private float _timer;
         [SerializeField, ReadOnly] private Vector3? _target;
         [SerializeField, ReadOnly] private HashSet<string> _tags = new();
-        [SerializeField, ReadOnly] private List<Modifier> _modifiers = new();
         [SerializeField, ReadOnly] private ProjectileModel _model;
         [SerializeField, ReadOnly] private ProjectileWeaponData _weaponData;
 
@@ -34,6 +33,7 @@ namespace Krooq.PlanetDefense
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
         protected Rigidbody2D Rigidbody2D => this.GetCachedComponent<Rigidbody2D>();
+        protected GameEventManager GameEventManager => this.GetSingleton<GameEventManager>();
 
         public float Damage => _damage.Value;
         public float Speed => _speed.Value;
@@ -42,12 +42,11 @@ namespace Krooq.PlanetDefense
         public float Lifetime => _lifetime.Value;
         public float FireRate => _fireRate.Value;
 
-        public void Init(Vector3 direction, ProjectileWeaponData weaponData, IEnumerable<Modifier> modifiers, PlayerTargetingReticle targetingReticle = null)
+        public void Init(Vector3 direction, ProjectileWeaponData weaponData, Spell sourceSpell, Player sourcePlayer, PlayerTargetingReticle targetingReticle = null)
         {
             _weaponData = weaponData;
             _direction = direction;
             _tags.Clear();
-            _modifiers.Clear();
             _target = null;
             GameManager.Despawn(_model);
 
@@ -86,11 +85,8 @@ namespace Krooq.PlanetDefense
             _timer = Lifetime;
             transform.rotation = Quaternion.LookRotation(Vector3.forward, direction);
 
-            // Apply Modifiers (Always trigger)
-            foreach (var mod in _modifiers)
-            {
-                mod.Process(this, ModifierTrigger.Always);
-            }
+            // Fire Event
+            GameEventManager?.FireEvent(this, new ProjectileLaunchedEvent(this, sourceSpell, sourcePlayer));
 
             // Update Scale
             transform.localScale = Vector3.one * Size;
@@ -146,7 +142,7 @@ namespace Krooq.PlanetDefense
                 var distSq = ((Vector2)_target.Value - Rigidbody2D.position).sqrMagnitude;
                 if (distSq <= moveStep.sqrMagnitude)
                 {
-                    foreach (var mod in _modifiers) mod.Process(this, ModifierTrigger.OnHit);
+                    GameEventManager?.FireEvent(this, new ProjectileHitEvent(this, null));
                     if (HasTag(Explosive)) Explode();
                     HandleImpact(true, Quaternion.LookRotation(Vector3.forward, Vector3.up));
                     return;
@@ -158,7 +154,7 @@ namespace Krooq.PlanetDefense
             _timer -= Time.fixedDeltaTime;
             if (_timer <= 0)
             {
-                foreach (var mod in _modifiers) mod.Process(this, ModifierTrigger.OnDespawn);
+                GameEventManager?.FireEvent(this, new ProjectileDespawnEvent(this));
                 HandleImpact(false);
             }
         }
@@ -167,9 +163,10 @@ namespace Krooq.PlanetDefense
         {
             if (!gameObject.activeInHierarchy) return; // Ignore collisions if already dealing with impact
 
-            foreach (var mod in _modifiers) mod.Process(this, ModifierTrigger.OnHit);
             var rb = other.attachedRigidbody;
             var go = rb != null ? rb.gameObject : other.gameObject;
+            GameEventManager?.FireEvent(this, new ProjectileHitEvent(this, go));
+
             var threat = go.GetCachedComponent<Threat>();
             if (threat != null)
             {

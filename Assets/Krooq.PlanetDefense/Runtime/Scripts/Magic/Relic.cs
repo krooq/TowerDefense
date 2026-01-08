@@ -13,13 +13,13 @@ namespace Krooq.PlanetDefense
         [SerializeField] private int _shopCost;
         [SerializeField] private List<string> _tags = new();
 
-        [SerializeField] private List<Effect> _effects = new();
+        [SerializeField] private List<AbilityDefinition> _abilities = new();
 
         public string Name => _relicName;
         public string Description => _description;
         public Sprite Icon => _icon;
         public int ShopCost => _shopCost;
         public IReadOnlyList<string> Tags => _tags;
-        public IReadOnlyList<Effect> Effects => _effects;
+        public IReadOnlyList<AbilityDefinition> Abilities => _abilities;
     }
 }
