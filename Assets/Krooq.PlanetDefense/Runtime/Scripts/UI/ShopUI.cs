@@ -16,6 +16,7 @@ namespace Krooq.PlanetDefense
 
         protected SpellBarUI SpellBarUI => this.GetSingleton<SpellBarUI>();
         protected RelicBarUI RelicBarUI => this.GetSingleton<RelicBarUI>();
+        protected CasterBarUI TowerBarUI => this.GetSingleton<CasterBarUI>();
         protected GameManager GameManager => this.GetSingleton<GameManager>();
 
         protected CanvasGroup CanvasGroup => this.GetCachedComponent<CanvasGroup>();
@@ -59,6 +60,7 @@ namespace Krooq.PlanetDefense
             // Refresh Active Slots
             if (SpellBarUI != null) SpellBarUI.Refresh();
             if (RelicBarUI != null) RelicBarUI.Refresh();
+            if (TowerBarUI != null) TowerBarUI.Refresh();
 
             // Populate Available Spells
             if (GameManager.Data.AvailableSpells != null)
@@ -77,6 +79,17 @@ namespace Krooq.PlanetDefense
                 foreach (var tile in GameManager.Data.AvailableRelics)
                 {
                     var ui = GameManager.Spawn(GameManager.Data.RelicTilePrefab);
+                    ui.transform.SetParent(_itemContainer, false);
+                    ui.Init(tile, true);
+                }
+            }
+
+            // Populate Available Towers
+            if (GameManager.Data.AvailableTowers != null)
+            {
+                foreach (var tile in GameManager.Data.AvailableTowers)
+                {
+                    var ui = GameManager.Spawn(GameManager.Data.CasterTilePrefab);
                     ui.transform.SetParent(_itemContainer, false);
                     ui.Init(tile, true);
                 }

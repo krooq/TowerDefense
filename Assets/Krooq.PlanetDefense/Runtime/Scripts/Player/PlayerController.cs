@@ -8,7 +8,7 @@ namespace Krooq.PlanetDefense
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] private PlayerSpellCaster _spellCaster;
+        [SerializeField] private PlayerCaster _caster;
         [SerializeField] private PlayerTargetingReticle _targetingReticle;
 
         protected Player Player => this.GetSingleton<Player>();
@@ -33,7 +33,7 @@ namespace Krooq.PlanetDefense
         protected void HandleAiming()
         {
             if (_targetingReticle == null) return;
-            _spellCaster.Aim(_targetingReticle.TargetPosition, GameManager.Data.RotationSpeed);
+            _caster.Aim(_targetingReticle.TargetPosition, GameManager.Data.RotationSpeed);
         }
     }
 }

@@ -5,7 +5,7 @@ namespace Krooq.PlanetDefense
 {
     public interface IAbility
     {
-        void Init(ISpellCaster owner, IAbilitySource source);
+        void Init(ICaster owner, IAbilitySource source);
         UniTask OnGameEvent(IGameEvent gameEvent);
     }
 }

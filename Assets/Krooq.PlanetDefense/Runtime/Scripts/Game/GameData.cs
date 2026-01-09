@@ -117,5 +117,19 @@ namespace Krooq.PlanetDefense
         public RelicTileUI RelicTilePrefab => _relicTilePrefab;
         public RelicSlotUI RelicSlotPrefab => _relicSlotPrefab;
         public List<RelicData> StartingRelics => _startingRelics;
+
+        [Header("Towers")]
+        [SerializeField] private List<CasterData> _availableTowers;
+        [SerializeField] private int _maxTowerSlots = 3;
+        [SerializeField] private CasterTileUI _towerTilePrefab;
+        [SerializeField] private CasterSlotUI _towerSlotPrefab;
+        [SerializeField] private List<CasterData> _startingTowers;
+
+        public List<CasterData> AvailableTowers => _availableTowers;
+        public int MaxCasterSlots => _maxTowerSlots;
+        public CasterTileUI CasterTilePrefab => _towerTilePrefab;
+        public CasterSlotUI CasterSlotPrefab => _towerSlotPrefab;
+        public List<CasterData> StartingTowers => _startingTowers;
     }
 }
+

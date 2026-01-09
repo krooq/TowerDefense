@@ -44,11 +44,11 @@ TagManager:
   - name: Background
     uniqueID: 1798838881
     locked: 0
-  - name: Threats
-    uniqueID: 1866815811
-    locked: 0
   - name: Buildings
     uniqueID: 1488393723
+    locked: 0
+  - name: Threats
+    uniqueID: 1866815811
     locked: 0
   - name: Projectiles
     uniqueID: 3059007435

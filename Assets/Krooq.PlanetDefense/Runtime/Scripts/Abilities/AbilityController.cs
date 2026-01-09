@@ -9,12 +9,12 @@ namespace Krooq.PlanetDefense
 {
     public class AbilityController : MonoBehaviour, IGameEventListener
     {
-        private ISpellCaster _caster;
+        private ICaster _caster;
         private List<IAbility> _abilities = new();
 
         protected GameEventManager GameEventManager => this.GetSingleton<GameEventManager>();
 
-        public void Init(ISpellCaster caster)
+        public void Init(ICaster caster)
         {
             _caster = caster;
             GameEventManager.AddListener(this);

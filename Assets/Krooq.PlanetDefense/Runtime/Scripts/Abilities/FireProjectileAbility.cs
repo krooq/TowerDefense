@@ -33,6 +33,7 @@ namespace Krooq.PlanetDefense
             if (Source is not SpellData sourceSpell) return;
             if (sourceSpell != spellCast.Spell) return;
             FireProjectile(spellCast);
+            await UniTask.CompletedTask;
         }
 
         private void FireProjectile(SpellCastEvent e)

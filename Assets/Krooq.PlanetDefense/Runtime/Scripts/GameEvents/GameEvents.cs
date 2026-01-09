@@ -6,9 +6,9 @@ namespace Krooq.PlanetDefense
     public struct SpellCastEvent : IGameEvent
     {
         public SpellData Spell;
-        public ISpellCaster Caster;
+        public ICaster Caster;
 
-        public SpellCastEvent(SpellData spell, ISpellCaster caster)
+        public SpellCastEvent(SpellData spell, ICaster caster)
         {
             Spell = spell;
             Caster = caster;
@@ -19,9 +19,9 @@ namespace Krooq.PlanetDefense
     {
         public Projectile Projectile;
         public SpellData SourceSpell;
-        public ISpellCaster SourceCaster;
+        public ICaster SourceCaster;
 
-        public ProjectileLaunchedEvent(Projectile projectile, SpellData sourceSpell, ISpellCaster sourceCaster)
+        public ProjectileLaunchedEvent(Projectile projectile, SpellData sourceSpell, ICaster sourceCaster)
         {
             Projectile = projectile;
             SourceSpell = sourceSpell;

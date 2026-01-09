@@ -5,10 +5,10 @@ namespace Krooq.PlanetDefense
 {
     public abstract class Ability : IAbility
     {
-        protected ISpellCaster Owner;
+        protected ICaster Owner;
         protected IAbilitySource Source;
 
-        public virtual void Init(ISpellCaster owner, IAbilitySource source)
+        public virtual void Init(ICaster owner, IAbilitySource source)
         {
             Owner = owner;
             Source = source;

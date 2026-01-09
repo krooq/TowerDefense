@@ -42,7 +42,7 @@ namespace Krooq.PlanetDefense
         public float Lifetime => _lifetime.Value;
         public float FireRate => _fireRate.Value;
 
-        public void Init(Vector3 direction, ProjectileData data, SpellData sourceSpell, ISpellCaster sourceCaster, ITargetingInfo targetingInfo = null)
+        public void Init(Vector3 direction, ProjectileData data, SpellData sourceSpell, ICaster sourceCaster, ITargetingInfo targetingInfo = null)
         {
             _data = data;
             _direction = direction;

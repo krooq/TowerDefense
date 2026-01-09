@@ -6,7 +6,7 @@ using Sirenix.OdinInspector;
 
 namespace Krooq.PlanetDefense
 {
-    public class PlayerSpellCaster : Caster
+    public class PlayerCaster : Caster
     {
         [SerializeField] private Transform _pivot;
         [SerializeField] private PlayerTargetingReticle _targetingReticle;
@@ -25,6 +25,10 @@ namespace Krooq.PlanetDefense
             if (GameManager.State != GameState.Playing) return;
             HandleInput();
         }
+
+        // Disable default behaviors from (NonPlayer) Caster
+        protected override void RegenMana() { }
+        protected override void PerformTargeting() { }
 
         public void Aim(Vector3 targetPosition, float rotationSpeed)
         {
@@ -90,12 +94,10 @@ namespace Krooq.PlanetDefense
             }
         }
 
-        protected override void ProcessSpell(SpellData spell, int slotIndex, float manaCostMult, float damageMult)
+        protected override void ProcessSpell(SpellData spell, int slotIndex)
         {
-            base.ProcessSpell(spell, slotIndex, manaCostMult, damageMult);
+            base.ProcessSpell(spell, slotIndex);
             _lastCastSpell = spell;
         }
-
-        // Removed original ProcessSpell, CastSpell, _firePoint, etc as they are in Base/Refactored
     }
 }
