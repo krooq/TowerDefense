@@ -10,9 +10,7 @@ namespace Krooq.PlanetDefense
         [SerializeField, TextArea] private string _description;
         [SerializeField] private Sprite _icon;
         [SerializeField] private int _shopCost;
-        [SerializeField] private Caster _prefab;
-        [SerializeField] private GameObject _tilePrefab;
-        [SerializeField] private GameObject _slotPrefab;
+        [SerializeField] private GameObject _modelPrefab;
 
         [Header("Stats")]
         [SerializeField] private SpellData _initialSpell;
@@ -26,9 +24,7 @@ namespace Krooq.PlanetDefense
         public string Description => _description;
         public Sprite Icon => _icon;
         public int ShopCost => _shopCost;
-        public Caster Prefab => _prefab;
-        public GameObject TilePrefab => _tilePrefab;
-        public GameObject SlotPrefab => _slotPrefab;
+        public GameObject ModelPrefab => _modelPrefab;
 
         public SpellData InitialSpell => _initialSpell;
         public int MaxMana => _maxMana;

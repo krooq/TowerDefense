@@ -63,9 +63,9 @@ namespace Krooq.PlanetDefense
             if (TowerBarUI != null) TowerBarUI.Refresh();
 
             // Populate Available Spells
-            if (GameManager.Data.AvailableSpells != null)
+            if (GameManager.Data.Spells != null)
             {
-                foreach (var tile in GameManager.Data.AvailableSpells)
+                foreach (var tile in GameManager.Data.Spells)
                 {
                     var ui = GameManager.Spawn(GameManager.Data.SpellTilePrefab);
                     ui.transform.SetParent(_itemContainer, false);
@@ -74,9 +74,9 @@ namespace Krooq.PlanetDefense
             }
 
             // Populate Available Relics
-            if (GameManager.Data.AvailableRelics != null)
+            if (GameManager.Data.Relics != null)
             {
-                foreach (var tile in GameManager.Data.AvailableRelics)
+                foreach (var tile in GameManager.Data.Relics)
                 {
                     var ui = GameManager.Spawn(GameManager.Data.RelicTilePrefab);
                     ui.transform.SetParent(_itemContainer, false);
@@ -85,9 +85,9 @@ namespace Krooq.PlanetDefense
             }
 
             // Populate Available Towers
-            if (GameManager.Data.AvailableCasters != null)
+            if (GameManager.Data.Casters != null)
             {
-                foreach (var tile in GameManager.Data.AvailableCasters)
+                foreach (var tile in GameManager.Data.Casters)
                 {
                     var ui = GameManager.Spawn(GameManager.Data.CasterTilePrefab);
                     ui.transform.SetParent(_itemContainer, false);

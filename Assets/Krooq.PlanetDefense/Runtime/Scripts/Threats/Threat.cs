@@ -30,6 +30,12 @@ namespace Krooq.PlanetDefense
             _resources = data.Resources;
             _movement = new ThreatMovement(data.MovementType);
 
+            if (_model)
+            {
+                GameManager.Despawn(_model);
+                _model = null;
+            }
+
             if (data.ModelPrefab != null)
             {
                 _model = GameManager.Spawn(data.ModelPrefab);
@@ -46,11 +52,7 @@ namespace Krooq.PlanetDefense
 
         protected void OnDisable()
         {
-            if (_model)
-            {
-                GameManager.Despawn(_model.gameObject);
-                _model = null;
-            }
+
             if (GameManager != null) GameManager.Unregister(this);
         }
 

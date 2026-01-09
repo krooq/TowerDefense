@@ -25,7 +25,6 @@ namespace Krooq.PlanetDefense
         }
 
         // Disable default behaviors from (NonPlayer) Caster
-        protected override void RegenMana() { }
         protected override void PerformTargeting() { }
 
         public void Aim(Vector3 targetPosition)
@@ -69,10 +68,6 @@ namespace Krooq.PlanetDefense
             return spells[index];
         }
 
-        public override bool TrySpendMana(int amount)
-        {
-            return Player.TrySpendMana(amount);
-        }
 
         public override IEnumerable<IAbilitySource> AbilitySources
         {

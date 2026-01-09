@@ -21,6 +21,7 @@ namespace Krooq.PlanetDefense
         [Header("State")]
         [SerializeField, ReadOnly, PropertyOrder(100)] protected float _currentMana;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected SpellData _equippedSpell;
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected GameObject _model;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected Transform _currentTarget;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected Vector3 _targetPos;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected bool _isGroundTarget = true;
@@ -66,6 +67,19 @@ namespace Krooq.PlanetDefense
             _range = data.Range;
             _abilities = new List<AbilityData>(data.Abilities);
             _targetingInfo = new DefaultTargetingInfo(this);
+
+            if (_model != null)
+            {
+                GameManager.Despawn(_model);
+                _model = null;
+            }
+
+            if (data.ModelPrefab != null)
+            {
+                _model = GameManager.Spawn(data.ModelPrefab);
+                _model.transform.SetParent(transform);
+                _model.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
+            }
 
             _currentMana = _maxMana;
 

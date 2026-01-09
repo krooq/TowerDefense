@@ -10,17 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb5cc07fd4771064b8b02794fcdfd512, type: 3}
-  m_Name: GameData
+  m_Name: Game Data
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.GameData
   _startingResources: 0
   _baseHealth: 10
-  _baseMana: 100
-  _baseManaRegen: 5
-  _startingSpells:
-  - {fileID: 11400000, guid: 87be09573ef0bc04e818a8ca9336716b, type: 2}
-  _availableWeapons:
-  - {fileID: 11400000, guid: c57ec0eb5af177447a7316823cca26b2, type: 2}
-  _defaultWeapon: {fileID: 11400000, guid: c57ec0eb5af177447a7316823cca26b2, type: 2}
+  _baseMana: 10
+  _playerCasterData: {fileID: 11400000, guid: a7b2efb70acc79147836aa7a2b76d396, type: 2}
+  _casterPrefab: {fileID: 1475530808638175228, guid: 518425689642eef458fdb2adaf29dde6, type: 3}
   _projectilePrefab: {fileID: 8491378065012396037, guid: 0ac105268fcd8d548aa6cf0f11ccd45b, type: 3}
   _damageStat: {fileID: 11400000, guid: a6594e0ea2d6c7c4e9c6a00a6ee713d6, type: 2}
   _speedStat: {fileID: 11400000, guid: ca8cd83cafaba674e920021faa0df61b, type: 2}

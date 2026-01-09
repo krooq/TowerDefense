@@ -27,7 +27,6 @@ namespace Krooq.PlanetDefense
 
         public GameData Data => _gameData;
         public int Resources => Player.Resources;
-        public float CurrentMana => Player.CurrentMana;
         public GameState State => _currentState;
 
         public IReadOnlyList<Threat> Threats => _threats;

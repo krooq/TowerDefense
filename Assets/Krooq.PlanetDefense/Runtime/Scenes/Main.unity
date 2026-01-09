@@ -3946,11 +3946,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8d0b8e2b9d63c4b8d55c58ec3e749a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.Player
-  _targetingReticle: {fileID: 0}
+  _targetingReticle: {fileID: 905639731}
   _currentHealth: 0
   _maxHealth: 0
-  _currentMana: 0
-  _maxMana: 0
   _resources: 0
   _spells:
   - {fileID: 0}
@@ -3982,6 +3980,7 @@ MonoBehaviour:
   _abilities: []
   _currentMana: 0
   _equippedSpell: {fileID: 0}
+  _model: {fileID: 0}
   _currentTarget: {fileID: 0}
   _targetPos: {x: 0, y: 0, z: 0}
   _isGroundTarget: 0

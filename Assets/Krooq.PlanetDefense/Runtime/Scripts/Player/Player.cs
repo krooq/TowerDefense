@@ -8,12 +8,10 @@ namespace Krooq.PlanetDefense
 {
     public class Player : MonoBehaviour
     {
-        [SerializeField, ReadOnly] private PlayerTargetingReticle _targetingReticle;
+        [SerializeField] private PlayerTargetingReticle _targetingReticle;
 
         [SerializeField, ReadOnly] private int _currentHealth;
         [SerializeField, ReadOnly] private int _maxHealth;
-        [SerializeField, ReadOnly] private float _currentMana;
-        [SerializeField, ReadOnly] private int _maxMana;
         [SerializeField, ReadOnly] private int _resources;
         [SerializeField, ReadOnly] private SpellData[] _spells = new SpellData[4];
         [SerializeField, ReadOnly] private RelicData[] _relics;
@@ -27,8 +25,6 @@ namespace Krooq.PlanetDefense
 
         public int CurrentHealth => _currentHealth;
         public int MaxHealth => _maxHealth;
-        public int CurrentMana => (int)_currentMana;
-        public int MaxMana => _maxMana;
         public int Resources => _resources;
         public IReadOnlyList<SpellData> Spells => _spells;
         public IReadOnlyList<RelicData> Relics => _relics;
@@ -40,6 +36,12 @@ namespace Krooq.PlanetDefense
         public AbilityController AbilityController => this.GetCachedComponent<AbilityController>();
         public PlayerTargetingReticle TargetingReticle => _targetingReticle;
 
+        protected void Init()
+        {
+            ResetPlayer();
+            AbilityController.Init(PlayerCaster);
+            PlayerCaster.Init(GameManager.Data.PlayerCasterData);
+        }
 
         private void Start()
         {
@@ -49,8 +51,6 @@ namespace Krooq.PlanetDefense
         protected void Update()
         {
             if (GameManager.State != GameState.Playing) return;
-            _currentMana += GameManager.Data.BaseManaRegen * Time.deltaTime;
-            if (_currentMana > _maxMana) _currentMana = _maxMana;
             HandleAiming();
         }
 
@@ -60,11 +60,7 @@ namespace Krooq.PlanetDefense
             PlayerCaster.Aim(_targetingReticle.TargetPosition);
         }
 
-        protected void Init()
-        {
-            AbilityController.Init(PlayerCaster);
-            ResetPlayer();
-        }
+
 
         public void SetSpell(int index, SpellData spell)
         {
@@ -116,7 +112,7 @@ namespace Krooq.PlanetDefense
                 return;
             }
 
-            var instance = GameManager.Spawn(data.Prefab);
+            var instance = GameManager.Spawn(GameManager.Data.CasterPrefab);
             instance.transform.SetPositionAndRotation(_casterSlots[index].position, _casterSlots[index].rotation);
             instance.transform.SetParent(_casterSlots[index], true);
             instance.Init(data);
@@ -133,56 +129,38 @@ namespace Krooq.PlanetDefense
             if (GameManager.Data == null) return;
 
             _maxHealth = GameManager.Data.BaseHealth;
-            _maxMana = GameManager.Data.BaseMana;
 
             _resources = GameManager.Data.StartingResources;
             _currentHealth = _maxHealth;
-            _selectedWeapon = GameManager.Data.DefaultWeapon;
             _spells = new SpellData[GameManager.Data.MaxSlots];
-            var startingSpells = GameManager.Data.StartingSpells;
-            for (int i = 0; i < startingSpells.Count && i < _spells.Length; i++)
-            {
-                _spells[i] = startingSpells[i];
-            }
-
             _relics = new RelicData[GameManager.Data.MaxRelicSlots];
             var startingRelics = GameManager.Data.StartingRelics;
-            if (startingRelics != null)
-            {
-                for (int i = 0; i < startingRelics.Count && i < _relics.Length; i++)
-                {
-                    _relics[i] = startingRelics[i];
-                }
-            }
+            for (int i = 0; i < startingRelics.Count && i < _relics.Length; i++)
+                _relics[i] = startingRelics[i];
 
             _casters = new CasterData[GameManager.Data.MaxCasterSlots];
 
-            // Clean up old towers if resetting
+            // Clean up old casters if resetting
             if (_spawnedCasters != null)
             {
-                foreach (var tower in _spawnedCasters)
+                foreach (var caster in _spawnedCasters)
                 {
-                    if (tower != null) GameManager.Despawn(tower);
+                    if (caster != null) GameManager.Despawn(caster);
                 }
             }
             _spawnedCasters = new Caster[_casters.Length];
 
-            var startingTowers = GameManager.Data.StartingCasters;
-            if (startingTowers != null)
+            var startingCasters = GameManager.Data.StartingCasters;
+            if (startingCasters != null)
             {
-                for (int i = 0; i < startingTowers.Count && i < _casters.Length; i++)
+                for (int i = 0; i < startingCasters.Count && i < _casters.Length; i++)
                 {
-                    SetCaster(i, startingTowers[i]);
+                    SetCaster(i, startingCasters[i]);
                 }
             }
-
-            _currentMana = _maxMana;
-
             this.GetSingleton<SpellBarUI>().Refresh();
             this.GetSingleton<RelicBarUI>().Refresh();
             this.GetSingleton<CasterBarUI>().Refresh();
-
-            AbilityController.RebuildAbilities();
         }
 
 
@@ -194,17 +172,6 @@ namespace Krooq.PlanetDefense
             if (_resources >= amount)
             {
                 _resources -= amount;
-                return true;
-            }
-            return false;
-        }
-
-        public bool TrySpendMana(int amount)
-        {
-            var cost = amount;
-            if (_currentMana >= cost)
-            {
-                _currentMana -= cost;
                 return true;
             }
             return false;
