@@ -20,7 +20,7 @@ namespace Krooq.PlanetDefense
                         Player.SetCaster(_slotIndex, tileUI.Caster);
 
                         var casterBarUI = this.GetSingleton<CasterBarUI>();
-                        if (casterBarUI) casterBarUI.Refresh();
+                        // if (casterBarUI) casterBarUI.Refresh();
                     }
                 }
             }

@@ -15,17 +15,31 @@ namespace Krooq.PlanetDefense
             return GameManager.Spawn(GameManager.Data.CasterSlotPrefab);
         }
 
-        protected override void OnRefreshTiles()
+        protected override void UpdateTiles()
         {
             var activeCasters = Player.Casters;
             if (activeCasters == null) return;
 
-            for (int i = 0; i < activeCasters.Count; i++)
+            for (int i = 0; i < _slotContainer.childCount; i++)
             {
-                var caster = activeCasters[i];
-                if (caster != null && i < _slotContainer.childCount)
+                var slot = _slotContainer.GetChild(i);
+                var caster = (i < activeCasters.Count) ? activeCasters[i] : null;
+
+                if (slot.childCount > 0)
                 {
-                    var slot = _slotContainer.GetChild(i);
+                    var currentChild = slot.GetChild(0);
+                    var currentUI = currentChild.GetComponent<CasterTileUI>();
+
+                    if (currentUI != null && currentUI.Item == caster)
+                    {
+                        continue;
+                    }
+
+                    GameManager.Despawn(currentChild.gameObject);
+                }
+
+                if (caster != null)
+                {
                     var ui = GameManager.Spawn(GameManager.Data.CasterTilePrefab);
                     ui.transform.SetParent(slot);
                     ui.transform.localPosition = Vector3.zero;

@@ -8,6 +8,8 @@ namespace Krooq.PlanetDefense
 {
     public class SpellSlotUI : BaseSlotUI
     {
+        protected PlayerCaster PlayerCaster => this.GetSingleton<PlayerCaster>();
+
         public override void OnDrop(PointerEventData eventData)
         {
             if (ShopUI) ShopUI.SetDirty();
@@ -17,10 +19,7 @@ namespace Krooq.PlanetDefense
                 {
                     if (Player.SpendResources(tileUI.Spell.ShopCost))
                     {
-                        Player.SetSpell(_slotIndex, tileUI.Spell);
-
-                        var spellBarUI = this.GetSingleton<SpellBarUI>();
-                        if (spellBarUI) spellBarUI.Refresh();
+                        PlayerCaster.SetSpell(tileUI.Spell, _slotIndex);
                     }
                 }
             }

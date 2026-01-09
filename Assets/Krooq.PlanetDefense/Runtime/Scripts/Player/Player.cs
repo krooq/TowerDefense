@@ -13,7 +13,6 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private int _currentHealth;
         [SerializeField, ReadOnly] private int _maxHealth;
         [SerializeField, ReadOnly] private int _resources;
-        [SerializeField, ReadOnly] private SpellData[] _spells = new SpellData[4];
         [SerializeField, ReadOnly] private RelicData[] _relics;
         [SerializeField, ReadOnly] private CasterData[] _casters;
         [SerializeField, ReadOnly] private ProjectileData _selectedWeapon;
@@ -26,7 +25,6 @@ namespace Krooq.PlanetDefense
         public int CurrentHealth => _currentHealth;
         public int MaxHealth => _maxHealth;
         public int Resources => _resources;
-        public IReadOnlyList<SpellData> Spells => _spells;
         public IReadOnlyList<RelicData> Relics => _relics;
         public IReadOnlyList<CasterData> Casters => _casters;
         public ProjectileData SelectedWeapon => _selectedWeapon;
@@ -58,17 +56,6 @@ namespace Krooq.PlanetDefense
         {
             if (_targetingReticle == null) return;
             PlayerCaster.Aim(_targetingReticle.TargetPosition);
-        }
-
-
-
-        public void SetSpell(int index, SpellData spell)
-        {
-            if (index >= 0 && index < _spells.Length)
-            {
-                _spells[index] = spell;
-                AbilityController.RebuildAbilities();
-            }
         }
 
         public void SetRelic(int index, RelicData relic)
@@ -132,7 +119,6 @@ namespace Krooq.PlanetDefense
 
             _resources = GameManager.Data.StartingResources;
             _currentHealth = _maxHealth;
-            _spells = new SpellData[GameManager.Data.MaxSlots];
             _relics = new RelicData[GameManager.Data.MaxRelicSlots];
             var startingRelics = GameManager.Data.StartingRelics;
             for (int i = 0; i < startingRelics.Count && i < _relics.Length; i++)
@@ -158,9 +144,8 @@ namespace Krooq.PlanetDefense
                     SetCaster(i, startingCasters[i]);
                 }
             }
-            this.GetSingleton<SpellBarUI>().Refresh();
-            this.GetSingleton<RelicBarUI>().Refresh();
-            this.GetSingleton<CasterBarUI>().Refresh();
+            // this.GetSingleton<RelicBarUI>().Refresh();
+            // this.GetSingleton<CasterBarUI>().Refresh();
         }
 
 

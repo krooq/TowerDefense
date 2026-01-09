@@ -19,7 +19,7 @@ namespace Krooq.PlanetDefense
                         Player.SetRelic(_slotIndex, tileUI.Relic);
 
                         var relicBarUI = this.GetSingleton<RelicBarUI>();
-                        if (relicBarUI) relicBarUI.Refresh();
+                        // if (relicBarUI) relicBarUI.Refresh();
                     }
                 }
             }

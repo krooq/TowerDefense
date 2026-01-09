@@ -21,7 +21,7 @@ namespace Krooq.PlanetDefense
 
             if (ShopUI) ShopUI.SetDirty();
             var relicBarUI = this.GetSingleton<RelicBarUI>();
-            if (relicBarUI) relicBarUI.Refresh();
+            // if (relicBarUI) relicBarUI.Refresh();
         }
     }
 }

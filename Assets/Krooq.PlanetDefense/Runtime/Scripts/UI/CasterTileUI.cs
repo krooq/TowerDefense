@@ -26,7 +26,7 @@ namespace Krooq.PlanetDefense
             if (ShopUI) ShopUI.SetDirty();
 
             var casterBarUI = this.GetSingleton<CasterBarUI>();
-            if (casterBarUI) casterBarUI.Refresh();
+            // if (casterBarUI) casterBarUI.Refresh();
         }
     }
 }

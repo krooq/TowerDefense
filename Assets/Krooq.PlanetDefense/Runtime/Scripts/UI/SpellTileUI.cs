@@ -12,6 +12,8 @@ namespace Krooq.PlanetDefense
     {
         public SpellData Spell => Item as SpellData;
 
+        protected PlayerCaster PlayerCaster => this.GetSingleton<PlayerCaster>();
+
         public void Init(SpellData spell, bool isShopItem, int slotIndex = -1, UnityAction onClick = null)
         {
             base.Init(spell, isShopItem, slotIndex, onClick);
@@ -21,11 +23,9 @@ namespace Krooq.PlanetDefense
         {
             // Sell
             Player.AddResources(Spell.ShopCost); // 100% refund for now
-            Player.SetSpell(_slotIndex, null);
+            PlayerCaster.SetSpell(null, _slotIndex);
 
             if (ShopUI) ShopUI.SetDirty();
-            var spellBarUI = this.GetSingleton<SpellBarUI>();
-            if (spellBarUI) spellBarUI.Refresh();
         }
     }
 }

@@ -12,7 +12,6 @@ namespace Krooq.PlanetDefense
 
         public override ITargetingInfo TargetingInfo => Player.TargetingReticle;
 
-        [SerializeField, ReadOnly] private int _selectedSlotIndex = 0;
         [SerializeField, ReadOnly] private SpellData _lastCastSpell;
 
         protected Player Player => this.GetSingleton<Player>();
@@ -37,37 +36,15 @@ namespace Krooq.PlanetDefense
 
         private void HandleInput()
         {
-            // Slot Selection
-            if (Player.Inputs.Spell1Action.WasPressedThisFrame()) _selectedSlotIndex = 0;
-            if (Player.Inputs.Spell2Action.WasPressedThisFrame()) _selectedSlotIndex = 1;
-            if (Player.Inputs.Spell3Action.WasPressedThisFrame()) _selectedSlotIndex = 2;
-            if (Player.Inputs.Spell4Action.WasPressedThisFrame()) _selectedSlotIndex = 3;
-
             // Firing
             if (Player.Inputs.ClickAction.WasPressedThisFrame())
             {
-                CastSelectedSpell();
+                CastSpell();
             }
 
             // Quick Casting
-            if (Player.Inputs.QuickCast1Action.WasPressedThisFrame()) CastSpell(0);
-            if (Player.Inputs.QuickCast2Action.WasPressedThisFrame()) CastSpell(1);
-            if (Player.Inputs.QuickCast3Action.WasPressedThisFrame()) CastSpell(2);
-            if (Player.Inputs.QuickCast4Action.WasPressedThisFrame()) CastSpell(3);
+            if (Player.Inputs.QuickCast1Action.WasPressedThisFrame()) CastSpell();
         }
-
-        private void CastSelectedSpell()
-        {
-            CastSpell(_selectedSlotIndex);
-        }
-
-        public override SpellData GetSpell(int index)
-        {
-            var spells = Player.Spells;
-            if (index < 0 || index >= spells.Count) return null;
-            return spells[index];
-        }
-
 
         public override IEnumerable<IAbilitySource> AbilitySources
         {
@@ -79,17 +56,14 @@ namespace Krooq.PlanetDefense
                     foreach (var relic in Player.Relics)
                         if (relic != null) yield return relic;
                 }
-                if (Player.Spells != null)
-                {
-                    foreach (var spell in Player.Spells)
-                        if (spell != null) yield return spell;
-                }
+                foreach (var abilitySource in base.AbilitySources)
+                    yield return abilitySource;
             }
         }
 
-        protected override void ProcessSpell(SpellData spell, int slotIndex)
+        protected override void ProcessSpell(SpellData spell)
         {
-            base.ProcessSpell(spell, slotIndex);
+            base.ProcessSpell(spell);
             _lastCastSpell = spell;
         }
     }

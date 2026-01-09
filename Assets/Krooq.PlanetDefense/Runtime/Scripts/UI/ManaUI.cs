@@ -12,11 +12,11 @@ namespace Krooq.PlanetDefense
         [SerializeField] private Image _fillImage;
         [SerializeField] private TextMeshProUGUI _valueText;
 
-        [SerializeField, ReadOnly] private ICaster _caster;
+        [SerializeField, ReadOnly] private Caster _caster;
 
         protected PlayerCaster PlayerCaster => this.GetSingleton<PlayerCaster>();
 
-        public void Init(ICaster caster)
+        public void Init(Caster caster)
         {
             _caster = caster;
         }

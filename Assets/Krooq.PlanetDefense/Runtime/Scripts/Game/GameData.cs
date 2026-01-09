@@ -75,11 +75,9 @@ namespace Krooq.PlanetDefense
 
         [Header("Spells")]
         [SerializeField] private List<SpellData> _spells;
-        [SerializeField] private int _maxSlots = 4;
         [SerializeField] private SpellTileUI _spellTilePrefab;
         [SerializeField] private SpellSlotUI _spellSlotPrefab;
         public List<SpellData> Spells => _spells;
-        public int MaxSlots => _maxSlots;
         public SpellTileUI SpellTilePrefab => _spellTilePrefab;
         public SpellSlotUI SpellSlotPrefab => _spellSlotPrefab;
 

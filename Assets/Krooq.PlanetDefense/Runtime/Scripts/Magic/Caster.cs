@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Krooq.Core;
 using Krooq.Common;
 using Sirenix.OdinInspector;
+using System.Linq;
 
 namespace Krooq.PlanetDefense
 {
@@ -11,7 +12,6 @@ namespace Krooq.PlanetDefense
         [SerializeField] protected Transform _firePoint;
 
         [Header("Settings")]
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected SpellData _initialSpell;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected int _maxMana = 50;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected float _manaRegen = 5f;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected TargetingData _targetingStrategy;
@@ -20,12 +20,12 @@ namespace Krooq.PlanetDefense
 
         [Header("State")]
         [SerializeField, ReadOnly, PropertyOrder(100)] protected float _currentMana;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected SpellData _equippedSpell;
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected SpellData _spell;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected GameObject _model;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected Transform _currentTarget;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected Vector3 _targetPos;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected bool _isGroundTarget = true;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected Dictionary<int, float> _spellCooldowns = new();
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected float _spellCooldown;
 
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
@@ -37,13 +37,15 @@ namespace Krooq.PlanetDefense
         public Transform FirePoint => _firePoint;
         public int CurrentMana => (int)_currentMana;
         public int MaxMana => _maxMana;
+        public SpellData Spell => _spell;
+        public int SpellSlots => 1;
 
         public virtual IEnumerable<IAbilitySource> AbilitySources
         {
             get
             {
                 yield return this;
-                if (_equippedSpell != null) yield return _equippedSpell;
+                if (_spell != null) yield return _spell;
             }
         }
 
@@ -60,13 +62,13 @@ namespace Krooq.PlanetDefense
 
         public virtual void Init(CasterData data)
         {
-            _initialSpell = data.InitialSpell;
             _maxMana = data.MaxMana;
             _manaRegen = data.ManaRegen;
             _targetingStrategy = data.TargetingStrategy;
             _range = data.Range;
             _abilities = new List<AbilityData>(data.Abilities);
             _targetingInfo = new DefaultTargetingInfo(this);
+            _spell = null;
 
             if (_model != null)
             {
@@ -83,7 +85,7 @@ namespace Krooq.PlanetDefense
 
             _currentMana = _maxMana;
 
-            if (_initialSpell != null) SetSpell(_initialSpell);
+            if (data.InitialSpell != null) SetSpell(data.InitialSpell);
 
             // Rebuild abilities as data changed
             AbilityController.RebuildAbilities();
@@ -114,19 +116,15 @@ namespace Krooq.PlanetDefense
                 _currentTarget = target.transform;
                 _targetPos = _currentTarget.position;
                 // Assuming simple targeting for now
-                CastSpell(0);
+                CastSpell();
             }
         }
 
         protected virtual void UpdateCooldowns()
         {
-            var keys = new List<int>(_spellCooldowns.Keys);
-            foreach (var key in keys)
+            if (_spellCooldown > 0)
             {
-                if (_spellCooldowns[key] > 0)
-                {
-                    _spellCooldowns[key] -= Time.deltaTime;
-                }
+                _spellCooldown -= Time.deltaTime;
             }
         }
 
@@ -140,30 +138,30 @@ namespace Krooq.PlanetDefense
             return false;
         }
 
-        public virtual SpellData GetSpell(int index)
+        public virtual SpellData GetSpell(int index = 0)
         {
-            if (index == 0) return _equippedSpell;
-            return null;
+            return _spell;
         }
 
-        public virtual void SetSpell(SpellData spell)
+        public virtual void SetSpell(SpellData spell, int i = 0)
         {
-            _equippedSpell = spell;
+            _spell = spell;
             AbilityController.RebuildAbilities();
         }
 
-        public virtual void CastSpell(int slotIndex)
+        public virtual void CastSpell(int index) => CastSpell();
+
+        public virtual void CastSpell()
         {
-            var spell = GetSpell(slotIndex);
-            if (spell == null) return;
+            if (_spell == null) return;
 
             // Check Cooldown
-            if (_spellCooldowns.TryGetValue(slotIndex, out var timer) && timer > 0) return;
+            if (_spellCooldown > 0) return;
 
-            ProcessSpell(spell, slotIndex);
+            ProcessSpell(_spell);
         }
 
-        protected virtual void ProcessSpell(SpellData spell, int slotIndex)
+        protected virtual void ProcessSpell(SpellData spell)
         {
             var cost = Mathf.CeilToInt(spell.ManaCost);
             if (!TrySpendMana(cost))
@@ -173,7 +171,7 @@ namespace Krooq.PlanetDefense
             }
 
             // Set Cooldown
-            _spellCooldowns[slotIndex] = spell.Cooldown;
+            _spellCooldown = spell.Cooldown;
 
             GameEventManager.FireEvent(this, new SpellCastEvent(spell, this));
         }

@@ -22,22 +22,15 @@ namespace Krooq.PlanetDefense
                     slot.Init(i);
                 }
             }
-            Refresh();
         }
 
-        public void Refresh()
+        protected virtual void Update()
         {
-            foreach (Transform slotTransform in _slotContainer)
-            {
-                for (var i = slotTransform.childCount - 1; i >= 0; i--)
-                    GameManager.Despawn(slotTransform.GetChild(i).gameObject);
-            }
-
-            OnRefreshTiles();
+            UpdateTiles();
         }
 
         protected abstract int MaxSlots { get; }
         protected abstract BaseSlotUI SpawnSlot();
-        protected abstract void OnRefreshTiles();
+        protected abstract void UpdateTiles();
     }
 }
