@@ -14,11 +14,18 @@ namespace Krooq.PlanetDefense
     {
         [SerializeField] private ThreatMovementType _type;
 
+        private float _sineOffset;
+        private float _frequency;
+        private float _amplitude;
+
         public ThreatMovementType Type => _type;
 
         public ThreatMovement(ThreatMovementType type)
         {
             _type = type;
+            _sineOffset = Random.Range(0f, 100f);
+            _frequency = Random.Range(1f, 2f);
+            _amplitude = Random.Range(2f, 3f);
         }
 
         public void Move(Threat threat)
@@ -59,10 +66,15 @@ namespace Krooq.PlanetDefense
         {
             // Move directly towards the base
             Vector2 direction = (threat.PlayerBase.transform.position - threat.transform.position).normalized;
-            threat.Rigidbody2D.MovePosition(threat.Rigidbody2D.position + direction * threat.Speed * Time.fixedDeltaTime);
+            Vector2 perp = new Vector2(-direction.y, direction.x);
 
-            // Optional: Rotate to face direction
-            float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+            float wave = Mathf.Sin(Time.time * _frequency + _sineOffset) * _amplitude;
+            Vector2 movement = (direction * threat.Speed + perp * wave) * Time.fixedDeltaTime;
+
+            threat.Rigidbody2D.MovePosition(threat.Rigidbody2D.position + movement);
+
+            // Rotate to face direction
+            float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
             threat.Rigidbody2D.rotation = angle;
         }
 

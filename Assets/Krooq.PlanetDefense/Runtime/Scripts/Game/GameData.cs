@@ -49,25 +49,21 @@ namespace Krooq.PlanetDefense
         [Header("Threats")]
         [SerializeField] private Threat _threatPrefab;
         [SerializeField] private List<ThreatData> _threats = new();
-        [SerializeField] private float _threatSpawnHeight = 10f;
-        [SerializeField] private float _threatSpawnWidth = 16f;
         [SerializeField] private float _groundUnitSpawnHeightMin = 3f;
         [SerializeField] private float _groundUnitSpawnHeightMax = 7f;
-        [SerializeField] private float _groundLevelY = 2f;
-        [SerializeField] private int _baseWaveSize = 5;
-        [SerializeField] private int _threatsPerWave = 5;
+        [SerializeField] private float _horizonY = 10f;
+        [SerializeField] private AnimationCurve _waveDifficultyCurve = AnimationCurve.Linear(1, 10, 20, 100);
+        [Tooltip("Time between groups of enemies spawning")]
         [SerializeField] private float _baseSpawnRate = 2f;
+        [Tooltip("How much shorter the wait between groups becomes each wave")]
         [SerializeField] private float _spawnRateDecreasePerWave = 0.1f;
         [SerializeField] private float _minSpawnRate = 0.2f;
         public Threat ThreatPrefab => _threatPrefab;
         public List<ThreatData> Threats => _threats;
         public float GroundUnitSpawnHeightMin => _groundUnitSpawnHeightMin;
         public float GroundUnitSpawnHeightMax => _groundUnitSpawnHeightMax;
-        public float GroundLevelY => _groundLevelY;
-        public float ThreatSpawnHeight => _threatSpawnHeight;
-        public float ThreatSpawnWidth => _threatSpawnWidth;
-        public int BaseWaveSize => _baseWaveSize;
-        public int ThreatsPerWave => _threatsPerWave;
+        public float HorizonY => _horizonY;
+        public AnimationCurve WaveDifficultyCurve => _waveDifficultyCurve;
         public float BaseSpawnRate => _baseSpawnRate;
         public float SpawnRateDecreasePerWave => _spawnRateDecreasePerWave;
         public float MinSpawnRate => _minSpawnRate;

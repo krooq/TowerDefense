@@ -4,6 +4,8 @@ using Cysharp.Threading.Tasks;
 using Krooq.Common;
 using Krooq.Core;
 using Sirenix.OdinInspector;
+using System;
+using Random = UnityEngine.Random;
 
 namespace Krooq.PlanetDefense
 {
@@ -26,35 +28,61 @@ namespace Krooq.PlanetDefense
             var waveIndex = waveNumber - 1;
             _isWaveActive = true;
             var data = GameManager.Data;
-            var threatCount = data.BaseWaveSize + (waveIndex * data.ThreatsPerWave);
-            var spawnRate = Mathf.Max(data.MinSpawnRate, data.BaseSpawnRate - (waveIndex * data.SpawnRateDecreasePerWave));
-            for (var i = 0; i < threatCount; i++)
+
+            // Calculate budget
+            var powerBudget = data.WaveDifficultyCurve.Evaluate(waveNumber);
+            var currentPower = 0f;
+
+            var groupSpawnRate = Mathf.Max(data.MinSpawnRate, data.BaseSpawnRate - (waveIndex * data.SpawnRateDecreasePerWave));
+
+            while (currentPower < powerBudget)
             {
                 if (GameManager.State != GameState.Playing) break;
 
-                SpawnThreat();
-                await UniTask.Delay((int)(spawnRate * 1000));
+                // Pick a threat
+                if (data.Threats == null || data.Threats.Count == 0) break;
+
+                var availableThreats = data.Threats.FindAll(t => t.MinWave <= waveNumber);
+                if (availableThreats.Count == 0) break;
+
+                var threatData = availableThreats[Random.Range(0, availableThreats.Count)];
+
+                // Calculate group size
+                var groupSize = Random.Range(threatData.MinGroupSize, threatData.MaxGroupSize + 1);
+
+                // Spawn group
+                for (int i = 0; i < groupSize; i++)
+                {
+                    if (GameManager.State != GameState.Playing) break;
+
+                    SpawnThreat(threatData);
+                    currentPower += threatData.PowerLevel;
+
+                    if (i < groupSize - 1)
+                    {
+                        await UniTask.Delay(TimeSpan.FromSeconds(threatData.GroupSpawnInterval));
+                    }
+                }
+
+                if (currentPower >= powerBudget) break;
+
+                await UniTask.Delay(TimeSpan.FromSeconds(groupSpawnRate));
             }
 
             // Wait for all threats to be gone
             while (GameManager.HasThreats)
             {
                 if (GameManager.State != GameState.Playing) break;
-                await UniTask.Delay(500);
+                await UniTask.Delay(TimeSpan.FromSeconds(0.5f));
             }
 
             _isWaveActive = false;
             GameManager.EndWave();
         }
 
-        protected void SpawnThreat()
+        protected void SpawnThreat(ThreatData threatData)
         {
             if (_cam == null) _cam = Camera.main;
-
-            var threats = GameManager.Data.Threats;
-            if (threats == null || threats.Count == 0) return;
-
-            var threatData = threats[Random.Range(0, threats.Count)];
 
             var height = 2f * _cam.orthographicSize;
             var width = height * _cam.aspect;

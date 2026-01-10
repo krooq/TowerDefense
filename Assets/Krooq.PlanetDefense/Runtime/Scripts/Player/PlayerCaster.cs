@@ -8,9 +8,9 @@ namespace Krooq.PlanetDefense
 {
     public class PlayerCaster : Caster
     {
-        [SerializeField] private Transform _pivot;
+        [SerializeField] private bool _manualControlEnabled;
 
-        public override ITargetingInfo TargetingInfo => Player.TargetingReticle;
+        public override ITargetingInfo TargetingInfo => _manualControlEnabled ? Player.TargetingReticle : base.TargetingInfo;
 
         protected Player Player => this.GetSingleton<Player>();
 
@@ -21,19 +21,10 @@ namespace Krooq.PlanetDefense
             HandleInput();
         }
 
-        // Disable default behaviors from (NonPlayer) Caster
-        protected override void PerformTargeting() { }
-
-        public void Aim(Vector3 targetPosition)
-        {
-            var dir = (targetPosition - _pivot.position).normalized;
-            var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f; // Assuming sprite points up
-            var t = 1f; // Don't think we need to make this take any time. //Time.deltaTime * rotationSpeed;
-            _pivot.rotation = Quaternion.Lerp(_pivot.rotation, Quaternion.Euler(0, 0, angle), t);
-        }
-
         private void HandleInput()
         {
+            if (!_manualControlEnabled) return;
+
             // Firing
             if (Player.Inputs.ClickAction.WasPressedThisFrame())
             {

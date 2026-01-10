@@ -13,10 +13,12 @@ namespace Krooq.PlanetDefense
 
         public Vector3 TargetPosition { get; private set; }
         public bool IsGroundTarget { get; private set; }
+        public bool IsValid => true;
 
         private Camera _cam;
         protected Player Player => this.GetSingleton<Player>();
         protected GameManager GameManager => this.GetSingleton<GameManager>();
+
 
         private void Start()
         {
@@ -43,13 +45,12 @@ namespace Krooq.PlanetDefense
             var worldPos = _cam.ScreenToWorldPoint(mouseScreenPos);
             worldPos.z = 0f;
 
-            float groundLevel = GameManager.Data.GroundLevelY;
+            float groundLevel = GameManager.Data.HorizonY;
 
             if (worldPos.y <= groundLevel)
             {
                 IsGroundTarget = true;
-                TargetPosition = new Vector3(worldPos.x, worldPos.y, 0f); // Snap to ground
-
+                TargetPosition = new Vector3(worldPos.x, worldPos.y, 0f);
                 if (_groundVisual) _groundVisual.SetActive(true);
                 if (_airVisual) _airVisual.SetActive(false);
             }

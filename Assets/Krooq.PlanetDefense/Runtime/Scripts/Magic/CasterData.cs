@@ -16,7 +16,7 @@ namespace Krooq.PlanetDefense
         [SerializeField] private SpellData _initialSpell;
         [SerializeField] private int _maxMana = 50;
         [SerializeField] private float _manaRegen = 5f;
-        [SerializeField] private TargetingData _targetingStrategy;
+        [SerializeField] private TargetingStrategyType _targetingStrategyType;
         [SerializeField] private float _range = 10f;
         [SerializeField] private List<AbilityData> _abilities = new();
 
@@ -29,7 +29,7 @@ namespace Krooq.PlanetDefense
         public SpellData InitialSpell => _initialSpell;
         public int MaxMana => _maxMana;
         public float ManaRegen => _manaRegen;
-        public TargetingData TargetingStrategy => _targetingStrategy;
+        public TargetingStrategyType TargetingStrategyType => _targetingStrategyType;
         public float Range => _range;
         public List<AbilityData> Abilities => _abilities;
     }

@@ -15,5 +15,10 @@ MonoBehaviour:
   _speed: 2
   _health: 5
   _resources: 5
+  _powerLevel: 10
+  _minGroupSize: 1
+  _maxGroupSize: 1
+  _groupSpawnInterval: 0.5
+  _minWave: 3
   _movementType: 0
   _modelPrefab: {fileID: 2873390572924841855, guid: be4ea862400492547844b9b6c0281f75, type: 3}

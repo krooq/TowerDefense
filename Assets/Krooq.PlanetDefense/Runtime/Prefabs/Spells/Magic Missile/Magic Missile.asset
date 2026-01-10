@@ -17,7 +17,7 @@ MonoBehaviour:
   _icon: {fileID: 0}
   _shopCost: 0
   _manaCost: 1
-  _cooldown: 0.1
+  _cooldown: 0.5
   _tags: []
   _abilities:
   - {fileID: 11400000, guid: b2265e33ec8dd874583b974f187d2028, type: 2}

@@ -10,11 +10,12 @@ namespace Krooq.PlanetDefense
     public class Caster : MonoBehaviour, ICaster, IAbilitySource
     {
         [SerializeField] protected Transform _firePoint;
+        [SerializeField] protected Transform _pivot;
 
         [Header("Settings")]
         [SerializeField, ReadOnly, PropertyOrder(100)] protected int _maxMana = 50;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected float _manaRegen = 5f;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected TargetingData _targetingStrategy;
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected TargetingStrategy _targetingStrategy;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected float _range = 10f;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected List<AbilityData> _abilities = new();
 
@@ -22,9 +23,6 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly, PropertyOrder(100)] protected float _currentMana;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected SpellData _spell;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected GameObject _model;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected Transform _currentTarget;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected Vector3 _targetPos;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected bool _isGroundTarget = true;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected float _spellCooldown;
 
         protected GameManager GameManager => this.GetSingleton<GameManager>();
@@ -49,13 +47,6 @@ namespace Krooq.PlanetDefense
             }
         }
 
-        protected class DefaultTargetingInfo : ITargetingInfo
-        {
-            private Caster _owner;
-            public DefaultTargetingInfo(Caster owner) { _owner = owner; }
-            public bool IsGroundTarget => _owner._isGroundTarget;
-            public Vector3 TargetPosition => _owner._targetPos;
-        }
 
         protected ITargetingInfo _targetingInfo;
         public virtual ITargetingInfo TargetingInfo => _targetingInfo;
@@ -64,10 +55,10 @@ namespace Krooq.PlanetDefense
         {
             _maxMana = data.MaxMana;
             _manaRegen = data.ManaRegen;
-            _targetingStrategy = data.TargetingStrategy;
             _range = data.Range;
             _abilities = new List<AbilityData>(data.Abilities);
-            _targetingInfo = new DefaultTargetingInfo(this);
+            _targetingStrategy = new TargetingStrategy(data.TargetingStrategyType);
+            _targetingInfo = new CasterTargetingInfo();
             _spell = null;
 
             if (_model != null)
@@ -97,7 +88,20 @@ namespace Krooq.PlanetDefense
 
             RegenMana();
             PerformTargeting();
+            Aim();
             UpdateCooldowns();
+            CastSpell();
+        }
+
+        protected virtual void Aim()
+        {
+            if (_pivot == null) return;
+
+            if (TargetingInfo is not { IsValid: true }) return;
+
+            var dir = (TargetingInfo.TargetPosition - _pivot.position).normalized;
+            var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
+            _pivot.rotation = Quaternion.Euler(0, 0, angle);
         }
 
         protected virtual void RegenMana()
@@ -110,14 +114,15 @@ namespace Krooq.PlanetDefense
         {
             if (_targetingStrategy == null) return;
 
-            var target = _targetingStrategy.FindTarget(transform.position, _range, GameManager.Threats);
-            if (target != null)
+            var target = _targetingStrategy.FindTarget(_firePoint.position, _range, GameManager.Threats);
+            _targetingInfo = target == null ? default : new CasterTargetingInfo()
             {
-                _currentTarget = target.transform;
-                _targetPos = _currentTarget.position;
-                // Assuming simple targeting for now
-                CastSpell();
-            }
+                Owner = this,
+                IsGroundTarget = target.Data.MovementType == ThreatMovementType.Ground,
+                TargetPosition = target.transform.position,
+                TargetThreat = target,
+                IsValid = true
+            };
         }
 
         protected virtual void UpdateCooldowns()
@@ -153,6 +158,7 @@ namespace Krooq.PlanetDefense
 
         public virtual void CastSpell()
         {
+            if (!_targetingInfo.IsValid) return;
             if (_spell == null) return;
 
             // Check Cooldown
@@ -175,5 +181,14 @@ namespace Krooq.PlanetDefense
 
             GameEventManager.FireEvent(this, new SpellCastEvent(spell, this));
         }
+    }
+
+    public struct CasterTargetingInfo : ITargetingInfo
+    {
+        public Caster Owner { get; set; }
+        public bool IsGroundTarget { get; set; }
+        public Vector3 TargetPosition { get; set; }
+        public Threat TargetThreat { get; set; }
+        public bool IsValid { get; set; }
     }
 }

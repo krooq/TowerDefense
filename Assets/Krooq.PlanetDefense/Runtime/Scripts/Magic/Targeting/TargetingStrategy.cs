@@ -3,12 +3,18 @@ using System.Collections.Generic;
 
 namespace Krooq.PlanetDefense
 {
-    public class TargetingData : ScriptableObject, ITargetingStrategy
+    public class TargetingStrategy : ITargetingStrategy
     {
-        [SerializeField] private TargetingStrategyType _strategyType;
+        [SerializeField] private TargetingStrategyType _type;
+
+        public TargetingStrategy(TargetingStrategyType strategyType)
+        {
+            _type = strategyType;
+        }
+
         public Threat FindTarget(Vector3 sourcePos, float range, IReadOnlyList<Threat> threats)
         {
-            return _strategyType switch
+            return _type switch
             {
                 TargetingStrategyType.Closest => TargetClosest(sourcePos, range, threats),
                 // Future strategies can be added here.

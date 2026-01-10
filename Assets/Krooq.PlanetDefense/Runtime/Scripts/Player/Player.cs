@@ -51,13 +51,6 @@ namespace Krooq.PlanetDefense
         protected void Update()
         {
             if (GameManager.State != GameState.Playing) return;
-            HandleAiming();
-        }
-
-        protected void HandleAiming()
-        {
-            if (_targetingReticle == null) return;
-            PlayerCaster.Aim(_targetingReticle.TargetPosition);
         }
 
         public void SetRelic(int index, RelicData relic)

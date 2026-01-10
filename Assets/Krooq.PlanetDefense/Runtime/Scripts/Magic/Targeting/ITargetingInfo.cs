@@ -6,5 +6,6 @@ namespace Krooq.PlanetDefense
     {
         bool IsGroundTarget { get; }
         Vector3 TargetPosition { get; }
+        bool IsValid { get; }
     }
 }
