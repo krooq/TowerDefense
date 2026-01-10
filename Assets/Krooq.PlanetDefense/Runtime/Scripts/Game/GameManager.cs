@@ -28,6 +28,7 @@ namespace Krooq.PlanetDefense
         public GameData Data => _gameData;
         public int Resources => Player.Resources;
         public GameState State => _currentState;
+        public int Wave => _wave;
 
         public IReadOnlyList<Threat> Threats => _threats;
         public ProjectileData SelectedWeapon => Player.SelectedWeapon;
@@ -35,6 +36,7 @@ namespace Krooq.PlanetDefense
         protected MultiGameObjectPool Pool => this.GetSingleton<MultiGameObjectPool>();
         protected WaveManager WaveManager => this.GetSingleton<WaveManager>();
         protected Player Player => this.GetSingleton<Player>();
+        protected GameEventManager GameEventManager => this.GetSingleton<GameEventManager>();
 
         public int ThreatCount => _threats.Count;
         public bool HasThreats => _threats.Count > 0;
@@ -59,14 +61,16 @@ namespace Krooq.PlanetDefense
             if (_threats.Contains(threat)) _threats.Remove(threat);
         }
 
-        protected void Awake()
-        {
-            // Initialization handled in Player for player stats
-        }
-
         public void StartGame()
         {
             _wave = 1;
+
+            for (int i = _threats.Count - 1; i >= 0; i--)
+            {
+                if (_threats[i] != null) Despawn(_threats[i].gameObject);
+            }
+            _threats.Clear();
+
             if (Player) Player.ResetPlayer();
             StartWave();
         }
@@ -93,6 +97,7 @@ namespace Krooq.PlanetDefense
         {
             _currentState = GameState.GameOver;
             Debug.Log("Game Over");
+            GameEventManager.FireEvent(this, new GameEndedEvent());
         }
 
         public T Spawn<T>(T prefab) where T : Object => Pool.Get(prefab);

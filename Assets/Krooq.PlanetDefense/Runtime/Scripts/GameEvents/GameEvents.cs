@@ -3,6 +3,8 @@ using UnityEngine;
 
 namespace Krooq.PlanetDefense
 {
+    public struct GameEndedEvent : IGameEvent { }
+
     public struct SpellCastEvent : IGameEvent
     {
         public SpellData Spell;
