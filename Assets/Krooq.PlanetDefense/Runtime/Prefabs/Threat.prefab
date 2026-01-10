@@ -50,6 +50,9 @@ MonoBehaviour:
   _resources: 10
   _data: {fileID: 0}
   _model: {fileID: 0}
+  _onDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &6324750008781136100
 Rigidbody2D:
   serializedVersion: 5
@@ -58,7 +61,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4610931118495644314}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0

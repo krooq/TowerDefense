@@ -1,0 +1,4251 @@
+fileFormatVersion: 2
+guid: 69b46a42dbe3f344a819227222552556
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 188953369877724122
+    second: Human Crow Keeper 134x92 SAprite Sheet_0
+  - first:
+      213: -1623376656074222786
+    second: Human Crow Keeper 134x92 SAprite Sheet_1
+  - first:
+      213: 1495960677407279316
+    second: Human Crow Keeper 134x92 SAprite Sheet_2
+  - first:
+      213: -6313328896168406946
+    second: Human Crow Keeper 134x92 SAprite Sheet_3
+  - first:
+      213: -5082253403527181731
+    second: Human Crow Keeper 134x92 SAprite Sheet_4
+  - first:
+      213: 7106301942519393707
+    second: Human Crow Keeper 134x92 SAprite Sheet_5
+  - first:
+      213: -5846596038150119983
+    second: Human Crow Keeper 134x92 SAprite Sheet_6
+  - first:
+      213: -6398625241092944940
+    second: Human Crow Keeper 134x92 SAprite Sheet_7
+  - first:
+      213: -7195563742178502241
+    second: Human Crow Keeper 134x92 SAprite Sheet_8
+  - first:
+      213: -3061204054049812472
+    second: Human Crow Keeper 134x92 SAprite Sheet_9
+  - first:
+      213: -8637497474404309365
+    second: Human Crow Keeper 134x92 SAprite Sheet_10
+  - first:
+      213: 8836029461471468530
+    second: Human Crow Keeper 134x92 SAprite Sheet_11
+  - first:
+      213: 2841839641784362955
+    second: Human Crow Keeper 134x92 SAprite Sheet_12
+  - first:
+      213: 7128574629102813126
+    second: Human Crow Keeper 134x92 SAprite Sheet_13
+  - first:
+      213: 1336463310348482668
+    second: Human Crow Keeper 134x92 SAprite Sheet_14
+  - first:
+      213: -6219754190426651441
+    second: Human Crow Keeper 134x92 SAprite Sheet_15
+  - first:
+      213: -3358058919975634929
+    second: Human Crow Keeper 134x92 SAprite Sheet_16
+  - first:
+      213: -8829776478240493314
+    second: Human Crow Keeper 134x92 SAprite Sheet_17
+  - first:
+      213: -6013313058699374719
+    second: Human Crow Keeper 134x92 SAprite Sheet_18
+  - first:
+      213: 2155362488480545201
+    second: Human Crow Keeper 134x92 SAprite Sheet_19
+  - first:
+      213: 5475631366953339090
+    second: Human Crow Keeper 134x92 SAprite Sheet_20
+  - first:
+      213: 3450129923731351437
+    second: Human Crow Keeper 134x92 SAprite Sheet_21
+  - first:
+      213: -4067207389172394230
+    second: Human Crow Keeper 134x92 SAprite Sheet_22
+  - first:
+      213: -7078318515903721109
+    second: Human Crow Keeper 134x92 SAprite Sheet_23
+  - first:
+      213: -4314152022456501509
+    second: Human Crow Keeper 134x92 SAprite Sheet_24
+  - first:
+      213: 4955685370981720640
+    second: Human Crow Keeper 134x92 SAprite Sheet_25
+  - first:
+      213: 518932976164019856
+    second: Human Crow Keeper 134x92 SAprite Sheet_26
+  - first:
+      213: -3522379234137059004
+    second: Human Crow Keeper 134x92 SAprite Sheet_27
+  - first:
+      213: 304242306333972119
+    second: Human Crow Keeper 134x92 SAprite Sheet_28
+  - first:
+      213: 6565745859254810378
+    second: Human Crow Keeper 134x92 SAprite Sheet_29
+  - first:
+      213: 695329425242571428
+    second: Human Crow Keeper 134x92 SAprite Sheet_30
+  - first:
+      213: -7809803641401190927
+    second: Human Crow Keeper 134x92 SAprite Sheet_31
+  - first:
+      213: -325113702520831400
+    second: Human Crow Keeper 134x92 SAprite Sheet_32
+  - first:
+      213: 7647048436582410197
+    second: Human Crow Keeper 134x92 SAprite Sheet_33
+  - first:
+      213: 4550934266884510423
+    second: Human Crow Keeper 134x92 SAprite Sheet_34
+  - first:
+      213: -144107824385272706
+    second: Human Crow Keeper 134x92 SAprite Sheet_35
+  - first:
+      213: 4621166582521735630
+    second: Human Crow Keeper 134x92 SAprite Sheet_36
+  - first:
+      213: -5441701815376179032
+    second: Human Crow Keeper 134x92 SAprite Sheet_37
+  - first:
+      213: -4832782430048535136
+    second: Human Crow Keeper 134x92 SAprite Sheet_38
+  - first:
+      213: -1814223057137213315
+    second: Human Crow Keeper 134x92 SAprite Sheet_39
+  - first:
+      213: -7028443966317252644
+    second: Human Crow Keeper 134x92 SAprite Sheet_40
+  - first:
+      213: -8231450259316755258
+    second: Human Crow Keeper 134x92 SAprite Sheet_41
+  - first:
+      213: 2352732520992055994
+    second: Human Crow Keeper 134x92 SAprite Sheet_42
+  - first:
+      213: 7583729399968451346
+    second: Human Crow Keeper 134x92 SAprite Sheet_43
+  - first:
+      213: -1650392047975981943
+    second: Human Crow Keeper 134x92 SAprite Sheet_44
+  - first:
+      213: 4452092666031834308
+    second: Human Crow Keeper 134x92 SAprite Sheet_45
+  - first:
+      213: 2909407373472635235
+    second: Human Crow Keeper 134x92 SAprite Sheet_46
+  - first:
+      213: -8110344793373429861
+    second: Human Crow Keeper 134x92 SAprite Sheet_47
+  - first:
+      213: 4775135108411611602
+    second: Human Crow Keeper 134x92 SAprite Sheet_48
+  - first:
+      213: 8740734626330283307
+    second: Human Crow Keeper 134x92 SAprite Sheet_49
+  - first:
+      213: -4805195775254922055
+    second: Human Crow Keeper 134x92 SAprite Sheet_50
+  - first:
+      213: 2719405469782977937
+    second: Human Crow Keeper 134x92 SAprite Sheet_51
+  - first:
+      213: -2766107035977274364
+    second: Human Crow Keeper 134x92 SAprite Sheet_52
+  - first:
+      213: 1042534905686457531
+    second: Human Crow Keeper 134x92 SAprite Sheet_53
+  - first:
+      213: 59486162331789452
+    second: Human Crow Keeper 134x92 SAprite Sheet_54
+  - first:
+      213: -4873867544092324748
+    second: Human Crow Keeper 134x92 SAprite Sheet_55
+  - first:
+      213: 5219229936852814120
+    second: Human Crow Keeper 134x92 SAprite Sheet_56
+  - first:
+      213: 7359420887861948363
+    second: Human Crow Keeper 134x92 SAprite Sheet_57
+  - first:
+      213: -7180815105401073459
+    second: Human Crow Keeper 134x92 SAprite Sheet_58
+  - first:
+      213: -4862442454880360471
+    second: Human Crow Keeper 134x92 SAprite Sheet_59
+  - first:
+      213: 4109194079009237779
+    second: Human Crow Keeper 134x92 SAprite Sheet_60
+  - first:
+      213: 8458758757033012628
+    second: Human Crow Keeper 134x92 SAprite Sheet_61
+  - first:
+      213: -8829349921792543656
+    second: Human Crow Keeper 134x92 SAprite Sheet_62
+  - first:
+      213: 6263981408390548113
+    second: Human Crow Keeper 134x92 SAprite Sheet_63
+  - first:
+      213: -8768108151885518553
+    second: Human Crow Keeper 134x92 SAprite Sheet_64
+  - first:
+      213: -4962356219647544312
+    second: Human Crow Keeper 134x92 SAprite Sheet_65
+  - first:
+      213: -760544563663025604
+    second: Human Crow Keeper 134x92 SAprite Sheet_66
+  - first:
+      213: 7429584956362585462
+    second: Human Crow Keeper 134x92 SAprite Sheet_67
+  - first:
+      213: -8545291796839854504
+    second: Human Crow Keeper 134x92 SAprite Sheet_68
+  - first:
+      213: -3818812181717167656
+    second: Human Crow Keeper 134x92 SAprite Sheet_69
+  - first:
+      213: 8828833762141518782
+    second: Human Crow Keeper 134x92 SAprite Sheet_70
+  - first:
+      213: -8612415728010752297
+    second: Human Crow Keeper 134x92 SAprite Sheet_71
+  - first:
+      213: -6775421035668353506
+    second: Human Crow Keeper 134x92 SAprite Sheet_72
+  - first:
+      213: 79606479258203727
+    second: Human Crow Keeper 134x92 SAprite Sheet_73
+  - first:
+      213: 6245130403388263794
+    second: Human Crow Keeper 134x92 SAprite Sheet_74
+  - first:
+      213: -8727667137619654709
+    second: Human Crow Keeper 134x92 SAprite Sheet_75
+  - first:
+      213: -2495932049417373016
+    second: Human Crow Keeper 134x92 SAprite Sheet_76
+  - first:
+      213: 4172285047612789180
+    second: Human Crow Keeper 134x92 SAprite Sheet_77
+  - first:
+      213: -5715163208440171163
+    second: Human Crow Keeper 134x92 SAprite Sheet_78
+  - first:
+      213: 8860219737131982176
+    second: Human Crow Keeper 134x92 SAprite Sheet_79
+  - first:
+      213: -6146767683829285725
+    second: Human Crow Keeper 134x92 SAprite Sheet_80
+  - first:
+      213: 8214831373027671623
+    second: Human Crow Keeper 134x92 SAprite Sheet_81
+  - first:
+      213: -8148054208771055108
+    second: Human Crow Keeper 134x92 SAprite Sheet_82
+  - first:
+      213: 960169350053594475
+    second: Human Crow Keeper 134x92 SAprite Sheet_83
+  - first:
+      213: -7515111290236846233
+    second: Human Crow Keeper 134x92 SAprite Sheet_84
+  - first:
+      213: 7279486131027881239
+    second: Human Crow Keeper 134x92 SAprite Sheet_85
+  - first:
+      213: -4775174468728903852
+    second: Human Crow Keeper 134x92 SAprite Sheet_86
+  - first:
+      213: 1936854844004974448
+    second: Human Crow Keeper 134x92 SAprite Sheet_87
+  - first:
+      213: 3057934609454689281
+    second: Human Crow Keeper 134x92 SAprite Sheet_88
+  - first:
+      213: 473421496811940922
+    second: Human Crow Keeper 134x92 SAprite Sheet_89
+  - first:
+      213: -2793013233726255057
+    second: Human Crow Keeper 134x92 SAprite Sheet_90
+  - first:
+      213: 3836751982392111814
+    second: Human Crow Keeper 134x92 SAprite Sheet_91
+  - first:
+      213: -3250141613166267433
+    second: Human Crow Keeper 134x92 SAprite Sheet_92
+  - first:
+      213: 7201604640230038719
+    second: Human Crow Keeper 134x92 SAprite Sheet_93
+  - first:
+      213: -365395874152432341
+    second: Human Crow Keeper 134x92 SAprite Sheet_94
+  - first:
+      213: 6466199088885683831
+    second: Human Crow Keeper 134x92 SAprite Sheet_95
+  - first:
+      213: 5968373147990765195
+    second: Human Crow Keeper 134x92 SAprite Sheet_96
+  - first:
+      213: -4621082925206087409
+    second: Human Crow Keeper 134x92 SAprite Sheet_97
+  - first:
+      213: -8669749100150008759
+    second: Human Crow Keeper 134x92 SAprite Sheet_98
+  - first:
+      213: -2617782435194236
+    second: Human Crow Keeper 134x92 SAprite Sheet_99
+  - first:
+      213: 5442746346434569089
+    second: Human Crow Keeper 134x92 SAprite Sheet_100
+  - first:
+      213: 231648846723148923
+    second: Human Crow Keeper 134x92 SAprite Sheet_101
+  - first:
+      213: 8648219856590886010
+    second: Human Crow Keeper 134x92 SAprite Sheet_102
+  - first:
+      213: 781447339665370951
+    second: Human Crow Keeper 134x92 SAprite Sheet_103
+  - first:
+      213: 4567340927913007722
+    second: Human Crow Keeper 134x92 SAprite Sheet_104
+  - first:
+      213: -8634720027913546048
+    second: Human Crow Keeper 134x92 SAprite Sheet_105
+  - first:
+      213: -7614170732389208197
+    second: Human Crow Keeper 134x92 SAprite Sheet_106
+  - first:
+      213: 5166237146540612455
+    second: Human Crow Keeper 134x92 SAprite Sheet_107
+  - first:
+      213: -611836229671096528
+    second: Human Crow Keeper 134x92 SAprite Sheet_108
+  - first:
+      213: 5848619721832287403
+    second: Human Crow Keeper 134x92 SAprite Sheet_109
+  - first:
+      213: 754817304119399165
+    second: Human Crow Keeper 134x92 SAprite Sheet_110
+  - first:
+      213: -1978232727431285062
+    second: Human Crow Keeper 134x92 SAprite Sheet_111
+  - first:
+      213: 1650065241034494308
+    second: Human Crow Keeper 134x92 SAprite Sheet_112
+  - first:
+      213: 1099254535218433925
+    second: Human Crow Keeper 134x92 SAprite Sheet_113
+  - first:
+      213: -7261481540168441735
+    second: Human Crow Keeper 134x92 SAprite Sheet_114
+  - first:
+      213: -6139711481696274164
+    second: Human Crow Keeper 134x92 SAprite Sheet_115
+  - first:
+      213: -1243859006463305674
+    second: Human Crow Keeper 134x92 SAprite Sheet_116
+  - first:
+      213: -6615822342952877578
+    second: Human Crow Keeper 134x92 SAprite Sheet_117
+  - first:
+      213: 1559959580609279936
+    second: Human Crow Keeper 134x92 SAprite Sheet_118
+  - first:
+      213: -3091504714287545584
+    second: Human Crow Keeper 134x92 SAprite Sheet_119
+  - first:
+      213: -6421371789234458470
+    second: Human Crow Keeper 134x92 SAprite Sheet_120
+  - first:
+      213: 1534311142372208975
+    second: Human Crow Keeper 134x92 SAprite Sheet_121
+  - first:
+      213: 3580618555397308119
+    second: Human Crow Keeper 134x92 SAprite Sheet_122
+  - first:
+      213: 7438713862690053589
+    second: Human Crow Keeper 134x92 SAprite Sheet_123
+  - first:
+      213: -23078623317098938
+    second: Human Crow Keeper 134x92 SAprite Sheet_124
+  - first:
+      213: -3135957126118081114
+    second: Human Crow Keeper 134x92 SAprite Sheet_125
+  - first:
+      213: -306797632843556736
+    second: Human Crow Keeper 134x92 SAprite Sheet_126
+  - first:
+      213: -1770614280668973877
+    second: Human Crow Keeper 134x92 SAprite Sheet_127
+  - first:
+      213: 7411328128516388815
+    second: Human Crow Keeper 134x92 SAprite Sheet_128
+  - first:
+      213: -5778670059219163143
+    second: Human Crow Keeper 134x92 SAprite Sheet_129
+  - first:
+      213: 1841123098032257163
+    second: Human Crow Keeper 134x92 SAprite Sheet_130
+  - first:
+      213: -8620479801581790324
+    second: Human Crow Keeper 134x92 SAprite Sheet_131
+  - first:
+      213: 2698401355117302039
+    second: Human Crow Keeper 134x92 SAprite Sheet_132
+  - first:
+      213: -3093934583395526835
+    second: Human Crow Keeper 134x92 SAprite Sheet_133
+  - first:
+      213: -7533839291320449814
+    second: Human Crow Keeper 134x92 SAprite Sheet_134
+  - first:
+      213: 1856940553573771946
+    second: Human Crow Keeper 134x92 SAprite Sheet_135
+  - first:
+      213: 9034463147189334581
+    second: Human Crow Keeper 134x92 SAprite Sheet_136
+  - first:
+      213: 7101967468604164870
+    second: Human Crow Keeper 134x92 SAprite Sheet_137
+  - first:
+      213: -4036834490037557893
+    second: Human Crow Keeper 134x92 SAprite Sheet_138
+  - first:
+      213: 5547120552574277640
+    second: Human Crow Keeper 134x92 SAprite Sheet_139
+  - first:
+      213: 6133810837962571180
+    second: Human Crow Keeper 134x92 SAprite Sheet_140
+  - first:
+      213: -5177627968985291518
+    second: Human Crow Keeper 134x92 SAprite Sheet_141
+  - first:
+      213: -5528251359344689640
+    second: Human Crow Keeper 134x92 SAprite Sheet_142
+  - first:
+      213: -7115270723089416739
+    second: Human Crow Keeper 134x92 SAprite Sheet_143
+  - first:
+      213: -4085731086884791788
+    second: Human Crow Keeper 134x92 SAprite Sheet_144
+  - first:
+      213: -1432946601853198366
+    second: Human Crow Keeper 134x92 SAprite Sheet_145
+  - first:
+      213: 1855612396656645650
+    second: Human Crow Keeper 134x92 SAprite Sheet_146
+  - first:
+      213: 3819488156601615173
+    second: Human Crow Keeper 134x92 SAprite Sheet_147
+  - first:
+      213: 4902189637758675816
+    second: Human Crow Keeper 134x92 SAprite Sheet_148
+  - first:
+      213: -8621497693395032034
+    second: Human Crow Keeper 134x92 SAprite Sheet_149
+  - first:
+      213: 7441412772463519517
+    second: Human Crow Keeper 134x92 SAprite Sheet_150
+  - first:
+      213: -8685708999145405661
+    second: Human Crow Keeper 134x92 SAprite Sheet_151
+  - first:
+      213: -8501450825434534470
+    second: Human Crow Keeper 134x92 SAprite Sheet_152
+  - first:
+      213: -843569754401975242
+    second: Human Crow Keeper 134x92 SAprite Sheet_153
+  - first:
+      213: -2275796972328424078
+    second: Human Crow Keeper 134x92 SAprite Sheet_154
+  - first:
+      213: -5485346843225936459
+    second: Human Crow Keeper 134x92 SAprite Sheet_155
+  - first:
+      213: 5657067187611606584
+    second: Human Crow Keeper 134x92 SAprite Sheet_156
+  - first:
+      213: -5674138327160332371
+    second: Human Crow Keeper 134x92 SAprite Sheet_157
+  - first:
+      213: -2268182682009243846
+    second: Human Crow Keeper 134x92 SAprite Sheet_158
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 551
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adbbcaab61c4f9200800000000000000
+      internalID: 188953369877724122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 551
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e33d806488b9879e0800000000000000
+      internalID: -1623376656074222786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 551
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d840d66f48b2c410800000000000000
+      internalID: 1495960677407279316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 551
+        width: 21
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e505ca181dc8268a0800000000000000
+      internalID: -6313328896168406946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 551
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5a0e38d4753879b0800000000000000
+      internalID: -5082253403527181731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 551
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bad698647f7ae9260800000000000000
+      internalID: 7106301942519393707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 551
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd1bd041e7bcdea0800000000000000
+      internalID: -5846596038150119983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 551
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db8ecd9e348337a0800000000000000
+      internalID: -6398625241092944940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 459
+        width: 22
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9915c476e8342c90800000000000000
+      internalID: -7195563742178502241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 459
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 800106db12b6485d0800000000000000
+      internalID: -3061204054049812472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 459
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b862cc97fc1712880800000000000000
+      internalID: -8637497474404309365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 459
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fb94ebdaf1ef9a70800000000000000
+      internalID: 8836029461471468530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 459
+        width: 22
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc72e25f81e307720800000000000000
+      internalID: 2841839641784362955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 459
+        width: 22
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cff88a3bd8cde260800000000000000
+      internalID: 7128574629102813126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 367
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68f9a4cc421c8210800000000000000
+      internalID: 1336463310348482668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 367
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc44f59748efea9a0800000000000000
+      internalID: -6219754190426651441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 367
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f08350c3437c561d0800000000000000
+      internalID: -3358058919975634929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 386
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef030604315567580800000000000000
+      internalID: -8829776478240493314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 367
+        width: 31
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18f810d02ab6c8ca0800000000000000
+      internalID: -6013313058699374719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 569
+        y: 386
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b9b51083c269ed10800000000000000
+      internalID: 2155362488480545201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 367
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d88d3497b95dfb40800000000000000
+      internalID: 5475631366953339090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 709
+        y: 367
+        width: 30
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d87e3f4d2e251ef20800000000000000
+      internalID: 3450129923731351437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 739
+        y: 376
+        width: 26
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a071984bd606e87c0800000000000000
+      internalID: -4067207389172394230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 367
+        width: 37
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b611d74ffc2c4cd90800000000000000
+      internalID: -7078318515903721109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 367
+        width: 140
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa727ac79d0124c0800000000000000
+      internalID: -4314152022456501509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1117
+        y: 367
+        width: 86
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04227fba69126c440800000000000000
+      internalID: 4955685370981720640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 367
+        width: 36
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09e1e7adace933700800000000000000
+      internalID: 518932976164019856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 367
+        width: 26
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4415c09bfbefd1fc0800000000000000
+      internalID: -3522379234137059004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1521
+        y: 367
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7969ea204c2e83400800000000000000
+      internalID: 304242306333972119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 367
+        width: 21
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a07ff5a72173e1b50800000000000000
+      internalID: 6565745859254810378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 367
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a2c571ad6e46a900800000000000000
+      internalID: 695329425242571428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 367
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5dabc57f00e9390800000000000000
+      internalID: -7809803641401190927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 275
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85242a16fc6fc7bf0800000000000000
+      internalID: -325113702520831400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 275
+        width: 21
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d763ba8906cf1a60800000000000000
+      internalID: 7647048436582410197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 275
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d2ddc59a9a282f30800000000000000
+      internalID: 4550934266884510423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 275
+        width: 25
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e74592e72b6000ef0800000000000000
+      internalID: -144107824385272706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 275
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec92d17d58ea12040800000000000000
+      internalID: 4621166582521735630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 287
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a097e0c7013b74b0800000000000000
+      internalID: -5441701815376179032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 275
+        width: 23
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ad353c2cf18eecb0800000000000000
+      internalID: -4832782430048535136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 283
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d706300edb592d6e0800000000000000
+      internalID: -1814223057137213315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 275
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdf2cef6373f57e90800000000000000
+      internalID: -7028443966317252644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 283
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c4b02be99304cd80800000000000000
+      internalID: -8231450259316755258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 186
+        width: 64
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab2ad3533c596a020800000000000000
+      internalID: 2352732520992055994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 975
+        y: 283
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21b4ecd75b1de3960800000000000000
+      internalID: 7583729399968451346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 1085
+        y: 275
+        width: 22
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98c13403d21a819e0800000000000000
+      internalID: -1650392047975981943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 187
+        width: 43
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c403f901b209cd30800000000000000
+      internalID: 4452092666031834308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 188
+        width: 63
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3691dba679a406820800000000000000
+      internalID: 2909407373472635235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 288
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9fa9018164427f80800000000000000
+      internalID: -8110344793373429861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 1353
+        y: 190
+        width: 60
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9de53d410b44240800000000000000
+      internalID: 4775135108411611602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 1376
+        y: 287
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d8f5e05d35d4970800000000000000
+      internalID: 8740734626330283307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 293
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bcf8b3c6e3805db0800000000000000
+      internalID: -4805195775254922055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 195
+        width: 82
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d2ba2edd44db520800000000000000
+      internalID: 2719405469782977937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 288
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40cadd56e40dc99d0800000000000000
+      internalID: -2766107035977274364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 294
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbcf26f19f3d77e00800000000000000
+      internalID: 1042534905686457531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 1663
+        y: 291
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8866d6795653d000800000000000000
+      internalID: 59486162331789452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 195
+        width: 24
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47c4210aa4b8c5cb0800000000000000
+      internalID: -4873867544092324748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 1691
+        y: 275
+        width: 51
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 829423399fd6e6840800000000000000
+      internalID: 5219229936852814120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 1797
+        y: 292
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfe99d3e4ae12660800000000000000
+      internalID: 7359420887861948363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 1812
+        y: 278
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc05fcc05be985c90800000000000000
+      internalID: -7180815105401073459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 1830
+        y: 275
+        width: 44
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e7e3108952258cb0800000000000000
+      internalID: -4862442454880360471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 1946
+        y: 278
+        width: 12
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31beb705e3ac60930800000000000000
+      internalID: 4109194079009237779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 1968
+        y: 275
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49d6da9e54c836570800000000000000
+      internalID: 8458758757033012628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 275
+        width: 36
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 854bee9a609d77580800000000000000
+      internalID: -8829349921792543656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 2102
+        y: 275
+        width: 42
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19a05c627e12ee650800000000000000
+      internalID: 6263981408390548113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 275
+        width: 30
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72928ae571c615680800000000000000
+      internalID: -8768108151885518553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 2236
+        y: 275
+        width: 42
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80435f65f4b222bb0800000000000000
+      internalID: -4962356219647544312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 2319
+        y: 275
+        width: 47
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ac207bfb00275f0800000000000000
+      internalID: -760544563663025604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 2370
+        y: 275
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675f39877203b1760800000000000000
+      internalID: 7429584956362585462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 285
+        width: 19
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e0d4bb266096980800000000000000
+      internalID: -8545291796839854504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 282
+        width: 9
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d150dcbd8ad00bc0800000000000000
+      internalID: -3818812181717167656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 2504
+        y: 275
+        width: 22
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebbbb6d8781568a70800000000000000
+      internalID: 8828833762141518782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_71
+      rect:
+        serializedVersion: 2
+        x: 2563
+        y: 275
+        width: 58
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de8ee1a68d8a7880800000000000000
+      internalID: -8612415728010752297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_72
+      rect:
+        serializedVersion: 2
+        x: 2638
+        y: 275
+        width: 21
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e474d377ed8f1a0800000000000000
+      internalID: -6775421035668353506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_73
+      rect:
+        serializedVersion: 2
+        x: 2696
+        y: 275
+        width: 98
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f46310ecba1da1100800000000000000
+      internalID: 79606479258203727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_74
+      rect:
+        serializedVersion: 2
+        x: 2834
+        y: 275
+        width: 94
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d03f583092ba650800000000000000
+      internalID: 6245130403388263794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_75
+      rect:
+        serializedVersion: 2
+        x: 2967
+        y: 275
+        width: 95
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc78450caf811e680800000000000000
+      internalID: -8727667137619654709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_76
+      rect:
+        serializedVersion: 2
+        x: 3105
+        y: 275
+        width: 91
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aaf6fa660bac5dd0800000000000000
+      internalID: -2495932049417373016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_77
+      rect:
+        serializedVersion: 2
+        x: 3238
+        y: 275
+        width: 92
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb152a4252fe6e930800000000000000
+      internalID: 4172285047612789180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_78
+      rect:
+        serializedVersion: 2
+        x: 580
+        y: 281
+        width: 18
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 565ba879759afa0b0800000000000000
+      internalID: -5715163208440171163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_79
+      rect:
+        serializedVersion: 2
+        x: 1511
+        y: 282
+        width: 40
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06d18af48e2d5fa70800000000000000
+      internalID: 8860219737131982176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_80
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 281
+        width: 20
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ac3188cb5b42baa0800000000000000
+      internalID: -6146767683829285725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_81
+      rect:
+        serializedVersion: 2
+        x: 1720
+        y: 276
+        width: 17
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74e7c071c91f00270800000000000000
+      internalID: 8214831373027671623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_82
+      rect:
+        serializedVersion: 2
+        x: 1782
+        y: 281
+        width: 23
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf1239b0edb4cee80800000000000000
+      internalID: -8148054208771055108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_83
+      rect:
+        serializedVersion: 2
+        x: 1916
+        y: 275
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b65892acfe4335d00800000000000000
+      internalID: 960169350053594475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_84
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 281
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76fb7e92916f4b790800000000000000
+      internalID: -7515111290236846233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_85
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 278
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71dac4b511ee50560800000000000000
+      internalID: 7279486131027881239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_86
+      rect:
+        serializedVersion: 2
+        x: 2163
+        y: 275
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45726e2ee1c2bbdb0800000000000000
+      internalID: -4775174468728903852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_87
+      rect:
+        serializedVersion: 2
+        x: 2174
+        y: 281
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f396ef73711ea10800000000000000
+      internalID: 1936854844004974448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_88
+      rect:
+        serializedVersion: 2
+        x: 2214
+        y: 275
+        width: 14
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10c6bee5357ff6a20800000000000000
+      internalID: 3057934609454689281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_89
+      rect:
+        serializedVersion: 2
+        x: 2296
+        y: 275
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3c6282d75ee19600800000000000000
+      internalID: 473421496811940922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_90
+      rect:
+        serializedVersion: 2
+        x: 2310
+        y: 275
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2018ce03493d39d0800000000000000
+      internalID: -2793013233726255057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_91
+      rect:
+        serializedVersion: 2
+        x: 2318
+        y: 275
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c2f1c99991ee3530800000000000000
+      internalID: 3836751982392111814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_92
+      rect:
+        serializedVersion: 2
+        x: 2322
+        y: 281
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d3728d3c6d25e2d0800000000000000
+      internalID: -3250141613166267433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_93
+      rect:
+        serializedVersion: 2
+        x: 2327
+        y: 276
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc57b9b34d31f360800000000000000
+      internalID: 7201604640230038719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_94
+      rect:
+        serializedVersion: 2
+        x: 2429
+        y: 275
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2d30ce636addeaf0800000000000000
+      internalID: -365395874152432341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_95
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 194
+        width: 32
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7765cfbdfcd8cb950800000000000000
+      internalID: 6466199088885683831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_96
+      rect:
+        serializedVersion: 2
+        x: 2463
+        y: 282
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e28fc91cbe3d250800000000000000
+      internalID: 5968373147990765195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_97
+      rect:
+        serializedVersion: 2
+        x: 2465
+        y: 277
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f09d775209d9edfb0800000000000000
+      internalID: -4621082925206087409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_98
+      rect:
+        serializedVersion: 2
+        x: 2469
+        y: 275
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 944dbc1b02ddea780800000000000000
+      internalID: -8669749100150008759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_99
+      rect:
+        serializedVersion: 2
+        x: 2471
+        y: 281
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48ad9d70423b6fff0800000000000000
+      internalID: -2617782435194236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_100
+      rect:
+        serializedVersion: 2
+        x: 2482
+        y: 277
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 183a9c517f4888b40800000000000000
+      internalID: 5442746346434569089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_101
+      rect:
+        serializedVersion: 2
+        x: 2487
+        y: 275
+        width: 16
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7cef85166bf63300800000000000000
+      internalID: 231648846723148923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_102
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 280
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a74549ba326a40870800000000000000
+      internalID: 8648219856590886010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_103
+      rect:
+        serializedVersion: 2
+        x: 2615
+        y: 283
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74fad63173248da00800000000000000
+      internalID: 781447339665370951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_104
+      rect:
+        serializedVersion: 2
+        x: 2618
+        y: 276
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a9b580064726f30800000000000000
+      internalID: 4567340927913007722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_105
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 183
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c6134122ef4b2880800000000000000
+      internalID: -8634720027913546048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_106
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 192
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7fe3cc7f08055690800000000000000
+      internalID: -7614170732389208197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_107
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 183
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76b1bf8105922b740800000000000000
+      internalID: 5166237146540612455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_108
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 183
+        width: 36
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03f6db5d0325287f0800000000000000
+      internalID: -611836229671096528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_109
+      rect:
+        serializedVersion: 2
+        x: 442
+        y: 183
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bac482256a87a2150800000000000000
+      internalID: 5848619721832287403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_110
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 183
+        width: 38
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df2da52c656a97a00800000000000000
+      internalID: 754817304119399165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_111
+      rect:
+        serializedVersion: 2
+        x: 714
+        y: 183
+        width: 35
+        height: 94
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab6f766c0d7eb84e0800000000000000
+      internalID: -1978232727431285062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_112
+      rect:
+        serializedVersion: 2
+        x: 848
+        y: 184
+        width: 31
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4619414289536e610800000000000000
+      internalID: 1650065241034494308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_113
+      rect:
+        serializedVersion: 2
+        x: 1789
+        y: 91
+        width: 30
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58f8e69fc26514f00800000000000000
+      internalID: 1099254535218433925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_114
+      rect:
+        serializedVersion: 2
+        x: 1923
+        y: 91
+        width: 29
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970243f13090a3b90800000000000000
+      internalID: -7261481540168441735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_115
+      rect:
+        serializedVersion: 2
+        x: 2057
+        y: 91
+        width: 30
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c093b1edfec5bcaa0800000000000000
+      internalID: -6139711481696274164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_116
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 91
+        width: 30
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6389519e2dcecbee0800000000000000
+      internalID: -1243859006463305674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_117
+      rect:
+        serializedVersion: 2
+        x: 2324
+        y: 91
+        width: 26
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f1833791a0ef24a0800000000000000
+      internalID: -6615822342952877578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_118
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 91
+        width: 49
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7fe2a39f616a510800000000000000
+      internalID: 1559959580609279936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_119
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 105
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 013027387d4c815d0800000000000000
+      internalID: -3091504714287545584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_120
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 91
+        width: 35
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9037fb2164b2e6a0800000000000000
+      internalID: -6421371789234458470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_121
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 103
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41f408dad7fa4510800000000000000
+      internalID: 1534311142372208975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_122
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 113
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7def0aeea99e0b130800000000000000
+      internalID: 3580618555397308119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_123
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 104
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dd1a6b98de9b3760800000000000000
+      internalID: 7438713862690053589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_124
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 91
+        width: 38
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e77474d120eaff0800000000000000
+      internalID: -23078623317098938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_125
+      rect:
+        serializedVersion: 2
+        x: 405
+        y: 91
+        width: 82
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ad70eadb97da74d0800000000000000
+      internalID: -3135957126118081114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_126
+      rect:
+        serializedVersion: 2
+        x: 538
+        y: 91
+        width: 125
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 088dd6cad290ebbf0800000000000000
+      internalID: -306797632843556736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_127
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 91
+        width: 116
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc4fd7e51b38d67e0800000000000000
+      internalID: -1770614280668973877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_128
+      rect:
+        serializedVersion: 2
+        x: 794
+        y: 91
+        width: 128
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc7741e7aa35ad660800000000000000
+      internalID: 7411328128516388815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_129
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 91
+        width: 138
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f76e06a23a0ecfa0800000000000000
+      internalID: -5778670059219163143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_130
+      rect:
+        serializedVersion: 2
+        x: 1091
+        y: 91
+        width: 101
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b88baf5f3bbfc8910800000000000000
+      internalID: 1841123098032257163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_131
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 91
+        width: 66
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8b99413b47ed5880800000000000000
+      internalID: -8620479801581790324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_132
+      rect:
+        serializedVersion: 2
+        x: 1383
+        y: 91
+        width: 63
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71113395cb5a27520800000000000000
+      internalID: 2698401355117302039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_133
+      rect:
+        serializedVersion: 2
+        x: 1519
+        y: 91
+        width: 29
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d47d96683e22015d0800000000000000
+      internalID: -3093934583395526835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_134
+      rect:
+        serializedVersion: 2
+        x: 1655
+        y: 91
+        width: 28
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae4c6fd941d627790800000000000000
+      internalID: -7533839291320449814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_135
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 100
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa28c0589d25c910800000000000000
+      internalID: 1856940553573771946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_136
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 103
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 532f390ad5cd06d70800000000000000
+      internalID: 9034463147189334581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_137
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 96
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b088ce8c14f8260800000000000000
+      internalID: 7101967468604164870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_138
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 91
+        width: 42
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b75244c5b684af7c0800000000000000
+      internalID: -4036834490037557893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_139
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 91
+        width: 35
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 808557ea0c45bfc40800000000000000
+      internalID: 5547120552574277640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_140
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 91
+        width: 44
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cad3334757caf1550800000000000000
+      internalID: 6133810837962571180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_141
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 91
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20521816bce5528b0800000000000000
+      internalID: -5177627968985291518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_142
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 95
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e7039bda4b743b0800000000000000
+      internalID: -5528251359344689640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_143
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 91
+        width: 19
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dddb485c9fa714d90800000000000000
+      internalID: -7115270723089416739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_144
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 93
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a167e39319c47c0800000000000000
+      internalID: -4085731086884791788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_145
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 91
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2efdf6e58a62d1ce0800000000000000
+      internalID: -1432946601853198366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_146
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 91
+        width: 27
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 216d78fa4a570c910800000000000000
+      internalID: 1855612396656645650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_147
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 0
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5430d0eed3c810530800000000000000
+      internalID: 3819488156601615173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_148
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 0
+        width: 21
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86be43ca083180440800000000000000
+      internalID: 4902189637758675816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_149
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 0
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e18e659c6894a5880800000000000000
+      internalID: -8621497693395032034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_150
+      rect:
+        serializedVersion: 2
+        x: 449
+        y: 0
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d172eb18d75354760800000000000000
+      internalID: 7441412772463519517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_151
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 0
+        width: 40
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32346832fa9267780800000000000000
+      internalID: -8685708999145405661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_152
+      rect:
+        serializedVersion: 2
+        x: 588
+        y: 8
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abde5825487c40a80800000000000000
+      internalID: -8501450825434534470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_153
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 0
+        width: 41
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6345b9d17c90b44f0800000000000000
+      internalID: -843569754401975242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_154
+      rect:
+        serializedVersion: 2
+        x: 853
+        y: 0
+        width: 42
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27d647b16beba60e0800000000000000
+      internalID: -2275796972328424078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_155
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 0
+        width: 42
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd25b3db1220e3b0800000000000000
+      internalID: -5485346843225936459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_156
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 0
+        width: 41
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83e9b1c72a0f18e40800000000000000
+      internalID: 5657067187611606584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_157
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 0
+        width: 41
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dafdd2b11496141b0800000000000000
+      internalID: -5674138327160332371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Human Crow Keeper 134x92 SAprite Sheet_158
+      rect:
+        serializedVersion: 2
+        x: 1390
+        y: 0
+        width: 41
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f65293edbc580e0800000000000000
+      internalID: -2268182682009243846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Human Crow Keeper 134x92 SAprite Sheet_0: 188953369877724122
+      Human Crow Keeper 134x92 SAprite Sheet_1: -1623376656074222786
+      Human Crow Keeper 134x92 SAprite Sheet_10: -8637497474404309365
+      Human Crow Keeper 134x92 SAprite Sheet_100: 5442746346434569089
+      Human Crow Keeper 134x92 SAprite Sheet_101: 231648846723148923
+      Human Crow Keeper 134x92 SAprite Sheet_102: 8648219856590886010
+      Human Crow Keeper 134x92 SAprite Sheet_103: 781447339665370951
+      Human Crow Keeper 134x92 SAprite Sheet_104: 4567340927913007722
+      Human Crow Keeper 134x92 SAprite Sheet_105: -8634720027913546048
+      Human Crow Keeper 134x92 SAprite Sheet_106: -7614170732389208197
+      Human Crow Keeper 134x92 SAprite Sheet_107: 5166237146540612455
+      Human Crow Keeper 134x92 SAprite Sheet_108: -611836229671096528
+      Human Crow Keeper 134x92 SAprite Sheet_109: 5848619721832287403
+      Human Crow Keeper 134x92 SAprite Sheet_11: 8836029461471468530
+      Human Crow Keeper 134x92 SAprite Sheet_110: 754817304119399165
+      Human Crow Keeper 134x92 SAprite Sheet_111: -1978232727431285062
+      Human Crow Keeper 134x92 SAprite Sheet_112: 1650065241034494308
+      Human Crow Keeper 134x92 SAprite Sheet_113: 1099254535218433925
+      Human Crow Keeper 134x92 SAprite Sheet_114: -7261481540168441735
+      Human Crow Keeper 134x92 SAprite Sheet_115: -6139711481696274164
+      Human Crow Keeper 134x92 SAprite Sheet_116: -1243859006463305674
+      Human Crow Keeper 134x92 SAprite Sheet_117: -6615822342952877578
+      Human Crow Keeper 134x92 SAprite Sheet_118: 1559959580609279936
+      Human Crow Keeper 134x92 SAprite Sheet_119: -3091504714287545584
+      Human Crow Keeper 134x92 SAprite Sheet_12: 2841839641784362955
+      Human Crow Keeper 134x92 SAprite Sheet_120: -6421371789234458470
+      Human Crow Keeper 134x92 SAprite Sheet_121: 1534311142372208975
+      Human Crow Keeper 134x92 SAprite Sheet_122: 3580618555397308119
+      Human Crow Keeper 134x92 SAprite Sheet_123: 7438713862690053589
+      Human Crow Keeper 134x92 SAprite Sheet_124: -23078623317098938
+      Human Crow Keeper 134x92 SAprite Sheet_125: -3135957126118081114
+      Human Crow Keeper 134x92 SAprite Sheet_126: -306797632843556736
+      Human Crow Keeper 134x92 SAprite Sheet_127: -1770614280668973877
+      Human Crow Keeper 134x92 SAprite Sheet_128: 7411328128516388815
+      Human Crow Keeper 134x92 SAprite Sheet_129: -5778670059219163143
+      Human Crow Keeper 134x92 SAprite Sheet_13: 7128574629102813126
+      Human Crow Keeper 134x92 SAprite Sheet_130: 1841123098032257163
+      Human Crow Keeper 134x92 SAprite Sheet_131: -8620479801581790324
+      Human Crow Keeper 134x92 SAprite Sheet_132: 2698401355117302039
+      Human Crow Keeper 134x92 SAprite Sheet_133: -3093934583395526835
+      Human Crow Keeper 134x92 SAprite Sheet_134: -7533839291320449814
+      Human Crow Keeper 134x92 SAprite Sheet_135: 1856940553573771946
+      Human Crow Keeper 134x92 SAprite Sheet_136: 9034463147189334581
+      Human Crow Keeper 134x92 SAprite Sheet_137: 7101967468604164870
+      Human Crow Keeper 134x92 SAprite Sheet_138: -4036834490037557893
+      Human Crow Keeper 134x92 SAprite Sheet_139: 5547120552574277640
+      Human Crow Keeper 134x92 SAprite Sheet_14: 1336463310348482668
+      Human Crow Keeper 134x92 SAprite Sheet_140: 6133810837962571180
+      Human Crow Keeper 134x92 SAprite Sheet_141: -5177627968985291518
+      Human Crow Keeper 134x92 SAprite Sheet_142: -5528251359344689640
+      Human Crow Keeper 134x92 SAprite Sheet_143: -7115270723089416739
+      Human Crow Keeper 134x92 SAprite Sheet_144: -4085731086884791788
+      Human Crow Keeper 134x92 SAprite Sheet_145: -1432946601853198366
+      Human Crow Keeper 134x92 SAprite Sheet_146: 1855612396656645650
+      Human Crow Keeper 134x92 SAprite Sheet_147: 3819488156601615173
+      Human Crow Keeper 134x92 SAprite Sheet_148: 4902189637758675816
+      Human Crow Keeper 134x92 SAprite Sheet_149: -8621497693395032034
+      Human Crow Keeper 134x92 SAprite Sheet_15: -6219754190426651441
+      Human Crow Keeper 134x92 SAprite Sheet_150: 7441412772463519517
+      Human Crow Keeper 134x92 SAprite Sheet_151: -8685708999145405661
+      Human Crow Keeper 134x92 SAprite Sheet_152: -8501450825434534470
+      Human Crow Keeper 134x92 SAprite Sheet_153: -843569754401975242
+      Human Crow Keeper 134x92 SAprite Sheet_154: -2275796972328424078
+      Human Crow Keeper 134x92 SAprite Sheet_155: -5485346843225936459
+      Human Crow Keeper 134x92 SAprite Sheet_156: 5657067187611606584
+      Human Crow Keeper 134x92 SAprite Sheet_157: -5674138327160332371
+      Human Crow Keeper 134x92 SAprite Sheet_158: -2268182682009243846
+      Human Crow Keeper 134x92 SAprite Sheet_16: -3358058919975634929
+      Human Crow Keeper 134x92 SAprite Sheet_17: -8829776478240493314
+      Human Crow Keeper 134x92 SAprite Sheet_18: -6013313058699374719
+      Human Crow Keeper 134x92 SAprite Sheet_19: 2155362488480545201
+      Human Crow Keeper 134x92 SAprite Sheet_2: 1495960677407279316
+      Human Crow Keeper 134x92 SAprite Sheet_20: 5475631366953339090
+      Human Crow Keeper 134x92 SAprite Sheet_21: 3450129923731351437
+      Human Crow Keeper 134x92 SAprite Sheet_22: -4067207389172394230
+      Human Crow Keeper 134x92 SAprite Sheet_23: -7078318515903721109
+      Human Crow Keeper 134x92 SAprite Sheet_24: -4314152022456501509
+      Human Crow Keeper 134x92 SAprite Sheet_25: 4955685370981720640
+      Human Crow Keeper 134x92 SAprite Sheet_26: 518932976164019856
+      Human Crow Keeper 134x92 SAprite Sheet_27: -3522379234137059004
+      Human Crow Keeper 134x92 SAprite Sheet_28: 304242306333972119
+      Human Crow Keeper 134x92 SAprite Sheet_29: 6565745859254810378
+      Human Crow Keeper 134x92 SAprite Sheet_3: -6313328896168406946
+      Human Crow Keeper 134x92 SAprite Sheet_30: 695329425242571428
+      Human Crow Keeper 134x92 SAprite Sheet_31: -7809803641401190927
+      Human Crow Keeper 134x92 SAprite Sheet_32: -325113702520831400
+      Human Crow Keeper 134x92 SAprite Sheet_33: 7647048436582410197
+      Human Crow Keeper 134x92 SAprite Sheet_34: 4550934266884510423
+      Human Crow Keeper 134x92 SAprite Sheet_35: -144107824385272706
+      Human Crow Keeper 134x92 SAprite Sheet_36: 4621166582521735630
+      Human Crow Keeper 134x92 SAprite Sheet_37: -5441701815376179032
+      Human Crow Keeper 134x92 SAprite Sheet_38: -4832782430048535136
+      Human Crow Keeper 134x92 SAprite Sheet_39: -1814223057137213315
+      Human Crow Keeper 134x92 SAprite Sheet_4: -5082253403527181731
+      Human Crow Keeper 134x92 SAprite Sheet_40: -7028443966317252644
+      Human Crow Keeper 134x92 SAprite Sheet_41: -8231450259316755258
+      Human Crow Keeper 134x92 SAprite Sheet_42: 2352732520992055994
+      Human Crow Keeper 134x92 SAprite Sheet_43: 7583729399968451346
+      Human Crow Keeper 134x92 SAprite Sheet_44: -1650392047975981943
+      Human Crow Keeper 134x92 SAprite Sheet_45: 4452092666031834308
+      Human Crow Keeper 134x92 SAprite Sheet_46: 2909407373472635235
+      Human Crow Keeper 134x92 SAprite Sheet_47: -8110344793373429861
+      Human Crow Keeper 134x92 SAprite Sheet_48: 4775135108411611602
+      Human Crow Keeper 134x92 SAprite Sheet_49: 8740734626330283307
+      Human Crow Keeper 134x92 SAprite Sheet_5: 7106301942519393707
+      Human Crow Keeper 134x92 SAprite Sheet_50: -4805195775254922055
+      Human Crow Keeper 134x92 SAprite Sheet_51: 2719405469782977937
+      Human Crow Keeper 134x92 SAprite Sheet_52: -2766107035977274364
+      Human Crow Keeper 134x92 SAprite Sheet_53: 1042534905686457531
+      Human Crow Keeper 134x92 SAprite Sheet_54: 59486162331789452
+      Human Crow Keeper 134x92 SAprite Sheet_55: -4873867544092324748
+      Human Crow Keeper 134x92 SAprite Sheet_56: 5219229936852814120
+      Human Crow Keeper 134x92 SAprite Sheet_57: 7359420887861948363
+      Human Crow Keeper 134x92 SAprite Sheet_58: -7180815105401073459
+      Human Crow Keeper 134x92 SAprite Sheet_59: -4862442454880360471
+      Human Crow Keeper 134x92 SAprite Sheet_6: -5846596038150119983
+      Human Crow Keeper 134x92 SAprite Sheet_60: 4109194079009237779
+      Human Crow Keeper 134x92 SAprite Sheet_61: 8458758757033012628
+      Human Crow Keeper 134x92 SAprite Sheet_62: -8829349921792543656
+      Human Crow Keeper 134x92 SAprite Sheet_63: 6263981408390548113
+      Human Crow Keeper 134x92 SAprite Sheet_64: -8768108151885518553
+      Human Crow Keeper 134x92 SAprite Sheet_65: -4962356219647544312
+      Human Crow Keeper 134x92 SAprite Sheet_66: -760544563663025604
+      Human Crow Keeper 134x92 SAprite Sheet_67: 7429584956362585462
+      Human Crow Keeper 134x92 SAprite Sheet_68: -8545291796839854504
+      Human Crow Keeper 134x92 SAprite Sheet_69: -3818812181717167656
+      Human Crow Keeper 134x92 SAprite Sheet_7: -6398625241092944940
+      Human Crow Keeper 134x92 SAprite Sheet_70: 8828833762141518782
+      Human Crow Keeper 134x92 SAprite Sheet_71: -8612415728010752297
+      Human Crow Keeper 134x92 SAprite Sheet_72: -6775421035668353506
+      Human Crow Keeper 134x92 SAprite Sheet_73: 79606479258203727
+      Human Crow Keeper 134x92 SAprite Sheet_74: 6245130403388263794
+      Human Crow Keeper 134x92 SAprite Sheet_75: -8727667137619654709
+      Human Crow Keeper 134x92 SAprite Sheet_76: -2495932049417373016
+      Human Crow Keeper 134x92 SAprite Sheet_77: 4172285047612789180
+      Human Crow Keeper 134x92 SAprite Sheet_78: -5715163208440171163
+      Human Crow Keeper 134x92 SAprite Sheet_79: 8860219737131982176
+      Human Crow Keeper 134x92 SAprite Sheet_8: -7195563742178502241
+      Human Crow Keeper 134x92 SAprite Sheet_80: -6146767683829285725
+      Human Crow Keeper 134x92 SAprite Sheet_81: 8214831373027671623
+      Human Crow Keeper 134x92 SAprite Sheet_82: -8148054208771055108
+      Human Crow Keeper 134x92 SAprite Sheet_83: 960169350053594475
+      Human Crow Keeper 134x92 SAprite Sheet_84: -7515111290236846233
+      Human Crow Keeper 134x92 SAprite Sheet_85: 7279486131027881239
+      Human Crow Keeper 134x92 SAprite Sheet_86: -4775174468728903852
+      Human Crow Keeper 134x92 SAprite Sheet_87: 1936854844004974448
+      Human Crow Keeper 134x92 SAprite Sheet_88: 3057934609454689281
+      Human Crow Keeper 134x92 SAprite Sheet_89: 473421496811940922
+      Human Crow Keeper 134x92 SAprite Sheet_9: -3061204054049812472
+      Human Crow Keeper 134x92 SAprite Sheet_90: -2793013233726255057
+      Human Crow Keeper 134x92 SAprite Sheet_91: 3836751982392111814
+      Human Crow Keeper 134x92 SAprite Sheet_92: -3250141613166267433
+      Human Crow Keeper 134x92 SAprite Sheet_93: 7201604640230038719
+      Human Crow Keeper 134x92 SAprite Sheet_94: -365395874152432341
+      Human Crow Keeper 134x92 SAprite Sheet_95: 6466199088885683831
+      Human Crow Keeper 134x92 SAprite Sheet_96: 5968373147990765195
+      Human Crow Keeper 134x92 SAprite Sheet_97: -4621082925206087409
+      Human Crow Keeper 134x92 SAprite Sheet_98: -8669749100150008759
+      Human Crow Keeper 134x92 SAprite Sheet_99: -2617782435194236
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

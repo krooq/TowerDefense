@@ -6,7 +6,7 @@ namespace Krooq.PlanetDefense
     public interface ICaster
     {
         Transform FirePoint { get; }
-        ITargetingInfo TargetingInfo { get; }
+        ITarget TargetingInfo { get; }
         GameObject gameObject { get; }
         Transform transform { get; }
         int CurrentMana { get; }

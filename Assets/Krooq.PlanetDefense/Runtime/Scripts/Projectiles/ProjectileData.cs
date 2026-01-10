@@ -16,12 +16,14 @@ namespace Krooq.PlanetDefense
         [SerializeField] private AudioResource _impactSound;
 
         [Header("Projectile Stats")]
-        [SerializeField] private float _baseFireRate = 1f;
-        [SerializeField] private float _baseDamage = 10f;
-        [SerializeField] private float _baseSpeed = 10f;
-        [SerializeField] private float _baseSize = 1f;
-        [SerializeField] private int _basePierce = 0;
-        [SerializeField] private float _baseLifetime = 30f;
+        [SerializeField] private float _fireRate = 1f;
+        [SerializeField] private float _damage = 10f;
+        [SerializeField] private float _speed = 10f;
+        [SerializeField] private float _size = 1f;
+        [SerializeField] private int _pierce = 0;
+        [SerializeField] private float _lifetime = 30f;
+        [SerializeField] private float _explosionRadius = 0f;
+        [SerializeField] private float _explosionDamageMult = 1f;
 
         public Sprite Icon => _icon;
         public ProjectileModel ProjectileModelPrefab => _projectileModelPrefab;
@@ -30,11 +32,13 @@ namespace Krooq.PlanetDefense
         public AudioResource FireSound => _fireSound;
         public AudioResource ImpactSound => _impactSound;
 
-        public float BaseFireRate => _baseFireRate;
-        public float BaseDamage => _baseDamage;
-        public float BaseSpeed => _baseSpeed;
-        public float BaseSize => _baseSize;
-        public int BasePierce => _basePierce;
-        public float BaseLifetime => _baseLifetime;
+        public float FireRate => _fireRate;
+        public float Damage => _damage;
+        public float Speed => _speed;
+        public float Size => _size;
+        public int Pierce => _pierce;
+        public float Lifetime => _lifetime;
+        public float ExplosionRadius => _explosionRadius;
+        public float ExplosionDamageMult => _explosionDamageMult;
     }
 }

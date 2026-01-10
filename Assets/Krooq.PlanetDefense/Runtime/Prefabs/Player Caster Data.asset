@@ -20,6 +20,6 @@ MonoBehaviour:
   _initialSpell: {fileID: 11400000, guid: 87be09573ef0bc04e818a8ca9336716b, type: 2}
   _maxMana: 10
   _manaRegen: 1
-  _targetingStrategyType: 0
+  _targetingStrategyType: 1
   _range: 10000
   _abilities: []

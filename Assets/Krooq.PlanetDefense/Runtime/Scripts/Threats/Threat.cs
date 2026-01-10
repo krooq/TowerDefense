@@ -1,6 +1,7 @@
 using UnityEngine;
 using Krooq.Core;
 using Sirenix.OdinInspector;
+using UnityEngine.Events;
 
 namespace Krooq.PlanetDefense
 {
@@ -12,15 +13,17 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private IThreatMovement _movement;
         [SerializeField, ReadOnly] private ThreatData _data;
         [SerializeField, ReadOnly] private ThreatModel _model;
-
+        [SerializeField, ReadOnly] private UnityEvent _onDeath = new();
         protected GameManager GameManager => this.GetSingleton<GameManager>();
-        public PlayerTower PlayerBase => this.GetSingleton<PlayerTower>();
+        public PlayerTower PlayerTower => this.GetSingleton<PlayerTower>();
         public Rigidbody2D Rigidbody2D => this.GetCachedComponent<Rigidbody2D>();
 
         public float Speed => _speed;
         public float Health => _health;
         public int Resources => _resources;
+        public bool IsAlive => _health > 0;
         public ThreatData Data => _data;
+        public UnityEvent OnDeath => _onDeath;
 
         public void Init(ThreatData data)
         {
@@ -69,6 +72,7 @@ namespace Krooq.PlanetDefense
 
         protected void Die(bool giveResources = true)
         {
+            _onDeath.Invoke();
             if (giveResources) this.GetSingleton<Player>().AddResources(Resources);
             GameManager.Despawn(gameObject);
         }
@@ -76,7 +80,8 @@ namespace Krooq.PlanetDefense
         protected void OnTriggerEnter2D(Collider2D other)
         {
             var go = other.attachedRigidbody != null ? other.attachedRigidbody.gameObject : other.gameObject;
-            if (go.TryGetComponent<PlayerTower>(out var playerTower))
+            var playerTower = go.GetCachedComponent<PlayerTower>();
+            if (playerTower != null)
             {
                 playerTower.TakeDamage(1);
                 Die(false);
@@ -88,6 +93,17 @@ namespace Krooq.PlanetDefense
                     Die(false);
                 }
             }
+        }
+
+        public Vector3 GetClosestPoint(Vector3 position)
+        {
+            if (_model != null) return _model.GetClosestPoint(position);
+            return transform.position;
+        }
+        public Vector3 GetMidPoint()
+        {
+            if (_model != null) return _model.GetMidPoint();
+            return transform.position;
         }
     }
 }

@@ -10,7 +10,7 @@ namespace Krooq.PlanetDefense
     {
         [SerializeField] private bool _manualControlEnabled;
 
-        public override ITargetingInfo TargetingInfo => _manualControlEnabled ? Player.TargetingReticle : base.TargetingInfo;
+        public override ITarget TargetingInfo => _manualControlEnabled ? Player.TargetingReticle : base.TargetingInfo;
 
         protected Player Player => this.GetSingleton<Player>();
 

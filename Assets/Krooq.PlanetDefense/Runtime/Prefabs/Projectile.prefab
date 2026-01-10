@@ -46,10 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4d380c23194656418044ee6cf67cb4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.Projectile
-  _direction: {x: 0, y: 0, z: 0}
+  _data: {fileID: 0}
   _timer: 0
   _model: {fileID: 0}
-  _data: {fileID: 0}
   _damage:
     _statData: {fileID: 0}
     _baseValue: 0

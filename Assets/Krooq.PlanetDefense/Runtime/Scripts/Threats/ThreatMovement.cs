@@ -25,12 +25,12 @@ namespace Krooq.PlanetDefense
             _type = type;
             _sineOffset = Random.Range(0f, 100f);
             _frequency = Random.Range(1f, 2f);
-            _amplitude = Random.Range(2f, 3f);
+            _amplitude = Random.Range(0.2f, 0.3f);
         }
 
         public void Move(Threat threat)
         {
-            if (threat.PlayerBase == null) return;
+            if (threat.PlayerTower == null) return;
 
             switch (_type)
             {
@@ -49,7 +49,8 @@ namespace Krooq.PlanetDefense
         private void MoveGround(Threat threat)
         {
             // Move horizontally towards the base
-            float directionX = Mathf.Sign(threat.PlayerBase.transform.position.x - threat.transform.position.x);
+            var targetPos = threat.PlayerTower.GetClosestPoint(threat.transform.position);
+            float directionX = Mathf.Sign(targetPos.x - threat.transform.position.x);
 
             if (threat.Rigidbody2D.bodyType == RigidbodyType2D.Dynamic)
             {
@@ -65,7 +66,8 @@ namespace Krooq.PlanetDefense
         private void MoveAir(Threat threat)
         {
             // Move directly towards the base
-            Vector2 direction = (threat.PlayerBase.transform.position - threat.transform.position).normalized;
+            var targetPos = threat.PlayerTower.GetClosestPoint(threat.transform.position);
+            Vector2 direction = (targetPos - threat.transform.position).normalized;
             Vector2 perp = new Vector2(-direction.y, direction.x);
 
             float wave = Mathf.Sin(Time.time * _frequency + _sineOffset) * _amplitude;
@@ -81,7 +83,8 @@ namespace Krooq.PlanetDefense
         private void MoveConstant(Threat threat)
         {
             // Move directly towards the base
-            Vector2 direction = (threat.PlayerBase.transform.position - threat.transform.position).normalized;
+            var targetPos = threat.PlayerTower.GetClosestPoint(threat.transform.position);
+            Vector2 direction = (targetPos - threat.transform.position).normalized;
             threat.Rigidbody2D.MovePosition(threat.Rigidbody2D.position + direction * threat.Speed * Time.fixedDeltaTime);
 
             // Tumble

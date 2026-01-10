@@ -25,6 +25,8 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly, PropertyOrder(100)] protected GameObject _model;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected float _spellCooldown;
 
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected ITarget _target;
+
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
         protected GameEventManager GameEventManager => this.GetSingleton<GameEventManager>();
@@ -46,10 +48,7 @@ namespace Krooq.PlanetDefense
                 if (_spell != null) yield return _spell;
             }
         }
-
-
-        protected ITargetingInfo _targetingInfo;
-        public virtual ITargetingInfo TargetingInfo => _targetingInfo;
+        public virtual ITarget TargetingInfo => _target;
 
         public virtual void Init(CasterData data)
         {
@@ -58,7 +57,7 @@ namespace Krooq.PlanetDefense
             _range = data.Range;
             _abilities = new List<AbilityData>(data.Abilities);
             _targetingStrategy = new TargetingStrategy(data.TargetingStrategyType);
-            _targetingInfo = new CasterTargetingInfo();
+            _target = new ThreatTarget();
             _spell = null;
 
             if (_model != null)
@@ -99,7 +98,7 @@ namespace Krooq.PlanetDefense
 
             if (TargetingInfo is not { IsValid: true }) return;
 
-            var dir = (TargetingInfo.TargetPosition - _pivot.position).normalized;
+            var dir = (TargetingInfo.Position - _pivot.position).normalized;
             var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
             _pivot.rotation = Quaternion.Euler(0, 0, angle);
         }
@@ -114,15 +113,8 @@ namespace Krooq.PlanetDefense
         {
             if (_targetingStrategy == null) return;
 
-            var target = _targetingStrategy.FindTarget(_firePoint.position, _range, GameManager.Threats);
-            _targetingInfo = target == null ? default : new CasterTargetingInfo()
-            {
-                Owner = this,
-                IsGroundTarget = target.Data.MovementType == ThreatMovementType.Ground,
-                TargetPosition = target.transform.position,
-                TargetThreat = target,
-                IsValid = true
-            };
+            var targetThreat = _targetingStrategy.FindTarget(_firePoint.position, _range, GameManager.Threats);
+            _target = targetThreat == null ? default : new ThreatTarget(targetThreat);
         }
 
         protected virtual void UpdateCooldowns()
@@ -133,19 +125,16 @@ namespace Krooq.PlanetDefense
             }
         }
 
+        public bool CanSpendMana(int amount) => _currentMana >= amount;
+
         public virtual bool TrySpendMana(int amount)
         {
-            if (_currentMana >= amount)
+            if (CanSpendMana(amount))
             {
                 _currentMana -= amount;
                 return true;
             }
             return false;
-        }
-
-        public virtual SpellData GetSpell(int index = 0)
-        {
-            return _spell;
         }
 
         public virtual void SetSpell(SpellData spell, int i = 0)
@@ -154,20 +143,18 @@ namespace Krooq.PlanetDefense
             AbilityController.RebuildAbilities();
         }
 
-        public virtual void CastSpell(int index) => CastSpell();
-
         public virtual void CastSpell()
         {
-            if (!_targetingInfo.IsValid) return;
+            if (!_target.IsValid) return;
             if (_spell == null) return;
 
             // Check Cooldown
             if (_spellCooldown > 0) return;
 
-            ProcessSpell(_spell);
+            CastSpell(_spell);
         }
 
-        protected virtual void ProcessSpell(SpellData spell)
+        protected virtual void CastSpell(SpellData spell)
         {
             var cost = Mathf.CeilToInt(spell.ManaCost);
             if (!TrySpendMana(cost))
@@ -181,14 +168,5 @@ namespace Krooq.PlanetDefense
 
             GameEventManager.FireEvent(this, new SpellCastEvent(spell, this));
         }
-    }
-
-    public struct CasterTargetingInfo : ITargetingInfo
-    {
-        public Caster Owner { get; set; }
-        public bool IsGroundTarget { get; set; }
-        public Vector3 TargetPosition { get; set; }
-        public Threat TargetThreat { get; set; }
-        public bool IsValid { get; set; }
     }
 }

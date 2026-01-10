@@ -2,18 +2,21 @@ using UnityEngine;
 using Krooq.Core;
 using Krooq.Common;
 using Sirenix.OdinInspector;
+using UnityEngine.Events;
 
 namespace Krooq.PlanetDefense
 {
-    public class PlayerTargetingReticle : MonoBehaviour, ITargetingInfo
+    public class PlayerTargetingReticle : MonoBehaviour, ITarget
     {
         [Header("Visuals")]
         [SerializeField] private GameObject _groundVisual;
         [SerializeField] private GameObject _airVisual;
 
-        public Vector3 TargetPosition { get; private set; }
+        public bool IsValid { get; set; }
+        public Transform Transform => null;
+        public Vector3 Position { get; set; }
         public bool IsGroundTarget { get; private set; }
-        public bool IsValid => true;
+        public UnityEvent OnTargetDestroyed => new();
 
         private Camera _cam;
         protected Player Player => this.GetSingleton<Player>();
@@ -45,25 +48,27 @@ namespace Krooq.PlanetDefense
             var worldPos = _cam.ScreenToWorldPoint(mouseScreenPos);
             worldPos.z = 0f;
 
-            float groundLevel = GameManager.Data.HorizonY;
+            float groundLevel = GameManager.Data.HorizonLevel;
 
             if (worldPos.y <= groundLevel)
             {
+                IsValid = true;
                 IsGroundTarget = true;
-                TargetPosition = new Vector3(worldPos.x, worldPos.y, 0f);
+                Position = new Vector3(worldPos.x, worldPos.y, 0f);
                 if (_groundVisual) _groundVisual.SetActive(true);
                 if (_airVisual) _airVisual.SetActive(false);
             }
             else
             {
                 IsGroundTarget = false;
-                TargetPosition = worldPos;
+                IsValid = true;
+                Position = new Vector3(worldPos.x, worldPos.y, 0f);
 
                 if (_groundVisual) _groundVisual.SetActive(false);
                 if (_airVisual) _airVisual.SetActive(true);
             }
 
-            transform.position = TargetPosition;
+            transform.position = Position;
         }
     }
 }

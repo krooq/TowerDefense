@@ -1,0 +1,429 @@
+fileFormatVersion: 2
+guid: 9e320e7d2e5da5a4783a52a7b698030a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5730436726278122340
+    second: Kami-Kaze Crow-Idle_0
+  - first:
+      213: 5600446500779894877
+    second: Kami-Kaze Crow-Idle_1
+  - first:
+      213: -654134959382525634
+    second: Kami-Kaze Crow-Idle_2
+  - first:
+      213: 1389276634995124480
+    second: Kami-Kaze Crow-Idle_3
+  - first:
+      213: -4873369302032541892
+    second: Kami-Kaze Crow-Idle_4
+  - first:
+      213: 2718810195871653273
+    second: Kami-Kaze Crow-Idle_5
+  - first:
+      213: -2190072761247306192
+    second: Kami-Kaze Crow-Idle_6
+  - first:
+      213: -6190931380328755163
+    second: Kami-Kaze Crow-Idle_7
+  - first:
+      213: 7200446821554644881
+    second: Kami-Kaze Crow-Idle_8
+  - first:
+      213: 4944243389700581272
+    second: Kami-Kaze Crow-Idle_9
+  - first:
+      213: -6803337935134670023
+    second: Kami-Kaze Crow-Idle_10
+  - first:
+      213: -3499129409269738316
+    second: Kami-Kaze Crow-Idle_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94175a98266970b0800000000000000
+      internalID: -5730436726278122340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d58a0968b68c8bd40800000000000000
+      internalID: 5600446500779894877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3907de58bb0ce6f0800000000000000
+      internalID: -654134959382525634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_3
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00962a32db3b74310800000000000000
+      internalID: 1389276634995124480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c379e05a0705e5cb0800000000000000
+      internalID: -4873369302032541892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99dd3a0e7772bb520800000000000000
+      internalID: 2718810195871653273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_6
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03e68995d6c4b91e0800000000000000
+      internalID: -2190072761247306192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_7
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5209fa6e5b4651aa0800000000000000
+      internalID: -6190931380328755163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_8
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197eade0c302de360800000000000000
+      internalID: 7200446821554644881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_9
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8972d2eca2b7d9440800000000000000
+      internalID: 4944243389700581272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_10
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 933cb519130b591a0800000000000000
+      internalID: -6803337935134670023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow-Idle_11
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 2
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b4da596758907fc0800000000000000
+      internalID: -3499129409269738316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Kami-Kaze Crow-Idle_0: -5730436726278122340
+      Kami-Kaze Crow-Idle_1: 5600446500779894877
+      Kami-Kaze Crow-Idle_10: -6803337935134670023
+      Kami-Kaze Crow-Idle_11: -3499129409269738316
+      Kami-Kaze Crow-Idle_2: -654134959382525634
+      Kami-Kaze Crow-Idle_3: 1389276634995124480
+      Kami-Kaze Crow-Idle_4: -4873369302032541892
+      Kami-Kaze Crow-Idle_5: 2718810195871653273
+      Kami-Kaze Crow-Idle_6: -2190072761247306192
+      Kami-Kaze Crow-Idle_7: -6190931380328755163
+      Kami-Kaze Crow-Idle_8: 7200446821554644881
+      Kami-Kaze Crow-Idle_9: 4944243389700581272
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,1053 @@
+fileFormatVersion: 2
+guid: 88ff9dd3f80b78f4aa69bbd96608a8e5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6392579369276157540
+    second: Kami-Kaze Crow Sprite Sheet 27x27_0
+  - first:
+      213: -8973060474899540921
+    second: Kami-Kaze Crow Sprite Sheet 27x27_1
+  - first:
+      213: -5806792974505793263
+    second: Kami-Kaze Crow Sprite Sheet 27x27_2
+  - first:
+      213: 6585684552933350847
+    second: Kami-Kaze Crow Sprite Sheet 27x27_3
+  - first:
+      213: -603432954361437906
+    second: Kami-Kaze Crow Sprite Sheet 27x27_4
+  - first:
+      213: 5412936153181401955
+    second: Kami-Kaze Crow Sprite Sheet 27x27_5
+  - first:
+      213: -2915503408710634560
+    second: Kami-Kaze Crow Sprite Sheet 27x27_6
+  - first:
+      213: 6465854415962170881
+    second: Kami-Kaze Crow Sprite Sheet 27x27_7
+  - first:
+      213: -5544342612672512488
+    second: Kami-Kaze Crow Sprite Sheet 27x27_8
+  - first:
+      213: -6416786796208840222
+    second: Kami-Kaze Crow Sprite Sheet 27x27_9
+  - first:
+      213: -7855572205108311122
+    second: Kami-Kaze Crow Sprite Sheet 27x27_10
+  - first:
+      213: 2403850157608651157
+    second: Kami-Kaze Crow Sprite Sheet 27x27_11
+  - first:
+      213: 7339690884361484804
+    second: Kami-Kaze Crow Sprite Sheet 27x27_12
+  - first:
+      213: 5777355290906538738
+    second: Kami-Kaze Crow Sprite Sheet 27x27_13
+  - first:
+      213: 3170287661363434385
+    second: Kami-Kaze Crow Sprite Sheet 27x27_14
+  - first:
+      213: 6249254703856160007
+    second: Kami-Kaze Crow Sprite Sheet 27x27_15
+  - first:
+      213: 5277945575376640299
+    second: Kami-Kaze Crow Sprite Sheet 27x27_16
+  - first:
+      213: -4745130637945731236
+    second: Kami-Kaze Crow Sprite Sheet 27x27_17
+  - first:
+      213: 6440008113846594567
+    second: Kami-Kaze Crow Sprite Sheet 27x27_18
+  - first:
+      213: 8213139259451475467
+    second: Kami-Kaze Crow Sprite Sheet 27x27_19
+  - first:
+      213: -3044032016906021723
+    second: Kami-Kaze Crow Sprite Sheet 27x27_20
+  - first:
+      213: -3046306440797385444
+    second: Kami-Kaze Crow Sprite Sheet 27x27_21
+  - first:
+      213: -3347943056764955825
+    second: Kami-Kaze Crow Sprite Sheet 27x27_22
+  - first:
+      213: 23026734631343237
+    second: Kami-Kaze Crow Sprite Sheet 27x27_23
+  - first:
+      213: -6717568524537229781
+    second: Kami-Kaze Crow Sprite Sheet 27x27_24
+  - first:
+      213: 6585605710161252059
+    second: Kami-Kaze Crow Sprite Sheet 27x27_25
+  - first:
+      213: -8886513969898765763
+    second: Kami-Kaze Crow Sprite Sheet 27x27_26
+  - first:
+      213: 5370396504654414997
+    second: Kami-Kaze Crow Sprite Sheet 27x27_27
+  - first:
+      213: -7885880140924589999
+    second: Kami-Kaze Crow Sprite Sheet 27x27_28
+  - first:
+      213: 3370416269940334758
+    second: Kami-Kaze Crow Sprite Sheet 27x27_29
+  - first:
+      213: 7386939774953983627
+    second: Kami-Kaze Crow Sprite Sheet 27x27_30
+  - first:
+      213: -9008435018636005059
+    second: Kami-Kaze Crow Sprite Sheet 27x27_31
+  - first:
+      213: -4842404151414368277
+    second: Kami-Kaze Crow Sprite Sheet 27x27_32
+  - first:
+      213: 5205320144696887883
+    second: Kami-Kaze Crow Sprite Sheet 27x27_33
+  - first:
+      213: -7930079617260100726
+    second: Kami-Kaze Crow Sprite Sheet 27x27_34
+  - first:
+      213: 6994023626536297973
+    second: Kami-Kaze Crow Sprite Sheet 27x27_35
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c91ddc7deeef847a0800000000000000
+      internalID: -6392579369276157540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744d3851a09497380800000000000000
+      internalID: -8973060474899540921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119295e2e802a6fa0800000000000000
+      internalID: -5806792974505793263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_3
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbd9e5c553d056b50800000000000000
+      internalID: 6585684552933350847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_4
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e21a585dcec20a7f0800000000000000
+      internalID: -603432954361437906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_5
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3633f3a90cc9e1b40800000000000000
+      internalID: 5412936153181401955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_6
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c3bc56c81d0a87d0800000000000000
+      internalID: -2915503408710634560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_7
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 106e0d075545bb950800000000000000
+      internalID: 6465854415962170881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_8
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81ef79ad4c98e03b0800000000000000
+      internalID: -5544342612672512488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_9
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e12e8c086ef2f6a0800000000000000
+      internalID: -6416786796208840222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_10
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eab461733b66bf290800000000000000
+      internalID: -7855572205108311122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_11
+      rect:
+        serializedVersion: 2
+        x: 302
+        y: 83
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 599c7817bf03c5120800000000000000
+      internalID: 2403850157608651157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 56
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40af983d8f1dbd560800000000000000
+      internalID: 7339690884361484804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_13
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 55
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f235bff60a4d2050800000000000000
+      internalID: 5777355290906538738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_14
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 57
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1931f53c4df1ffb20800000000000000
+      internalID: 3170287661363434385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_15
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 57
+        width: 18
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70d094e0b00d9b650800000000000000
+      internalID: 6249254703856160007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 26
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b295b2c79870f3940800000000000000
+      internalID: 5277945575376640299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_17
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 43
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c570c6853d8e52eb0800000000000000
+      internalID: -4745130637945731236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_18
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 28
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70ca57842418f5950800000000000000
+      internalID: 6440008113846594567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_19
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 28
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b068b6234aeeaf170800000000000000
+      internalID: 8213139259451475467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_20
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 27
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a49663320d61c5d0800000000000000
+      internalID: -3044032016906021723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_21
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 40
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1d894f9e6859b5d0800000000000000
+      internalID: -3046306440797385444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_22
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 22
+        width: 18
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f431a4d2787b981d0800000000000000
+      internalID: -3347943056764955825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_23
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 0
+        width: 111
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 584d90271bec15000800000000000000
+      internalID: 23026734631343237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_24
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 2
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e0d94a40766c2a0800000000000000
+      internalID: -6717568524537229781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_25
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 8
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bde02f85085c46b50800000000000000
+      internalID: 6585605710161252059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_26
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 4
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3243ac80a2cca480800000000000000
+      internalID: -8886513969898765763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_27
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 3
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5940deada2b778a40800000000000000
+      internalID: 5370396504654414997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_28
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 18
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 158e1e20bc9bf8290800000000000000
+      internalID: -7885880140924589999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_29
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 11
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a0adf28dbf16ce20800000000000000
+      internalID: 3370416269940334758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_30
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 2
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8e065f669ea38660800000000000000
+      internalID: 7386939774953983627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_31
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 20
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d31f20c441c9bf280800000000000000
+      internalID: -9008435018636005059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_32
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 2
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be7d11894135cccb0800000000000000
+      internalID: -4842404151414368277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_33
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ac7d6b7130d3840800000000000000
+      internalID: 5205320144696887883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_34
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 4
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8365ac7a92b2f190800000000000000
+      internalID: -7930079617260100726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kami-Kaze Crow Sprite Sheet 27x27_35
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 2
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5a262be63cf0160800000000000000
+      internalID: 6994023626536297973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Kami-Kaze Crow Sprite Sheet 27x27_0: -6392579369276157540
+      Kami-Kaze Crow Sprite Sheet 27x27_1: -8973060474899540921
+      Kami-Kaze Crow Sprite Sheet 27x27_10: -7855572205108311122
+      Kami-Kaze Crow Sprite Sheet 27x27_11: 2403850157608651157
+      Kami-Kaze Crow Sprite Sheet 27x27_12: 7339690884361484804
+      Kami-Kaze Crow Sprite Sheet 27x27_13: 5777355290906538738
+      Kami-Kaze Crow Sprite Sheet 27x27_14: 3170287661363434385
+      Kami-Kaze Crow Sprite Sheet 27x27_15: 6249254703856160007
+      Kami-Kaze Crow Sprite Sheet 27x27_16: 5277945575376640299
+      Kami-Kaze Crow Sprite Sheet 27x27_17: -4745130637945731236
+      Kami-Kaze Crow Sprite Sheet 27x27_18: 6440008113846594567
+      Kami-Kaze Crow Sprite Sheet 27x27_19: 8213139259451475467
+      Kami-Kaze Crow Sprite Sheet 27x27_2: -5806792974505793263
+      Kami-Kaze Crow Sprite Sheet 27x27_20: -3044032016906021723
+      Kami-Kaze Crow Sprite Sheet 27x27_21: -3046306440797385444
+      Kami-Kaze Crow Sprite Sheet 27x27_22: -3347943056764955825
+      Kami-Kaze Crow Sprite Sheet 27x27_23: 23026734631343237
+      Kami-Kaze Crow Sprite Sheet 27x27_24: -6717568524537229781
+      Kami-Kaze Crow Sprite Sheet 27x27_25: 6585605710161252059
+      Kami-Kaze Crow Sprite Sheet 27x27_26: -8886513969898765763
+      Kami-Kaze Crow Sprite Sheet 27x27_27: 5370396504654414997
+      Kami-Kaze Crow Sprite Sheet 27x27_28: -7885880140924589999
+      Kami-Kaze Crow Sprite Sheet 27x27_29: 3370416269940334758
+      Kami-Kaze Crow Sprite Sheet 27x27_3: 6585684552933350847
+      Kami-Kaze Crow Sprite Sheet 27x27_30: 7386939774953983627
+      Kami-Kaze Crow Sprite Sheet 27x27_31: -9008435018636005059
+      Kami-Kaze Crow Sprite Sheet 27x27_32: -4842404151414368277
+      Kami-Kaze Crow Sprite Sheet 27x27_33: 5205320144696887883
+      Kami-Kaze Crow Sprite Sheet 27x27_34: -7930079617260100726
+      Kami-Kaze Crow Sprite Sheet 27x27_35: 6994023626536297973
+      Kami-Kaze Crow Sprite Sheet 27x27_4: -603432954361437906
+      Kami-Kaze Crow Sprite Sheet 27x27_5: 5412936153181401955
+      Kami-Kaze Crow Sprite Sheet 27x27_6: -2915503408710634560
+      Kami-Kaze Crow Sprite Sheet 27x27_7: 6465854415962170881
+      Kami-Kaze Crow Sprite Sheet 27x27_8: -5544342612672512488
+      Kami-Kaze Crow Sprite Sheet 27x27_9: -6416786796208840222
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -92,18 +92,20 @@ namespace Krooq.PlanetDefense
 
             Vector3 spawnPos;
 
+            var spawnMargin = 0.2f;
             if (threatData.MovementType == ThreatMovementType.Ground)
             {
                 // Spawn on left or right edge, within the configured Y range
-                var spawnY = Random.Range(GameManager.Data.GroundUnitSpawnHeightMin, GameManager.Data.GroundUnitSpawnHeightMax);
+                var diff = GameManager.Data.HorizonLevel - GameManager.Data.GroundLevel;
+                var spawnY = Random.Range(GameManager.Data.GroundLevel + diff / 10f, GameManager.Data.HorizonLevel - diff / 10);
                 var leftSide = Random.value < 0.5f;
-                var spawnX = leftSide ? leftEdge - 2f : rightEdge + 2f;
+                var spawnX = leftSide ? leftEdge - spawnMargin : rightEdge + spawnMargin;
                 spawnPos = new Vector3(spawnX, spawnY, 0);
             }
             else
             {
                 // Air or Constant - Spawn above top edge
-                var spawnY = topEdge + 2f;
+                var spawnY = topEdge + spawnMargin;
                 var spawnX = Random.Range(leftEdge, rightEdge);
                 spawnPos = new Vector3(spawnX, spawnY, 0);
             }

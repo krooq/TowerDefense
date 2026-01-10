@@ -18,9 +18,11 @@ MonoBehaviour:
   _impactEffectPrefab: {fileID: 1512438380890628738, guid: 54a2417118ee59e4cb3b573f5ec11d72, type: 3}
   _fireSound: {fileID: 6418180475301049370, guid: 0ca959c278502a744818b3e75e57799c, type: 2}
   _impactSound: {fileID: 6418180475301049370, guid: 51e467160460334428f586a52d261a79, type: 2}
-  _baseFireRate: 0.5
-  _baseDamage: 10
-  _baseSpeed: 30
-  _baseSize: 1
-  _basePierce: 0
-  _baseLifetime: 30
+  _fireRate: 1
+  _damage: 10
+  _speed: 5
+  _size: 1
+  _pierce: 0
+  _lifetime: 30
+  _explosionRadius: 0
+  _explosionDamageMult: 1

@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.ProjectileModel
   _projectile: {fileID: 0}
+  _collider: {fileID: 0}
 --- !u!58 &8910265170896235363
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -82,7 +83,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.25
+  m_Radius: 0.05
 --- !u!1001 &3271375491162643649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -97,23 +98,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7367134466453729266, guid: 87d08d6a0406c114bb308534ed1d8b38, type: 3}
       propertyPath: m_LocalScale.x
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7367134466453729266, guid: 87d08d6a0406c114bb308534ed1d8b38, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7367134466453729266, guid: 87d08d6a0406c114bb308534ed1d8b38, type: 3}
       propertyPath: m_LocalScale.z
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7367134466453729266, guid: 87d08d6a0406c114bb308534ed1d8b38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7367134466453729266, guid: 87d08d6a0406c114bb308534ed1d8b38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.5
+      value: -0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7367134466453729266, guid: 87d08d6a0406c114bb308534ed1d8b38, type: 3}
       propertyPath: m_LocalPosition.z

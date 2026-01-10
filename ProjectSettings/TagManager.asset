@@ -38,11 +38,14 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 1798838881
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
-    uniqueID: 1798838881
+  - name: Ground
+    uniqueID: 4164064389
     locked: 0
   - name: Tower
     uniqueID: 1488393723
@@ -52,6 +55,9 @@ TagManager:
     locked: 0
   - name: Projectiles
     uniqueID: 3059007435
+    locked: 0
+  - name: Fog
+    uniqueID: 4105888347
     locked: 0
   - name: UI
     uniqueID: 610060259

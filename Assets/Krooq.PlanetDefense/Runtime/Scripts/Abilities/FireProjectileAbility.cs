@@ -49,7 +49,7 @@ namespace Krooq.PlanetDefense
 
             p.transform.SetPositionAndRotation(Owner.FirePoint.position, Owner.FirePoint.rotation);
 
-            p.Init(Owner.FirePoint.up, data, e.Spell, Owner, Owner.TargetingInfo);
+            p.Init(data, Owner.TargetingInfo, e.Spell, Owner);
         }
     }
 }

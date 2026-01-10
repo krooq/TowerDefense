@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f11ad2f9bbac64ba2f15144c82d2ca, type: 3}
   m_Name: Flapper
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.ThreatData
-  _speed: 3
-  _health: 1
+  _speed: 0.3
+  _health: 3
   _resources: 1
   _powerLevel: 3
   _minGroupSize: 1
