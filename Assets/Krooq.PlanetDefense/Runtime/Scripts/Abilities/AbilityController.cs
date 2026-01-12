@@ -35,9 +35,9 @@ namespace Krooq.PlanetDefense
             foreach (var source in _caster.AbilitySources)
             {
                 if (source == null) continue;
-                foreach (var def in source.Abilities)
+                foreach (var data in source.Abilities)
                 {
-                    var ability = def.Create();
+                    var ability = data.Create();
                     ability.Init(_caster, source);
                     _abilities.Add(ability);
                 }

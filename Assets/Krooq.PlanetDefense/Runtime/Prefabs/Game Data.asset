@@ -32,8 +32,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 782d0a51ebf816b49ab9ea3b2262e1c1, type: 2}
   - {fileID: 11400000, guid: cc33b3d0ea776f7438cd5af36df1f39e, type: 2}
   - {fileID: 11400000, guid: bfe896e32d9d4744c986afb21e325712, type: 2}
-  _horizonLevel: 2
-  _groundLevel: 0
+  _horizonLevel: 0.75
+  _groundLevel: -0.75
   _waveDifficultyCurve:
     serializedVersion: 2
     m_Curve:

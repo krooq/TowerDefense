@@ -58,7 +58,7 @@ namespace Krooq.PlanetDefense
             _abilities = new List<AbilityData>(data.Abilities);
             _targetingStrategy = new TargetingStrategy(data.TargetingStrategyType);
             _target = new ThreatTarget();
-            _spell = null;
+            _spell = data.InitialSpell;
 
             if (_model != null)
             {

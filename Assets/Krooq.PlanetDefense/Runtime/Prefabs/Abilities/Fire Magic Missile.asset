@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: a407b41690e42a34383e5dbabbcdc2c2, type: 3}
   m_Name: Fire Magic Missile
   m_EditorClassIdentifier: Krooq.PlanetDefense:Krooq.PlanetDefense:FireProjectileAbilityData
   _description: 

@@ -51,7 +51,7 @@ namespace Krooq.PlanetDefense
                         if (relic != null) yield return relic;
                 }
                 foreach (var abilitySource in base.AbilitySources)
-                    yield return abilitySource;
+                    if (abilitySource != null) yield return abilitySource;
             }
         }
     }

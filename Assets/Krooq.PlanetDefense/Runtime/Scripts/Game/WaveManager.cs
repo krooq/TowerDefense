@@ -12,6 +12,7 @@ namespace Krooq.PlanetDefense
     public class WaveManager : MonoBehaviour
     {
         [SerializeField, ReadOnly] private bool _isWaveActive = false;
+        [SerializeField] private Transform _groundContainer;
         [SerializeField, ReadOnly] private Camera _cam;
 
         protected GameManager GameManager => this.GetSingleton<GameManager>();
@@ -111,6 +112,12 @@ namespace Krooq.PlanetDefense
             }
 
             var threat = GameManager.Spawn(GameManager.Data.ThreatPrefab);
+
+            if (_groundContainer != null)
+            {
+                threat.transform.SetParent(_groundContainer);
+            }
+
             threat.transform.SetPositionAndRotation(spawnPos, Quaternion.identity);
             threat.Init(threatData);
         }

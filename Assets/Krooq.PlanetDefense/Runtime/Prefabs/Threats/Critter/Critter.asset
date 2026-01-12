@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19f11ad2f9bbac64ba2f15144c82d2ca, type: 3}
   m_Name: Critter
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.ThreatData
-  _speed: 0.4
+  _speed: 0.2
   _health: 1
   _resources: 1
   _powerLevel: 1

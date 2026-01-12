@@ -2,12 +2,22 @@ using UnityEngine;
 
 namespace Krooq.PlanetDefense
 {
+    public enum ThreatAttackType
+    {
+        Melee,
+        Ranged
+    }
+
     [CreateAssetMenu(fileName = "ThreatData", menuName = "PlanetDefense/ThreatData")]
     public class ThreatData : ScriptableObject
     {
         [SerializeField] private float _speed = 2f;
         [SerializeField] private float _health = 10f;
         [SerializeField] private int _resources = 10;
+        [SerializeField] private float _damage = 1f;
+        [SerializeField] private float _attackRate = 1f;
+        [SerializeField] private float _attackRange = 1f;
+        [SerializeField] private ThreatAttackType _attackType = ThreatAttackType.Melee;
         [SerializeField] private int _powerLevel = 1;
         [SerializeField] private int _minGroupSize = 1;
         [SerializeField] private int _maxGroupSize = 1;
@@ -19,6 +29,10 @@ namespace Krooq.PlanetDefense
         public float Speed => _speed;
         public float Health => _health;
         public int Resources => _resources;
+        public float Damage => _damage;
+        public float AttackRate => _attackRate;
+        public float AttackRange => _attackRange;
+        public ThreatAttackType AttackType => _attackType;
         public int PowerLevel => _powerLevel;
         public int MinGroupSize => _minGroupSize;
         public int MaxGroupSize => _maxGroupSize;

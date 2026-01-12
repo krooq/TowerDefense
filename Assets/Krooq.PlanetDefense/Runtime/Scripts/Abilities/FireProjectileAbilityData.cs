@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks;
 
 namespace Krooq.PlanetDefense
 {
-    [CreateAssetMenu(fileName = "FireProjectileAbility", menuName = "PlanetDefense/Abilities/FireProjectile")]
+    [CreateAssetMenu(fileName = "FireProjectileAbilityData", menuName = "PlanetDefense/Abilities/FireProjectile")]
     public class FireProjectileAbilityData : AbilityData
     {
         [SerializeField] private ProjectileData _projectileData;

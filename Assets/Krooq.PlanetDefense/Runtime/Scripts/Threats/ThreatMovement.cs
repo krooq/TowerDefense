@@ -48,18 +48,19 @@ namespace Krooq.PlanetDefense
 
         private void MoveGround(Threat threat)
         {
-            // Move horizontally towards the base
             var targetPos = threat.PlayerTower.GetClosestPoint(threat.transform.position);
-            float directionX = Mathf.Sign(targetPos.x - threat.transform.position.x);
+            Vector2 direction = (targetPos - threat.transform.position).normalized;
 
             if (threat.Rigidbody2D.bodyType == RigidbodyType2D.Dynamic)
             {
-                threat.Rigidbody2D.linearVelocity = new Vector2(directionX * threat.Speed, threat.Rigidbody2D.linearVelocity.y);
+                threat.Rigidbody2D.linearVelocity = direction * threat.Speed;
             }
             else
             {
-                Vector2 nextPos = threat.Rigidbody2D.position + new Vector2(directionX * threat.Speed * Time.fixedDeltaTime, 0);
-                threat.Rigidbody2D.MovePosition(nextPos);
+                // Use transform.Translate (or direct position assignment) so we modify the 
+                // local offset relative to the parent. This ensures we don't fight the 
+                // parent's MovePosition which happens later in the physics step.
+                threat.transform.position = (Vector2)threat.transform.position + direction * threat.Speed * Time.fixedDeltaTime;
             }
         }
 
@@ -73,7 +74,8 @@ namespace Krooq.PlanetDefense
             float wave = Mathf.Sin(Time.time * _frequency + _sineOffset) * _amplitude;
             Vector2 movement = (direction * threat.Speed + perp * wave) * Time.fixedDeltaTime;
 
-            threat.Rigidbody2D.MovePosition(threat.Rigidbody2D.position + movement);
+            // Direct transform update to retain parenting offsets
+            threat.transform.position = (Vector2)threat.transform.position + movement;
 
             // Rotate to face direction
             float angle = Mathf.Atan2(movement.y, movement.x) * Mathf.Rad2Deg;
@@ -85,7 +87,9 @@ namespace Krooq.PlanetDefense
             // Move directly towards the base
             var targetPos = threat.PlayerTower.GetClosestPoint(threat.transform.position);
             Vector2 direction = (targetPos - threat.transform.position).normalized;
-            threat.Rigidbody2D.MovePosition(threat.Rigidbody2D.position + direction * threat.Speed * Time.fixedDeltaTime);
+
+            // Direct transform update
+            threat.transform.position = (Vector2)threat.transform.position + direction * threat.Speed * Time.fixedDeltaTime;
 
             // Tumble
             threat.Rigidbody2D.rotation += threat.Speed * Time.fixedDeltaTime;

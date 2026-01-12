@@ -45,14 +45,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8b5131aefa03fc4dbeac41a347d2a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Krooq.PlanetDefense::Krooq.PlanetDefense.Meteor
+  _state: 0
   _speed: 2
   _health: 10
   _resources: 10
+  _damage: 1
+  _attackRate: 1
+  _attackRange: 1
+  _attackType: 0
   _data: {fileID: 0}
   _model: {fileID: 0}
   _onDeath:
     m_PersistentCalls:
       m_Calls: []
+  _animator: {fileID: 0}
 --- !u!50 &6324750008781136100
 Rigidbody2D:
   serializedVersion: 5

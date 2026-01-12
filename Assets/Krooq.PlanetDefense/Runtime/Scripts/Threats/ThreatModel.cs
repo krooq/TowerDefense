@@ -13,7 +13,6 @@ namespace Krooq.PlanetDefense
         [SerializeField, ReadOnly] private float _hopInterval = 0.3f;
         [SerializeField, ReadOnly] private float _nextBumpTime;
 
-
         protected SpringTransform SpringTransform => this.GetCachedComponent<SpringTransform>();
 
         protected void OnEnable()
@@ -30,16 +29,16 @@ namespace Krooq.PlanetDefense
         public void Update()
         {
             if (_threat == null) return;
-            if (_threat.Data.MovementType != ThreatMovementType.Ground)
-            {
-                SpringTransform.enabled = false;
-                return;
-            }
-            if (Time.time >= _nextBumpTime)
-            {
-                SpringTransform.BumpPosition(Vector3.up * 1f);
-                _nextBumpTime = Time.time + _hopInterval;
-            }
+            // if (_threat.Data.MovementType != ThreatMovementType.Ground)
+            // {
+            //     SpringTransform.enabled = false;
+            //     return;
+            // }
+            // if (Time.time >= _nextBumpTime)
+            // {
+            //     SpringTransform.BumpPosition(Vector3.up * 1f);
+            //     _nextBumpTime = Time.time + _hopInterval;
+            // }
         }
 
         public Vector3 GetClosestPoint(Vector3 point)
@@ -73,5 +72,6 @@ namespace Krooq.PlanetDefense
             }
             return count > 0 ? sum / count : transform.position;
         }
+
     }
 }
