@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Krooq.PlanetDefense/Runtime/Scenes/Main.unity
+    path: Assets/Krooq.TowerDefense/Runtime/Scenes/Main.unity
     guid: 4471ab5b23cf95545b28129b30d25b03
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
