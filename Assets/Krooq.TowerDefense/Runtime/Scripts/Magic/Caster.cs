@@ -15,22 +15,20 @@ namespace Krooq.TowerDefense
         [Header("Settings")]
         [SerializeField, ReadOnly, PropertyOrder(100)] protected int _maxMana = 50;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected float _manaRegen = 5f;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected TargetingStrategy _targetingStrategy;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected float _range = 10f;
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected List<RelicData> _relics = new();
         [SerializeField, ReadOnly, PropertyOrder(100)] protected List<AbilityData> _abilities = new();
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected TargetingStrategy _targetingStrategy;
 
         [Header("State")]
         [SerializeField, ReadOnly, PropertyOrder(100)] protected float _currentMana;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected SpellData _spell;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected GameObject _model;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected float _spellCooldown;
-
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected float _cooldownRemaining;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected ITarget _target;
 
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
         protected GameEventManager GameEventManager => this.GetSingleton<GameEventManager>();
-
         protected AbilityController AbilityController => this.GetCachedComponent<AbilityController>();
 
         public IReadOnlyList<AbilityData> Abilities => _abilities;
@@ -38,7 +36,6 @@ namespace Krooq.TowerDefense
         public int CurrentMana => (int)_currentMana;
         public int MaxMana => _maxMana;
         public SpellData Spell => _spell;
-        public int SpellSlots => 1;
 
         public virtual IEnumerable<IAbilitySource> AbilitySources
         {
@@ -54,11 +51,10 @@ namespace Krooq.TowerDefense
         {
             _maxMana = data.MaxMana;
             _manaRegen = data.ManaRegen;
-            _range = data.Range;
+            _spell = data.InitialSpell;
             _abilities = new List<AbilityData>(data.Abilities);
             _targetingStrategy = new TargetingStrategy(data.TargetingStrategyType);
             _target = new ThreatTarget();
-            _spell = data.InitialSpell;
 
             if (_model != null)
             {
@@ -86,10 +82,22 @@ namespace Krooq.TowerDefense
             if (GameManager.State != GameState.Playing) return;
 
             RegenMana();
-            PerformTargeting();
-            Aim();
             UpdateCooldowns();
+            FindTargets();
+            Aim();
             CastSpell();
+        }
+
+        protected virtual void RegenMana() => _currentMana = Mathf.Clamp(_currentMana + _manaRegen * Time.deltaTime, 0f, _maxMana);
+
+        protected virtual void UpdateCooldowns() => _cooldownRemaining = Mathf.Clamp(_cooldownRemaining - Time.deltaTime, 0f, _spell != null ? _spell.Cooldown : 0f);
+
+        protected virtual void FindTargets()
+        {
+            if (_targetingStrategy == null) return;
+            var range = _spell != null ? _spell.Range : 0f;
+            var targetThreat = _targetingStrategy.FindTarget(_firePoint.position, range, GameManager.Threats);
+            _target = targetThreat == null ? default : new ThreatTarget(targetThreat);
         }
 
         protected virtual void Aim()
@@ -103,27 +111,6 @@ namespace Krooq.TowerDefense
             _pivot.rotation = Quaternion.Euler(0, 0, angle);
         }
 
-        protected virtual void RegenMana()
-        {
-            _currentMana += _manaRegen * Time.deltaTime;
-            _currentMana = Mathf.Min(_currentMana, _maxMana);
-        }
-
-        protected virtual void PerformTargeting()
-        {
-            if (_targetingStrategy == null) return;
-
-            var targetThreat = _targetingStrategy.FindTarget(_firePoint.position, _range, GameManager.Threats);
-            _target = targetThreat == null ? default : new ThreatTarget(targetThreat);
-        }
-
-        protected virtual void UpdateCooldowns()
-        {
-            if (_spellCooldown > 0)
-            {
-                _spellCooldown -= Time.deltaTime;
-            }
-        }
 
         public bool CanSpendMana(int amount) => _currentMana >= amount;
 
@@ -137,7 +124,7 @@ namespace Krooq.TowerDefense
             return false;
         }
 
-        public virtual void SetSpell(SpellData spell, int i = 0)
+        public virtual void SetSpell(SpellData spell)
         {
             _spell = spell;
             AbilityController.RebuildAbilities();
@@ -147,26 +134,16 @@ namespace Krooq.TowerDefense
         {
             if (!_target.IsValid) return;
             if (_spell == null) return;
+            if (_cooldownRemaining > 0) return;
 
-            // Check Cooldown
-            if (_spellCooldown > 0) return;
-
-            CastSpell(_spell);
-        }
-
-        protected virtual void CastSpell(SpellData spell)
-        {
-            var cost = Mathf.CeilToInt(spell.ManaCost);
+            var cost = Mathf.CeilToInt(_spell.ManaCost);
             if (!TrySpendMana(cost))
             {
                 // TODO: Feedback
                 return;
             }
-
-            // Set Cooldown
-            _spellCooldown = spell.Cooldown;
-
-            GameEventManager.FireEvent(this, new SpellCastEvent(spell, this));
+            _cooldownRemaining = _spell.Cooldown;
+            GameEventManager.FireEvent(this, new SpellCastEvent(_spell, this));
         }
     }
 }

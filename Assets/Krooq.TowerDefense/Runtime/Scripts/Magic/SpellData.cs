@@ -4,7 +4,7 @@ using Sirenix.OdinInspector;
 
 namespace Krooq.TowerDefense
 {
-    [CreateAssetMenu(fileName = "New Spell", menuName = "PlanetDefense/Spell")]
+    [CreateAssetMenu(fileName = "New Spell", menuName = "Tower Defense/Spell")]
     public class SpellData : ScriptableObject, IShopItem, IAbilitySource
     {
         [SerializeField] private string _spellName;
@@ -13,6 +13,7 @@ namespace Krooq.TowerDefense
         [SerializeField] private int _shopCost;
         [SerializeField] private float _manaCost;
         [SerializeField] private float _cooldown;
+        [SerializeField] private float _range = 10f;
         [SerializeField] private List<string> _tags = new();
 
         [SerializeField] private List<AbilityData> _abilities = new();
@@ -24,6 +25,7 @@ namespace Krooq.TowerDefense
         public int ShopCost => _shopCost;
         public float ManaCost => _manaCost;
         public float Cooldown => _cooldown;
+        public float Range => _range;
         public IReadOnlyList<string> Tags => _tags;
         public IReadOnlyList<AbilityData> Abilities => _abilities;
     }

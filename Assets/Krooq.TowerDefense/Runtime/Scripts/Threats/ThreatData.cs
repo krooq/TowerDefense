@@ -8,7 +8,7 @@ namespace Krooq.TowerDefense
         Ranged
     }
 
-    [CreateAssetMenu(fileName = "ThreatData", menuName = "PlanetDefense/ThreatData")]
+    [CreateAssetMenu(fileName = "ThreatData", menuName = "Tower Defense/ThreatData")]
     public class ThreatData : ScriptableObject
     {
         [SerializeField] private float _speed = 2f;

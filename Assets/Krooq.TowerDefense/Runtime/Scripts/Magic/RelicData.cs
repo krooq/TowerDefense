@@ -4,7 +4,7 @@ using Sirenix.OdinInspector;
 
 namespace Krooq.TowerDefense
 {
-    [CreateAssetMenu(fileName = "New Relic", menuName = "PlanetDefense/Relic")]
+    [CreateAssetMenu(fileName = "Relic", menuName = "Tower Defense/Relic")]
     public class RelicData : ScriptableObject, IShopItem, IAbilitySource
     {
         [SerializeField] private string _relicName;

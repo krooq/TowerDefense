@@ -24,9 +24,6 @@ namespace Krooq.TowerDefense
             Player.SetCaster(_slotIndex, null);
 
             if (ShopUI) ShopUI.SetDirty();
-
-            var casterBarUI = this.GetSingleton<CasterBarUI>();
-            // if (casterBarUI) casterBarUI.Refresh();
         }
     }
 }

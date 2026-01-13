@@ -24,6 +24,7 @@ namespace Krooq.TowerDefense
         public const string QuickCast2 = "QuickCast2";
         public const string QuickCast3 = "QuickCast3";
         public const string QuickCast4 = "QuickCast4";
+        public const string Pause = "Pause";
 
         // UI Map.
         public InputAction ClickAction => PlayerInput.actions.FindAction(Click);
@@ -45,6 +46,7 @@ namespace Krooq.TowerDefense
         public InputAction QuickCast2Action => PlayerInput.actions.FindAction(QuickCast2);
         public InputAction QuickCast3Action => PlayerInput.actions.FindAction(QuickCast3);
         public InputAction QuickCast4Action => PlayerInput.actions.FindAction(QuickCast4);
+        public InputAction PauseAction => PlayerInput.actions.FindAction(Pause);
 
         protected PlayerInput PlayerInput => this.GetCachedComponent<PlayerInput>();
 

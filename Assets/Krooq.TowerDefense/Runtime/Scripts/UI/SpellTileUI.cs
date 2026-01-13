@@ -23,7 +23,7 @@ namespace Krooq.TowerDefense
         {
             // Sell
             Player.AddResources(Spell.ShopCost); // 100% refund for now
-            PlayerCaster.SetSpell(null, _slotIndex);
+            PlayerCaster.SetSpell(null);
 
             if (ShopUI) ShopUI.SetDirty();
         }

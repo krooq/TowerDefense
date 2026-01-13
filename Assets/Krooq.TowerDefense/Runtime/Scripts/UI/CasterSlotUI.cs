@@ -18,9 +18,6 @@ namespace Krooq.TowerDefense
                     if (Player.SpendResources(tileUI.Caster.ShopCost))
                     {
                         Player.SetCaster(_slotIndex, tileUI.Caster);
-
-                        var casterBarUI = this.GetSingleton<CasterBarUI>();
-                        // if (casterBarUI) casterBarUI.Refresh();
                     }
                 }
             }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Krooq.TowerDefense
 {
-    [CreateAssetMenu(fileName = "CasterData", menuName = "PlanetDefense/CasterData")]
+    [CreateAssetMenu(fileName = "Caster", menuName = "Tower Defense/Caster")]
     public class CasterData : ScriptableObject, IShopItem
     {
         [SerializeField] private string _name;
@@ -17,7 +17,6 @@ namespace Krooq.TowerDefense
         [SerializeField] private int _maxMana = 50;
         [SerializeField] private float _manaRegen = 5f;
         [SerializeField] private TargetingStrategyType _targetingStrategyType;
-        [SerializeField] private float _range = 10f;
         [SerializeField] private List<AbilityData> _abilities = new();
 
         public string Name => _name;
@@ -30,7 +29,6 @@ namespace Krooq.TowerDefense
         public int MaxMana => _maxMana;
         public float ManaRegen => _manaRegen;
         public TargetingStrategyType TargetingStrategyType => _targetingStrategyType;
-        public float Range => _range;
         public List<AbilityData> Abilities => _abilities;
     }
 }

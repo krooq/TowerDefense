@@ -5,7 +5,7 @@ using Krooq.Common;
 
 namespace Krooq.TowerDefense
 {
-    [CreateAssetMenu(fileName = "GameData", menuName = "PlanetDefense/GameData")]
+    [CreateAssetMenu(fileName = "GameData", menuName = "Tower Defense/GameData")]
     public class GameData : ScriptableObject
     {
         [Header("Player")]
@@ -102,6 +102,10 @@ namespace Krooq.TowerDefense
         public CasterTileUI CasterTilePrefab => _casterTilePrefab;
         public CasterSlotUI CasterSlotPrefab => _casterSlotPrefab;
         public List<CasterData> StartingCasters => _startingCasters;
+
+        [Header("Tower Interactions")]
+        [SerializeField] private TowerEnhancementUI _towerEnhancementUIPrefab;
+        public TowerEnhancementUI TowerEnhancementUIPrefab => _towerEnhancementUIPrefab;
     }
 }
 

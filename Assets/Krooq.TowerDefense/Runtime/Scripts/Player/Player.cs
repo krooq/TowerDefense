@@ -140,7 +140,6 @@ namespace Krooq.TowerDefense
                 }
             }
             // this.GetSingleton<RelicBarUI>().Refresh();
-            // this.GetSingleton<CasterBarUI>().Refresh();
         }
 
 

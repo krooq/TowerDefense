@@ -4,7 +4,7 @@ using Krooq.Common;
 
 namespace Krooq.TowerDefense
 {
-    [CreateAssetMenu(fileName = "ProjectileData", menuName = "PlanetDefense/ProjectileData")]
+    [CreateAssetMenu(fileName = "ProjectileData", menuName = "Tower Defense/ProjectileData")]
     public class ProjectileData : ScriptableObject
     {
         [Header("Visuals & Effects")]

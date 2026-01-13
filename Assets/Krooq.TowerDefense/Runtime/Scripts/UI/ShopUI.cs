@@ -15,9 +15,7 @@ namespace Krooq.TowerDefense
         [SerializeField, ReadOnly] private bool _dirty = true;
 
         protected RelicBarUI RelicBarUI => this.GetSingleton<RelicBarUI>();
-        protected CasterBarUI TowerBarUI => this.GetSingleton<CasterBarUI>();
         protected GameManager GameManager => this.GetSingleton<GameManager>();
-
         protected CanvasGroup CanvasGroup => this.GetCachedComponent<CanvasGroup>();
 
         protected void Update()
@@ -58,7 +56,6 @@ namespace Krooq.TowerDefense
 
             // Refresh Active Slots
             // if (RelicBarUI != null) RelicBarUI.Refresh();
-            // if (TowerBarUI != null) TowerBarUI.Refresh();
 
             // Populate Available Spells
             if (GameManager.Data.Spells != null)
