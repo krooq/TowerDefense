@@ -8,37 +8,7 @@ namespace Krooq.TowerDefense
 {
     public class PlayerCaster : Caster
     {
-        [SerializeField] private bool _manualControlEnabled;
-
-        public override ITarget TargetingInfo => _manualControlEnabled ? Player.TargetingReticle : base.TargetingInfo;
-
         protected Player Player => this.GetSingleton<Player>();
-
-        protected override void Update()
-        {
-            base.Update();
-            if (GameManager.State != GameState.Playing) return;
-            HandleInput();
-        }
-
-        private void HandleInput()
-        {
-            if (!_manualControlEnabled) return;
-
-            // Firing
-            if (Player.Inputs.ClickAction.WasPressedThisFrame())
-            {
-                CastSpell();
-                Player.Attack();
-            }
-
-            // Quick Casting
-            if (Player.Inputs.QuickCast1Action.WasPressedThisFrame())
-            {
-                CastSpell();
-                Player.Attack();
-            }
-        }
 
         public override IEnumerable<IAbilitySource> AbilitySources
         {

@@ -39,10 +39,10 @@ namespace Krooq.TowerDefense
         public float Lifetime => _lifetime.Value;
         public float FireRate => _fireRate.Value;
 
-        public void Init(ProjectileData data, ITarget targetingInfo, SpellData sourceSpell, ICaster sourceCaster)
+        public void Init(ProjectileData data, ITarget target, SpellData sourceSpell, ICaster sourceCaster)
         {
             _data = data;
-            _target = targetingInfo;
+            _target = target;
             _target.OnTargetDestroyed.AddListener(InvalidateTarget);
             _tags.Clear();
             GameManager.Despawn(_model);

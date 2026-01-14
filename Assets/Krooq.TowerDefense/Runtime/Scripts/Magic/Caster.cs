@@ -13,18 +13,15 @@ namespace Krooq.TowerDefense
         [SerializeField] protected Transform _pivot;
 
         [Header("Settings")]
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected int _maxMana = 50;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected float _manaRegen = 5f;
         [SerializeField, ReadOnly, PropertyOrder(100)] protected List<RelicData> _relics = new();
         [SerializeField, ReadOnly, PropertyOrder(100)] protected List<AbilityData> _abilities = new();
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected TargetingStrategy _targetingStrategy;
 
         [Header("State")]
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected float _currentMana;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected SpellData _spell;
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected List<Spell> _spells = new();
         [SerializeField, ReadOnly, PropertyOrder(100)] protected GameObject _model;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected float _cooldownRemaining;
-        [SerializeField, ReadOnly, PropertyOrder(100)] protected ITarget _target;
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected int _spellIndex;
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected bool _isCasting;
+        [SerializeField, ReadOnly, PropertyOrder(100)] protected float _castTimer;
 
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected AudioManager AudioManager => this.GetSingleton<AudioManager>();
@@ -33,28 +30,27 @@ namespace Krooq.TowerDefense
 
         public IReadOnlyList<AbilityData> Abilities => _abilities;
         public Transform FirePoint => _firePoint;
-        public int CurrentMana => (int)_currentMana;
-        public int MaxMana => _maxMana;
-        public SpellData Spell => _spell;
+        public IReadOnlyList<Spell> Spells => _spells;
 
         public virtual IEnumerable<IAbilitySource> AbilitySources
         {
             get
             {
                 yield return this;
-                if (_spell != null) yield return _spell;
+                foreach (var spell in _spells)
+                    if (spell != null) yield return spell;
             }
         }
-        public virtual ITarget TargetingInfo => _target;
 
         public virtual void Init(CasterData data)
         {
-            _maxMana = data.MaxMana;
-            _manaRegen = data.ManaRegen;
-            _spell = data.InitialSpell;
+            _spells.Clear();
+            if (data.Spells != null)
+                foreach (var spellData in data.Spells)
+                    if (spellData != null)
+                        _spells.Add(new Spell(spellData));
+
             _abilities = new List<AbilityData>(data.Abilities);
-            _targetingStrategy = new TargetingStrategy(data.TargetingStrategyType);
-            _target = new ThreatTarget();
 
             if (_model != null)
             {
@@ -69,9 +65,9 @@ namespace Krooq.TowerDefense
                 _model.transform.SetLocalPositionAndRotation(Vector3.zero, Quaternion.identity);
             }
 
-            _currentMana = _maxMana;
-
-            if (data.InitialSpell != null) SetSpell(data.InitialSpell);
+            _spellIndex = 0;
+            _isCasting = false;
+            _castTimer = 0;
 
             // Rebuild abilities as data changed
             AbilityController.RebuildAbilities();
@@ -81,69 +77,71 @@ namespace Krooq.TowerDefense
         {
             if (GameManager.State != GameState.Playing) return;
 
-            RegenMana();
-            UpdateCooldowns();
-            FindTargets();
-            Aim();
-            CastSpell();
+            if (_spells.Count == 0) return;
+
+            foreach (var spell in _spells) spell?.Update(Time.deltaTime);
+
+            if (!_isCasting) TryStartCastingNextSpell();
+            else
+            {
+                _castTimer -= Time.deltaTime;
+                if (_castTimer <= 0) _isCasting = false;
+            }
         }
 
-        protected virtual void RegenMana() => _currentMana = Mathf.Clamp(_currentMana + _manaRegen * Time.deltaTime, 0f, _maxMana);
-
-        protected virtual void UpdateCooldowns() => _cooldownRemaining = Mathf.Clamp(_cooldownRemaining - Time.deltaTime, 0f, _spell != null ? _spell.Cooldown : 0f);
-
-        protected virtual void FindTargets()
-        {
-            if (_targetingStrategy == null) return;
-            var range = _spell != null ? _spell.Range : 0f;
-            var targetThreat = _targetingStrategy.FindTarget(_firePoint.position, range, GameManager.Threats);
-            _target = targetThreat == null ? default : new ThreatTarget(targetThreat);
-        }
-
-        protected virtual void Aim()
+        protected virtual void Aim(ITarget target)
         {
             if (_pivot == null) return;
 
-            if (TargetingInfo is not { IsValid: true }) return;
+            if (target is not { IsValid: true }) return;
 
-            var dir = (TargetingInfo.Position - _pivot.position).normalized;
+            var dir = (target.Position - _pivot.position).normalized;
             var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg - 90f;
             _pivot.rotation = Quaternion.Euler(0, 0, angle);
         }
 
-
-        public bool CanSpendMana(int amount) => _currentMana >= amount;
-
-        public virtual bool TrySpendMana(int amount)
+        protected virtual void TryStartCastingNextSpell()
         {
-            if (CanSpendMana(amount))
+            if (_isCasting) return;
+            if (_spells.Count == 0) return;
+
+            var spell = _spellIndex < _spells.Count && _spellIndex >= 0 ? _spells[_spellIndex] : null;
+            // If we can't cast this spell, move to the next one, it's that simple.
+            if (spell == null || !spell.CanCast(_firePoint.position, GameManager.Threats))
             {
-                _currentMana -= amount;
-                return true;
+                _spellIndex = (_spellIndex + 1) % _spells.Count;
             }
-            return false;
+            else
+            {
+                Aim(spell.Target);
+                spell.Cast();
+                _isCasting = true;
+                _castTimer = spell.Data.CastDuration;
+                GameEventManager.FireEvent(this, new SpellCastEvent(spell, this));
+            }
         }
 
-        public virtual void SetSpell(SpellData spell)
+        public virtual void AddSpell(SpellData spellData)
         {
-            _spell = spell;
-            AbilityController.RebuildAbilities();
+            if (spellData != null)
+            {
+                _spells.Add(new Spell(spellData));
+                AbilityController.RebuildAbilities();
+            }
         }
 
-        public virtual void CastSpell()
+        public virtual void RemoveSpell(SpellData spellData)
         {
-            if (!_target.IsValid) return;
-            if (_spell == null) return;
-            if (_cooldownRemaining > 0) return;
-
-            var cost = Mathf.CeilToInt(_spell.ManaCost);
-            if (!TrySpendMana(cost))
+            if (spellData != null)
             {
-                // TODO: Feedback
-                return;
+                _spells.RemoveAll(s => s.Data == spellData);
+                AbilityController.RebuildAbilities();
+                if (_spellIndex >= _spells.Count)
+                {
+                    _spellIndex = 0;
+                    _isCasting = false; // Interrupt if current removed
+                }
             }
-            _cooldownRemaining = _spell.Cooldown;
-            GameEventManager.FireEvent(this, new SpellCastEvent(_spell, this));
         }
     }
 }

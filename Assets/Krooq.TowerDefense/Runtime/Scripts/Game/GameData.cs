@@ -70,10 +70,8 @@ namespace Krooq.TowerDefense
         [Header("Spells")]
         [SerializeField] private List<SpellData> _spells;
         [SerializeField] private SpellTileUI _spellTilePrefab;
-        [SerializeField] private SpellSlotUI _spellSlotPrefab;
         public List<SpellData> Spells => _spells;
         public SpellTileUI SpellTilePrefab => _spellTilePrefab;
-        public SpellSlotUI SpellSlotPrefab => _spellSlotPrefab;
 
 
         [Header("Relics")]
@@ -102,10 +100,6 @@ namespace Krooq.TowerDefense
         public CasterTileUI CasterTilePrefab => _casterTilePrefab;
         public CasterSlotUI CasterSlotPrefab => _casterSlotPrefab;
         public List<CasterData> StartingCasters => _startingCasters;
-
-        [Header("Tower Interactions")]
-        [SerializeField] private TowerEnhancementUI _towerEnhancementUIPrefab;
-        public TowerEnhancementUI TowerEnhancementUIPrefab => _towerEnhancementUIPrefab;
     }
 }
 

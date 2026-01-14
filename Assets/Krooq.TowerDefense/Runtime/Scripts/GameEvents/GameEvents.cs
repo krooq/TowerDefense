@@ -7,10 +7,9 @@ namespace Krooq.TowerDefense
 
     public struct SpellCastEvent : IGameEvent
     {
-        public SpellData Spell;
+        public Spell Spell;
         public ICaster Caster;
-
-        public SpellCastEvent(SpellData spell, ICaster caster)
+        public SpellCastEvent(Spell spell, Caster caster) : this()
         {
             Spell = spell;
             Caster = caster;

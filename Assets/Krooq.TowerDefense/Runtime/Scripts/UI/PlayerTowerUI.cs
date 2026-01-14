@@ -2,18 +2,30 @@ using UnityEngine;
 using System.Collections.Generic;
 using Krooq.Common;
 using Krooq.Core;
+using Sirenix.OdinInspector;
 
 namespace Krooq.TowerDefense
 {
-    public class TowerEnhancementUI : MonoBehaviour
+    public class PlayerTowerUI : MonoBehaviour
     {
-        [SerializeField] private CasterSlotUI _casterSlot;
         [SerializeField] private Transform _relicRoot;
+        [SerializeField, ReadOnly] private List<RelicSlotUI> _activeRelicSlots = new();
 
         protected GameManager GameManager => this.GetSingleton<GameManager>();
         protected CanvasGroup CanvasGroup => this.GetCachedComponent<CanvasGroup>();
 
-        private List<RelicSlotUI> _activeRelicSlots = new();
+
+        private void Update()
+        {
+            if (GameManager.State == GameState.Shop)
+            {
+                SetVisible(true);
+            }
+            else
+            {
+                SetVisible(false);
+            }
+        }
 
         public void SetVisible(bool visible)
         {
@@ -23,13 +35,8 @@ namespace Krooq.TowerDefense
             CanvasGroup.blocksRaycasts = visible;
         }
 
-        public void Init(int casterIndex, int[] relicIndices)
+        public void Init(int[] relicIndices)
         {
-            if (_casterSlot != null)
-            {
-                _casterSlot.Init(casterIndex);
-            }
-
             // Clear existing
             foreach (var slot in _activeRelicSlots)
             {

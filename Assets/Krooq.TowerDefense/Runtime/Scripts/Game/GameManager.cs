@@ -48,7 +48,6 @@ namespace Krooq.TowerDefense
 
         private void Update()
         {
-            // Mana regen handled by Player
         }
 
         public void Register(Threat threat)

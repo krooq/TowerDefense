@@ -30,7 +30,7 @@ namespace Krooq.TowerDefense
         public override async UniTask OnGameEvent(IGameEvent gameEvent)
         {
             if (gameEvent is not SpellCastEvent spellCast) return;
-            if (Source is not SpellData sourceSpell) return;
+            if (Source is not Spell sourceSpell) return;
             if (sourceSpell != spellCast.Spell) return;
             FireProjectile(spellCast);
             await UniTask.CompletedTask;
@@ -49,7 +49,7 @@ namespace Krooq.TowerDefense
 
             p.transform.SetPositionAndRotation(Owner.FirePoint.position, Owner.FirePoint.rotation);
 
-            p.Init(data, Owner.TargetingInfo, e.Spell, Owner);
+            p.Init(data, e.Spell.Target, e.Spell.Data, Owner);
         }
     }
 }

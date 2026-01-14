@@ -17,9 +17,7 @@ MonoBehaviour:
   _icon: {fileID: 0}
   _shopCost: 0
   _modelPrefab: {fileID: 0}
-  _initialSpell: {fileID: 11400000, guid: 87be09573ef0bc04e818a8ca9336716b, type: 2}
-  _maxMana: 10
-  _manaRegen: 1
+  _spells:
+  - {fileID: 11400000, guid: 87be09573ef0bc04e818a8ca9336716b, type: 2}
   _targetingStrategyType: 1
-  _range: 10000
   _abilities: []

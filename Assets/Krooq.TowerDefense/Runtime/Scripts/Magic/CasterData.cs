@@ -13,9 +13,7 @@ namespace Krooq.TowerDefense
         [SerializeField] private GameObject _modelPrefab;
 
         [Header("Stats")]
-        [SerializeField] private SpellData _initialSpell;
-        [SerializeField] private int _maxMana = 50;
-        [SerializeField] private float _manaRegen = 5f;
+        [SerializeField] private List<SpellData> _spells = new();
         [SerializeField] private TargetingStrategyType _targetingStrategyType;
         [SerializeField] private List<AbilityData> _abilities = new();
 
@@ -25,9 +23,7 @@ namespace Krooq.TowerDefense
         public int ShopCost => _shopCost;
         public GameObject ModelPrefab => _modelPrefab;
 
-        public SpellData InitialSpell => _initialSpell;
-        public int MaxMana => _maxMana;
-        public float ManaRegen => _manaRegen;
+        public List<SpellData> Spells => _spells;
         public TargetingStrategyType TargetingStrategyType => _targetingStrategyType;
         public List<AbilityData> Abilities => _abilities;
     }
